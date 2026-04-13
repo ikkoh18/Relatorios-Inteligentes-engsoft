@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 3 — Relatórios Inteligentes</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#F0F4FA;color:#1a1a2e;min-height:100vh}
+
+    header{background:#1B2A4A;color:white;padding:14px 32px;display:flex;align-items:center;gap:12px}
+    header .badge{background:#E8622A;color:white;font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px}
+    header h1{font-size:17px;font-weight:600}
+    header p{font-size:11px;color:#8899BB;margin-top:2px}
+
+    nav{background:#162238;display:flex;gap:4px;padding:0 32px}
+    nav button{background:none;border:none;color:#8899BB;padding:10px 16px;font-size:13px;cursor:pointer;border-bottom:2px solid transparent}
+    nav button.active{color:white;border-bottom-color:#E8622A}
+    nav button:hover{color:white}
+
+    .page{display:none;max-width:900px;margin:28px auto;padding:0 24px}
+    .page.active{display:block}
+
+    .card{background:white;border-radius:12px;border:1px solid #E2E8F0;padding:22px;margin-bottom:18px}
+    .card h2{font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+    .num{background:#E8622A;color:white;width:22px;height:22px;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+    .upload-area{border:2px dashed #CBD5E1;border-radius:8px;padding:28px;text-align:center;cursor:pointer;transition:all .2s}
+    .upload-area:hover,.upload-area.drag{border-color:#E8622A;background:#FFF8F5}
+    .upload-area input{display:none}
+    .upload-area .icon{font-size:28px;margin-bottom:8px}
+    .upload-area p{font-size:13px;color:#64748B}
+    .upload-area span{font-size:12px;color:#94A3B8}
+
+    #file-list{margin-top:10px}
+    .file-item{display:flex;align-items:center;gap:8px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:6px;padding:7px 12px;margin-top:6px;font-size:13px}
+    .file-item .rm{margin-left:auto;cursor:pointer;color:#94A3B8;font-size:16px;background:none;border:none}
+    .file-item .rm:hover{color:#E8622A}
+
+    .template-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .topt{border:2px solid #E2E8F0;border-radius:8px;padding:12px;cursor:pointer;transition:all .2s}
+    .topt:hover{border-color:#E8622A}
+    .topt.selected{border-color:#E8622A;background:#FFF8F5}
+    .topt input{display:none}
+    .topt .tn{font-size:12px;font-weight:600;color:#1B2A4A;margin-bottom:3px}
+    .topt .td{font-size:11px;color:#64748B}
+
+    #custom-area{display:none;margin-top:12px}
+    #custom-area textarea{width:100%;border:1px solid #E2E8F0;border-radius:8px;padding:12px;font-size:13px;color:#1a1a2e;resize:vertical;min-height:100px;font-family:inherit}
+    #custom-area textarea:focus{outline:none;border-color:#E8622A}
+    #custom-area p{font-size:12px;color:#94A3B8;margin-top:6px}
+
+    .proj-input{width:100%;border:1px solid #E2E8F0;border-radius:8px;padding:10px 14px;font-size:13px;color:#1a1a2e;margin-bottom:14px}
+    .proj-input:focus{outline:none;border-color:#E8622A}
+
+    button.primary{background:#E8622A;color:white;border:none;padding:12px 28px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;width:100%;transition:background .2s}
+    button.primary:hover{background:#C94E1E}
+    button.primary:disabled{background:#CBD5E1;cursor:not-allowed}
+
+    .loading{display:none;text-align:center;padding:28px}
+    .spinner{width:34px;height:34px;border:3px solid #E2E8F0;border-top-color:#E8622A;border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 10px}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    #result-card{display:none}
+    .result-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px}
+    .result-header h2{margin-bottom:0}
+    .export-btns{display:flex;gap:6px}
+    .ebtn{padding:6px 12px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;border:1.5px solid;background:white;transition:all .2s}
+    .ebtn.md{border-color:#0D9488;color:#0D9488}.ebtn.md:hover{background:#E1F5EE}
+    .ebtn.docx{border-color:#2563EB;color:#2563EB}.ebtn.docx:hover{background:#E6F1FB}
+    .ebtn.pdf{border-color:#E8622A;color:#E8622A}.ebtn.pdf:hover{background:#FFF8F5}
+
+    #report-content{background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:18px;font-size:13px;line-height:1.8;white-space:pre-wrap;max-height:480px;overflow-y:auto;color:#1a1a2e}
+
+    .error-msg{background:#FEF2F2;border:1px solid #FECACA;color:#B91C1C;border-radius:8px;padding:10px 14px;font-size:13px;display:none;margin-bottom:14px}
+    .info-badge{display:inline-block;background:#E1F5EE;color:#085041;font-size:11px;padding:3px 10px;border-radius:99px;margin-bottom:12px}
+
+    /* Histórico */
+    .hist-item{background:white;border:1px solid #E2E8F0;border-radius:10px;padding:16px;margin-bottom:12px}
+    .hist-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+    .hist-id{font-size:12px;font-family:monospace;color:#64748B}
+    .hist-tag{font-size:11px;font-weight:600;padding:2px 8px;border-radius:99px;background:#EFF6FF;color:#1D4ED8}
+    .hist-date{font-size:12px;color:#94A3B8}
+    .hist-btns{display:flex;gap:6px;margin-top:10px}
+    .hist-btn{padding:5px 12px;border-radius:6px;font-size:12px;cursor:pointer;border:1px solid #E2E8F0;background:#F8FAFC;color:#1B2A4A}
+    .hist-btn:hover{background:#E2E8F0}
+    .empty{text-align:center;color:#94A3B8;font-size:14px;padding:40px}
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div style="display:flex;align-items:center;gap:10px">
+      <span class="badge">MÓDULO 3</span>
+      <h1>Relatórios Inteligentes</h1>
+    </div>
+    <p>Plataforma de Documentação Inteligente — Mackenzie 2026</p>
+  </div>
+</header>
+
+<nav>
+  <button class="active" onclick="showPage('gerar',this)">Gerar Relatório</button>
+  <button onclick="showPage('historico',this)">Histórico</button>
+  <button onclick="showPage('api',this)">Integração API</button>
+</nav>
+
+<!-- ── PÁGINA: GERAR ── -->
+<div class="page active" id="page-gerar">
+
+  <div class="card">
+    <h2><span class="num">1</span> Arquivos do projeto</h2>
+    <div class="upload-area" id="upload-area" onclick="document.getElementById('file-input').click()">
+      <input type="file" id="file-input" multiple accept=".txt,.md,.py,.js,.json,.yaml,.yml,.csv,.html">
+      <div class="icon">📁</div>
+      <p>Clique para selecionar ou arraste os arquivos aqui</p>
+      <span>Aceita: .txt .md .py .js .json .yaml .csv .html</span>
+    </div>
+    <div id="file-list"></div>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">2</span> Template do relatório</h2>
+    <div class="template-grid">
+      <label class="topt selected" onclick="selectTemplate(this,'sprint_review')">
+        <input type="radio" name="tpl" value="sprint_review" checked>
+        <div class="tn">Sprint Review</div>
+        <div class="td">Encerramento de sprint</div>
+      </label>
+      <label class="topt" onclick="selectTemplate(this,'tecnico')">
+        <input type="radio" name="tpl" value="tecnico">
+        <div class="tn">Técnico</div>
+        <div class="td">Arquitetura e APIs</div>
+      </label>
+      <label class="topt" onclick="selectTemplate(this,'executivo')">
+        <input type="radio" name="tpl" value="executivo">
+        <div class="tn">Executivo</div>
+        <div class="td">Resumo para gestores</div>
+      </label>
+      <label class="topt" onclick="selectTemplate(this,'custom')">
+        <input type="radio" name="tpl" value="custom">
+        <div class="tn">Personalizado</div>
+        <div class="td">Você define o prompt</div>
+      </label>
+    </div>
+
+    <div id="custom-area">
+      <textarea id="prompt-custom" placeholder="Descreva como você quer que o relatório seja gerado. Ex: Gere um relatório focado em riscos técnicos, listando cada problema encontrado com sua gravidade e solução proposta..."></textarea>
+      <p>Escreva as instruções que a IA vai seguir para montar o seu relatório.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">3</span> Identificação do projeto</h2>
+    <input class="proj-input" id="projeto-id" type="text" placeholder="Nome ou ID do projeto (ex: modulo3-mackenzie)">
+    <div class="error-msg" id="error-msg"></div>
+    <button class="primary" id="btn-gerar" onclick="gerarRelatorio()">Gerar Relatório com IA</button>
+  </div>
+
+  <div class="loading" id="loading">
+    <div class="spinner"></div>
+    <p style="color:#64748B;font-size:14px">A IA está gerando seu relatório...</p>
+  </div>
+
+  <div class="card" id="result-card">
+    <div class="result-header">
+      <h2><span class="num" style="background:#0D9488">✓</span> Relatório gerado e salvo</h2>
+      <div class="export-btns">
+        <button class="ebtn md"   onclick="exportar('md')">⬇ Markdown</button>
+        <button class="ebtn docx" onclick="exportar('docx')">⬇ DOCX</button>
+        <button class="ebtn pdf"  onclick="exportar('pdf')">⬇ PDF</button>
+      </div>
+    </div>
+    <div id="report-content"></div>
+  </div>
+
+</div>
+
+<!-- ── PÁGINA: HISTÓRICO ── -->
+<div class="page" id="page-historico">
+  <div class="card">
+    <h2>Relatórios salvos</h2>
+    <span class="info-badge">Disponíveis para Módulos 4 e 5</span>
+    <div id="hist-list"><div class="empty">Carregando...</div></div>
+  </div>
+</div>
+
+<!-- ── PÁGINA: API ── -->
+<div class="page" id="page-api">
+  <div class="card">
+    <h2>Como outros módulos se integram</h2>
+    <p style="font-size:13px;color:#64748B;margin-bottom:16px">Use os endpoints abaixo para enviar dados e consumir relatórios.</p>
+
+    <div style="margin-bottom:16px">
+      <p style="font-size:12px;font-weight:600;color:#1B2A4A;margin-bottom:6px">Módulo 2 → envia arquivos aqui:</p>
+      <pre style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:14px;font-size:12px;overflow-x:auto">POST /reports/receive-file
+Content-Type: multipart/form-data
+
+file: &lt;arquivo&gt;
+projeto_id: "nome-do-projeto"
+
+# Ou via JSON:
+POST /reports/ingest
+{
+  "projeto_id": "nome-do-projeto",
+  "conteudo": "texto dos arquivos",
+  "template": "sprint_review"
+}</pre>
+    </div>
+
+    <div style="margin-bottom:16px">
+      <p style="font-size:12px;font-weight:600;color:#1B2A4A;margin-bottom:6px">Módulos 4 e 5 → consomem relatórios aqui:</p>
+      <pre style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:14px;font-size:12px;overflow-x:auto">GET /reports/list
+→ lista todos os relatórios prontos
+
+GET /reports/get/{id}
+→ retorna o conteúdo Markdown de um relatório específico</pre>
+    </div>
+
+    <div>
+      <p style="font-size:12px;font-weight:600;color:#1B2A4A;margin-bottom:6px">Documentação interativa:</p>
+      <a href="/docs" target="_blank" style="font-size:13px;color:#2563EB">Abrir /docs — FastAPI Swagger UI →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Pasta de outputs</h2>
+    <p style="font-size:13px;color:#64748B">Todos os relatórios gerados são salvos automaticamente em:</p>
+    <pre style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:12px;font-size:13px;margin-top:10px">app/storage/outputs/
+├── projeto_sprint_review_20260413_143022.md
+├── projeto_sprint_review_20260413_143022.json
+└── ...</pre>
+    <p style="font-size:12px;color:#94A3B8;margin-top:10px">Cada relatório tem um .md (conteúdo) e um .json (metadados com projeto_id, template, data e arquivos de origem).</p>
+  </div>
+</div>
+
+<script>
+  let arquivos = [];
+  let relatorioAtual = "";
+  let templateAtual = "sprint_review";
+
+  // Upload
+  document.getElementById("file-input").addEventListener("change", e => adicionarArquivos(e.target.files));
+  const area = document.getElementById("upload-area");
+  area.addEventListener("dragover",  e => { e.preventDefault(); area.classList.add("drag"); });
+  area.addEventListener("dragleave", ()  => area.classList.remove("drag"));
+  area.addEventListener("drop", e => { e.preventDefault(); area.classList.remove("drag"); adicionarArquivos(e.dataTransfer.files); });
+
+  function adicionarArquivos(novos) {
+    for (const f of novos) if (!arquivos.find(x => x.name === f.name)) arquivos.push(f);
+    renderLista();
+  }
+  function removerArquivo(nome) { arquivos = arquivos.filter(f => f.name !== nome); renderLista(); }
+  function renderLista() {
+    document.getElementById("file-list").innerHTML = arquivos.map(f => `
+      <div class="file-item">
+        <span>📄</span><span>${f.name}</span>
+        <span style="color:#94A3B8;font-size:12px">${(f.size/1024).toFixed(1)} KB</span>
+        <button class="rm" onclick="removerArquivo('${f.name}')">×</button>
+      </div>`).join("");
+  }
+
+  function selectTemplate(el, val) {
+    document.querySelectorAll(".topt").forEach(o => o.classList.remove("selected"));
+    el.classList.add("selected");
+    templateAtual = val;
+    document.getElementById("custom-area").style.display = val === "custom" ? "block" : "none";
+  }
+
+  function showPage(nome, btn) {
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.querySelectorAll("nav button").forEach(b => b.classList.remove("active"));
+    document.getElementById("page-" + nome).classList.add("active");
+    btn.classList.add("active");
+    if (nome === "historico") carregarHistorico();
+  }
+
+  async function gerarRelatorio() {
+    const erro = document.getElementById("error-msg");
+    erro.style.display = "none";
+    if (arquivos.length === 0) { erro.textContent = "Selecione ao menos um arquivo."; erro.style.display = "block"; return; }
+
+    const promptCustom = document.getElementById("prompt-custom").value;
+    if (templateAtual === "custom" && !promptCustom.trim()) {
+      erro.textContent = "Digite as instruções do seu template personalizado."; erro.style.display = "block"; return;
+    }
+
+    document.getElementById("btn-gerar").disabled = true;
+    document.getElementById("loading").style.display = "block";
+    document.getElementById("result-card").style.display = "none";
+
+    try {
+      const form = new FormData();
+      arquivos.forEach(f => form.append("files", f));
+      form.append("template", templateAtual);
+      form.append("prompt_custom", promptCustom);
+      form.append("projeto_id", document.getElementById("projeto-id").value || "projeto");
+      form.append("auto_salvar", "true");
+
+      const res = await fetch("/reports/generate", { method: "POST", body: form });
+      if (!res.ok) { const d = await res.json(); throw new Error(d.detail || "Erro ao gerar relatório."); }
+
+      const data = await res.json();
+      relatorioAtual = data.report;
+      document.getElementById("report-content").textContent = relatorioAtual;
+      document.getElementById("result-card").style.display = "block";
+      document.getElementById("result-card").scrollIntoView({ behavior: "smooth" });
+
+    } catch(e) {
+      erro.textContent = e.message; erro.style.display = "block";
+    } finally {
+      document.getElementById("btn-gerar").disabled = false;
+      document.getElementById("loading").style.display = "none";
+    }
+  }
+
+  async function exportar(formato) {
+    if (!relatorioAtual) return;
+    const form = new FormData();
+    form.append("report", relatorioAtual);
+    form.append("formato", formato);
+    const res  = await fetch("/reports/export", { method: "POST", body: form });
+    if (!res.ok) { alert("Erro ao exportar."); return; }
+    const blob = await res.blob();
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement("a");
+    a.href = url; a.download = `relatorio.${formato}`; a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  async function carregarHistorico() {
+    const lista = document.getElementById("hist-list");
+    try {
+      const res  = await fetch("/reports/list");
+      const data = await res.json();
+      if (!data.relatorios.length) { lista.innerHTML = '<div class="empty">Nenhum relatório gerado ainda.</div>'; return; }
+      lista.innerHTML = data.relatorios.map(r => `
+        <div class="hist-item">
+          <div class="hist-header">
+            <span class="hist-id">${r.id}</span>
+            <span class="hist-tag">${r.template}</span>
+          </div>
+          <div style="font-size:13px;color:#1B2A4A;font-weight:500">${r.projeto_id}</div>
+          <div class="hist-date">${new Date(r.gerado_em).toLocaleString("pt-BR")}</div>
+          <div class="hist-btns">
+            <button class="hist-btn" onclick="verRelatorio('${r.id}')">Ver conteúdo</button>
+            <button class="hist-btn" onclick="exportarSalvo('${r.id}','pdf')">⬇ PDF</button>
+            <button class="hist-btn" onclick="exportarSalvo('${r.id}','docx')">⬇ DOCX</button>
+          </div>
+        </div>`).join("");
+    } catch(e) {
+      lista.innerHTML = '<div class="empty">Erro ao carregar histórico.</div>';
+    }
+  }
+
+  async function verRelatorio(id) {
+    const res  = await fetch(`/reports/get/${id}`);
+    const data = await res.json();
+    alert(data.conteudo.substring(0, 800) + (data.conteudo.length > 800 ? "\n\n[...]" : ""));
+  }
+
+  async function exportarSalvo(id, formato) {
+    const res  = await fetch(`/reports/get/${id}`);
+    const data = await res.json();
+    const form = new FormData();
+    form.append("report", data.conteudo);
+    form.append("formato", formato);
+    const r2   = await fetch("/reports/export", { method: "POST", body: form });
+    const blob = await r2.blob();
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement("a");
+    a.href = url; a.download = `${id}.${formato}`; a.click();
+    URL.revokeObjectURL(url);
+  }
+</script>
+</body>
+</html>

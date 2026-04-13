@@ -1,0 +1,23 @@
+Gere uma documentação técnica completa com as seguintes seções obrigatórias:
+
+# Documentação Técnica - [Nome do Projeto]
+
+## 1. Visão Geral
+Descrição do sistema, propósito e contexto.
+
+## 2. Arquitetura
+- Tecnologias utilizadas
+- Componentes principais
+- Como os componentes se comunicam
+
+## 3. APIs e Endpoints
+Liste os endpoints disponíveis com método, rota e descrição.
+
+## 4. Instalação e Configuração
+Passo a passo para rodar o projeto localmente.
+
+## 5. Decisões Técnicas
+Justificativas para as principais escolhas de tecnologia e arquitetura.
+
+## 6. Pendências e Dívida Técnica
+O que ainda precisa ser feito ou melhorado.

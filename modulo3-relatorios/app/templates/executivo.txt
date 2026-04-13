@@ -1,0 +1,18 @@
+Gere um resumo executivo em linguagem não técnica, acessível para gestores e clientes. Use as seguintes seções:
+
+# Resumo Executivo - [Nome do Projeto]
+
+## 1. Status do Projeto
+Em uma frase, qual é o estado atual do projeto. Use linguagem simples, sem termos técnicos.
+
+## 2. Principais Conquistas
+O que foi realizado até agora que gera valor para o negócio.
+
+## 3. Próximas Entregas
+O que será entregue nas próximas semanas e qual o impacto esperado.
+
+## 4. Riscos e Pontos de Atenção
+Riscos identificados e como estão sendo mitigados.
+
+## 5. Indicadores
+Métricas de progresso relevantes para o cliente ou diretoria.
