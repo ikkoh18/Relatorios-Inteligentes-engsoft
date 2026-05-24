@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 3 — Relatórios Inteligentes</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      display: flex;
+      min-height: 100vh;
+    }
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 204px;
+      height: 100vh;
+      background: #fff;
+      border-right: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar-logo { padding: 19px 18px 22px; border-bottom: 1px solid #e5e7eb; }
+    .sidebar-logo h2 { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
+    .sidebar-logo p { font-size: 11px; color: #64748b; }
+    .menu { padding: 14px 11px; }
+    .menu a {
+      height: 38px;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 14px;
+      color: #475569;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .menu a:hover { background: #f8fafc; }
+    .menu a.active { background: #eef4ff; color: #4b63f4; }
+    .menu a svg { opacity: .65; flex-shrink: 0; }
+    .sidebar-bottom { margin-top: auto; padding: 13px 11px 18px; border-top: 1px solid #e5e7eb; }
+    .user-toggle {
+      width: 100%;
+      border: none;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 4px 10px;
+      border-radius: 7px;
+      text-align: left;
+    }
+    .profile-mini-avatar {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #7c4dff;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 800;
+    }
+    .user-info { flex: 1; }
+    .user-info strong { font-size: 10px; display: block; }
+    .user-info p { font-size: 10px; color: #64748b; }
+    .main {
+      margin-left: 204px;
+      flex: 1;
+      padding: 28px 32px;
+      max-width: calc(100vw - 204px);
+    }
+    .page-header { margin-bottom: 24px; }
+    .page-header h1 { font-size: 20px; font-weight: 700; }
+    .page-header p { font-size: 13px; color: #64748b; margin-top: 4px; }
+    .page { display: none; }
+    .page.active { display: block; }
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .card-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .step-num {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #4b63f4;
+      color: white;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .source-status {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      background: #f8fafc;
+      padding: 14px;
+      font-size: 12px;
+      color: #475569;
+      line-height: 1.6;
+    }
+    .source-status.ready { border-color: #86efac; background: #f0fdf4; color: #166534; }
+    .source-status.waiting { border-color: #fde68a; background: #fffbeb; color: #92400e; }
+    .source-files { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+    .file-pill {
+      border: 1px solid #dbe4f0;
+      background: white;
+      border-radius: 99px;
+      padding: 3px 8px;
+      font-size: 11px;
+      color: #475569;
+    }
+    .template-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .topt {
+      border: 1.5px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 12px;
+      cursor: pointer;
+    }
+    .topt:hover { border-color: #4b63f4; }
+    .topt.selected { border-color: #4b63f4; background: #eef4ff; }
+    .topt input { display: none; }
+    .tn { font-size: 12px; font-weight: 600; margin-bottom: 2px; }
+    .td { font-size: 11px; color: #64748b; }
+    #custom-area { display: none; margin-top: 10px; }
+    #custom-area textarea {
+      width: 100%;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 12px;
+      resize: vertical;
+      min-height: 90px;
+      font-family: inherit;
+    }
+    .form-label { font-size: 12px; font-weight: 500; color: #475569; margin-bottom: 6px; display: block; }
+    .form-input {
+      width: 100%;
+      border: 1px solid #e5e7eb;
+      border-radius: 7px;
+      padding: 8px 12px;
+      font-size: 12px;
+      color: #0f172a;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 190px; gap: 8px; margin-bottom: 14px; }
+    .btn-primary, .btn-secondary {
+      border: none;
+      padding: 10px 14px;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-primary { background: #4b63f4; color: white; width: 100%; }
+    .btn-primary:hover { background: #3b52e0; }
+    .btn-primary:disabled { background: #cbd5e1; cursor: not-allowed; }
+    .btn-secondary { background: #eef4ff; color: #4b63f4; border: 1px solid #dbe4ff; }
+    .loading { display: none; text-align: center; padding: 24px; }
+    .spinner {
+      width: 30px;
+      height: 30px;
+      border: 2.5px solid #e5e7eb;
+      border-top-color: #4b63f4;
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      margin: 0 auto 10px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #result-card { display: none; }
+    .result-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; flex-wrap: wrap; gap: 8px; }
+    .export-btns { display: flex; gap: 6px; }
+    .ebtn {
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid;
+      background: white;
+    }
+    .ebtn.md { border-color: #059669; color: #059669; }
+    .ebtn.docx { border-color: #2563eb; color: #2563eb; }
+    .ebtn.pdf { border-color: #dc2626; color: #dc2626; }
+    #report-content {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 12px;
+      line-height: 1.8;
+      white-space: pre-wrap;
+      max-height: 420px;
+      overflow-y: auto;
+    }
+    .error-msg {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #b91c1c;
+      border-radius: 7px;
+      padding: 10px 14px;
+      font-size: 12px;
+      display: none;
+      margin-bottom: 12px;
+    }
+    .hist-item {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 14px;
+      margin-bottom: 10px;
+    }
+    .hist-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+    .hist-id { font-size: 11px; font-family: monospace; color: #64748b; }
+    .tag { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 99px; background: #eef4ff; color: #4b63f4; }
+    .hist-proj { font-size: 13px; font-weight: 600; }
+    .hist-date { font-size: 11px; color: #94a3b8; }
+    .hist-actions { display: flex; gap: 6px; margin-top: 10px; }
+    .hist-btn {
+      padding: 4px 10px;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      font-size: 11px;
+      cursor: pointer;
+      background: #f8fafc;
+      color: #475569;
+    }
+    .empty { text-align: center; color: #94a3b8; font-size: 13px; padding: 32px; }
+    .api-block { margin-bottom: 20px; }
+    .api-label { font-size: 12px; font-weight: 600; color: #475569; margin-bottom: 8px; }
+    .api-badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; margin-right: 6px; }
+    .get { background: #dcfce7; color: #15803d; }
+    .post { background: #fef9c3; color: #854d0e; }
+    pre {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 14px;
+      font-size: 11px;
+      overflow-x: auto;
+      line-height: 1.7;
+    }
+    @media (max-width: 760px) {
+      .sidebar { position: static; width: 100%; height: auto; }
+      body { display: block; }
+      .main { margin-left: 0; max-width: none; padding: 20px; }
+      .template-grid, .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <h2>DocIA</h2>
+    <p>Documentação Inteligente</p>
+  </div>
+  <nav class="menu">
+    <a class="active" onclick="showPage('gerar', this)">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      <span>Gerar Relatório</span>
+    </a>
+    <a onclick="showPage('historico', this)">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span>Histórico</span>
+    </a>
+    <a onclick="showPage('api', this)">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <span>Integração API</span>
+    </a>
+  </nav>
+  <div class="sidebar-bottom">
+    <button class="user-toggle">
+      <div class="profile-mini-avatar">R</div>
+      <div class="user-info">
+        <strong>Roberto Ikkoh</strong>
+        <p>Módulo 3</p>
+      </div>
+    </button>
+  </div>
+</aside>
+
+<main class="main">
+  <div class="page active" id="page-gerar">
+    <div class="page-header">
+      <h1>Relatórios Inteligentes</h1>
+      <p>Gere relatórios a partir dos arquivos recebidos do Módulo 2</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="step-num">1</span> Fonte do projeto</div>
+      <label class="form-label">ID do projeto</label>
+      <div class="form-row">
+        <input class="form-input" id="projeto-id" type="text" placeholder="ex: modulo3-mackenzie">
+        <button class="btn-secondary" onclick="verificarFonte()">Verificar Módulo 2</button>
+      </div>
+      <div class="source-status waiting" id="source-status">
+        Aguardando os arquivos selecionados no Módulo 2.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="step-num">2</span> Template</div>
+      <div class="template-grid">
+        <label class="topt selected" onclick="selectTemplate(this,'sprint_review')">
+          <input type="radio" name="tpl" value="sprint_review" checked>
+          <div class="tn">Sprint Review</div>
+          <div class="td">Encerramento de sprint</div>
+        </label>
+        <label class="topt" onclick="selectTemplate(this,'tecnico')">
+          <input type="radio" name="tpl" value="tecnico">
+          <div class="tn">Técnico</div>
+          <div class="td">Arquitetura e APIs</div>
+        </label>
+        <label class="topt" onclick="selectTemplate(this,'executivo')">
+          <input type="radio" name="tpl" value="executivo">
+          <div class="tn">Executivo</div>
+          <div class="td">Resumo para gestores</div>
+        </label>
+        <label class="topt" onclick="selectTemplate(this,'custom')">
+          <input type="radio" name="tpl" value="custom">
+          <div class="tn">Personalizado</div>
+          <div class="td">Você define o prompt</div>
+        </label>
+      </div>
+      <div id="custom-area">
+        <textarea id="prompt-custom" placeholder="Descreva como quer que o relatório seja gerado..."></textarea>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="step-num">3</span> Gerar</div>
+      <div class="error-msg" id="error-msg"></div>
+      <button class="btn-primary" id="btn-gerar" onclick="gerarRelatorio()">Gerar Relatório com IA</button>
+    </div>
+
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      <p style="font-size:13px;color:#64748b">Gerando relatório...</p>
+    </div>
+
+    <div class="card" id="result-card">
+      <div class="result-header">
+        <div class="card-title" style="margin:0">
+          <span class="step-num" style="background:#059669">✓</span> Relatório gerado e salvo
+        </div>
+        <div class="export-btns">
+          <button class="ebtn md" onclick="exportar('md')">Markdown</button>
+          <button class="ebtn docx" onclick="exportar('docx')">DOCX</button>
+          <button class="ebtn pdf" onclick="exportar('pdf')">PDF</button>
+        </div>
+      </div>
+      <div id="report-content"></div>
+    </div>
+  </div>
+
+  <div class="page" id="page-historico">
+    <div class="page-header">
+      <h1>Histórico de Relatórios</h1>
+      <p>Relatórios disponíveis para os Módulos 4, 5 e 6</p>
+    </div>
+    <div id="hist-list"><div class="empty">Carregando...</div></div>
+  </div>
+
+  <div class="page" id="page-api">
+    <div class="page-header">
+      <h1>Integração API</h1>
+      <p>Contratos para conectar os outros módulos</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Módulo 2 → Módulo 3</div>
+      <div class="api-block">
+        <div class="api-label"><span class="api-badge post">POST</span>/reports/ingest-files</div>
+        <pre>multipart/form-data
+files:      &lt;arquivos selecionados pelo usuário&gt;
+projeto_id: "meu-projeto"
+template:   "sprint_review"</pre>
+      </div>
+      <div class="api-block">
+        <div class="api-label"><span class="api-badge post">POST</span>/reports/ingest</div>
+        <pre>{
+  "projeto_id": "meu-projeto",
+  "conteudo": "texto extraído dos arquivos selecionados",
+  "arquivos": ["requisitos.md", "ata-sprint.txt"],
+  "template": "sprint_review"
+}</pre>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Módulos 4, 5 e 6 → Módulo 3</div>
+      <div class="api-block">
+        <div class="api-label"><span class="api-badge get">GET</span>/reports/list</div>
+        <pre>Lista os relatórios gerados.</pre>
+      </div>
+      <div class="api-block">
+        <div class="api-label"><span class="api-badge get">GET</span>/reports/get/{id}</div>
+        <pre>Retorna o conteúdo Markdown de um relatório.</pre>
+      </div>
+      <div class="api-block">
+        <div class="api-label"><span class="api-badge get">GET</span>/health</div>
+        <pre>{ "status": "ok", "module": 3, "version": "1.0.0" }</pre>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  let relatorioAtual = "";
+  let templateAtual = "sprint_review";
+
+  function selectTemplate(el, val) {
+    document.querySelectorAll(".topt").forEach(o => o.classList.remove("selected"));
+    el.classList.add("selected");
+    templateAtual = val;
+    document.getElementById("custom-area").style.display = val === "custom" ? "block" : "none";
+  }
+
+  function showPage(nome, el) {
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.querySelectorAll(".menu a").forEach(a => a.classList.remove("active"));
+    document.getElementById("page-" + nome).classList.add("active");
+    el.classList.add("active");
+    if (nome === "historico") loadHistorico();
+  }
+
+  function projetoId() {
+    return document.getElementById("projeto-id").value.trim() || "projeto";
+  }
+
+  async function verificarFonte() {
+    const statusEl = document.getElementById("source-status");
+    statusEl.className = "source-status waiting";
+    statusEl.textContent = "Consultando dados recebidos do Módulo 2...";
+    try {
+      const res = await fetch(`/reports/project/${encodeURIComponent(projetoId())}/source`);
+      const data = await res.json();
+      if (!data.recebido) {
+        statusEl.className = "source-status waiting";
+        statusEl.textContent = "Ainda não há arquivos do Módulo 2 para este projeto.";
+        return;
+      }
+      const files = (data.arquivos || []).map(f => `<span class="file-pill">${f}</span>`).join("");
+      statusEl.className = "source-status ready";
+      statusEl.innerHTML = `Dados recebidos do Módulo 2 em ${new Date(data.recebido_em).toLocaleString("pt-BR")}.<div class="source-files">${files}</div>`;
+    } catch {
+      statusEl.className = "source-status waiting";
+      statusEl.textContent = "Não foi possível consultar o Módulo 3 agora.";
+    }
+  }
+
+  async function gerarRelatorio() {
+    const err = document.getElementById("error-msg");
+    const pc = document.getElementById("prompt-custom").value;
+    err.style.display = "none";
+    if (templateAtual === "custom" && !pc.trim()) {
+      err.textContent = "Digite as instruções do template personalizado.";
+      err.style.display = "block";
+      return;
+    }
+
+    document.getElementById("btn-gerar").disabled = true;
+    document.getElementById("loading").style.display = "block";
+    document.getElementById("result-card").style.display = "none";
+
+    try {
+      const res = await fetch("/reports/generate-from-project", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          projeto_id: projetoId(),
+          template: templateAtual,
+          prompt_custom: pc
+        })
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.detail || "Erro ao gerar relatório.");
+      relatorioAtual = data.report;
+      document.getElementById("report-content").textContent = relatorioAtual;
+      document.getElementById("result-card").style.display = "block";
+      document.getElementById("result-card").scrollIntoView({ behavior: "smooth" });
+      verificarFonte();
+    } catch (e) {
+      err.textContent = e.message;
+      err.style.display = "block";
+    } finally {
+      document.getElementById("btn-gerar").disabled = false;
+      document.getElementById("loading").style.display = "none";
+    }
+  }
+
+  async function exportar(fmt) {
+    if (!relatorioAtual) return;
+    const form = new FormData();
+    form.append("report", relatorioAtual);
+    form.append("formato", fmt);
+    const res = await fetch("/reports/export", { method: "POST", body: form });
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `relatorio.${fmt}`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  async function loadHistorico() {
+    const el = document.getElementById("hist-list");
+    try {
+      const data = await (await fetch("/reports/list")).json();
+      if (!data.relatorios.length) {
+        el.innerHTML = '<div class="empty">Nenhum relatório gerado ainda.</div>';
+        return;
+      }
+      el.innerHTML = data.relatorios.map(r => `
+        <div class="hist-item">
+          <div class="hist-row">
+            <span class="hist-id">${r.id}</span>
+            <span class="tag">${r.template}</span>
+          </div>
+          <div class="hist-proj">${r.projeto_id}</div>
+          <div class="hist-date">${new Date(r.gerado_em).toLocaleString("pt-BR")}</div>
+          <div class="hist-actions">
+            <button class="hist-btn" onclick="verRel('${r.id}')">Ver</button>
+            <button class="hist-btn" onclick="expSalvo('${r.id}','pdf')">PDF</button>
+            <button class="hist-btn" onclick="expSalvo('${r.id}','docx')">DOCX</button>
+          </div>
+        </div>`).join("");
+    } catch {
+      el.innerHTML = '<div class="empty">Erro ao carregar histórico.</div>';
+    }
+  }
+
+  async function verRel(id) {
+    const d = await (await fetch(`/reports/get/${id}`)).json();
+    alert(d.conteudo.substring(0, 800) + (d.conteudo.length > 800 ? "\n\n[...]" : ""));
+  }
+
+  async function expSalvo(id, fmt) {
+    const d = await (await fetch(`/reports/get/${id}`)).json();
+    relatorioAtual = d.conteudo;
+    exportar(fmt);
+  }
+</script>
+</body>
+</html>

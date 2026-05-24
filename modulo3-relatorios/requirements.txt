@@ -1,8 +1,0 @@
-fastapi
-uvicorn
-anthropic
-python-docx
-fpdf2
-markdown
-python-dotenv
-python-multipart

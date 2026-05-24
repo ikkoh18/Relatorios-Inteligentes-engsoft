@@ -1,0 +1,12 @@
+venv/
+.env
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+app/storage/inputs/*
+app/storage/outputs/*
+app/storage/processing/*
+!app/storage/inputs/.gitkeep
+!app/storage/outputs/.gitkeep
+!app/storage/processing/.gitkeep

@@ -1,4 +1,4 @@
-Gere uma documentação técnica completa com as seguintes seções obrigatórias:
+Gere uma documentação técnica completa com as seguintes seções:
 
 # Documentação Técnica - [Nome do Projeto]
 
@@ -6,18 +6,16 @@ Gere uma documentação técnica completa com as seguintes seções obrigatória
 Descrição do sistema, propósito e contexto.
 
 ## 2. Arquitetura
-- Tecnologias utilizadas
-- Componentes principais
-- Como os componentes se comunicam
+Tecnologias utilizadas e como os componentes se comunicam.
 
 ## 3. APIs e Endpoints
-Liste os endpoints disponíveis com método, rota e descrição.
+Endpoints disponíveis com método, rota e descrição.
 
 ## 4. Instalação e Configuração
 Passo a passo para rodar o projeto localmente.
 
 ## 5. Decisões Técnicas
-Justificativas para as principais escolhas de tecnologia e arquitetura.
+Justificativas para as principais escolhas.
 
 ## 6. Pendências e Dívida Técnica
 O que ainda precisa ser feito ou melhorado.

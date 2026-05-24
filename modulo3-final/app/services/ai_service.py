@@ -16,23 +16,8 @@ def carregar_template(nome: str) -> str:
         return "Gere um relatório estruturado e completo do projeto fornecido."
 
 
-def gerar_relatorio(
-    conteudo: str,
-    template_nome: str,
-    prompt_custom: str = ""
-) -> str:
-    """
-    Gera um relatório usando a OpenAI.
-
-    Se prompt_custom for preenchido, usa ele como instrução principal.
-    Caso contrário, carrega o template do arquivo correspondente.
-    """
-
-    # Se o usuário digitou um prompt próprio, usa ele
-    if prompt_custom.strip():
-        instrucoes = prompt_custom.strip()
-    else:
-        instrucoes = carregar_template(template_nome)
+def gerar_relatorio(conteudo: str, template_nome: str, prompt_custom: str = "") -> str:
+    instrucoes = prompt_custom.strip() if prompt_custom.strip() else carregar_template(template_nome)
 
     prompt = f"""Você é um redator técnico especializado em documentação de projetos de software.
 
