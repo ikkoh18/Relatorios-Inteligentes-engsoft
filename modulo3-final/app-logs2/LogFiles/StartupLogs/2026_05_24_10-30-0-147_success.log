@@ -1,0 +1,183 @@
+2026-05-24T19:48:14.0414593+00:00 ContainerStream:     __ __          __      __    _ __     
+2026-05-24T19:48:14.0503596+00:00 ContainerStream:    / //_/_  _ ____/ /_  __/ /   (_) /____ 
+2026-05-24T19:48:14.0503998+00:00 ContainerStream:   / ,< / / / / __  / / / / /   / / __/ _  
+2026-05-24T19:48:14.0504071+00:00 ContainerStream:  / /| / /_/ / /_/ / /_/ / /___/ / /_/  __/
+2026-05-24T19:48:14.0504127+00:00 ContainerStream: /_/ |_\__,_/\__,_/\__,_/_____/_/\__/\___/ 
+2026-05-24T19:48:14.0504192+00:00 ContainerStream: 
+2026-05-24T19:48:14.0505013+00:00 ContainerStream:                                           
+2026-05-24T19:48:14.0505116+00:00 ContainerStream: DEBUG CONSOLE | AZURE APP SERVICE ON LINUX
+2026-05-24T19:48:14.0505196+00:00 ContainerStream: 
+2026-05-24T19:48:14.0505287+00:00 ContainerStream: Documentation: http://aka.ms/webapp-linux
+2026-05-24T19:48:14.0505340+00:00 ContainerStream: Kudu Version : 20260420.5
+2026-05-24T19:48:14.0505395+00:00 ContainerStream: Commit       : 7a094e2df1cfed4581bd19068ff5e3be7c578796
+2026-05-24T19:48:14.0505448+00:00 ContainerStream: Instance Name: 10-30-0-147
+2026-05-24T19:48:14.0505569+00:00 ContainerStream: Instance Id  : 1b1f15bb56786a6bb8ba86082f436e509051d1089ba3891ef72c9800a4f23207
+2026-05-24T19:48:14.0505615+00:00 ContainerStream: 
+2026-05-24T19:48:15.6661445+00:00 ContainerStream: chown: changing ownership of '/temp': Operation not permitted
+2026-05-24T19:48:15.6921499+00:00 ContainerStream: chmod: changing permissions of '/temp': Operation not permitted
+2026-05-24T19:48:16.9430339+00:00 ContainerStream: Restarting OpenBSD Secure Shell server: sshd.
+2026-05-24T19:48:17.0042365+00:00 ContainerStream: node not running, starting node /opt/webssh/index.js
+2026-05-24T19:48:21.3025477+00:00 ContainerStream: Sun May 24 19:48:21 UTC 2026 running .net core
+2026-05-24T19:48:22.5742325+00:00 ContainerStream: Startup : 07.48.22.558001
+2026-05-24T19:48:22.6066884+00:00 ContainerStream: Configure Services : 07.48.22.606463
+2026-05-24T19:48:23.0032858+00:00 ContainerStream: Configure : 07.48.23.002867
+2026-05-24T19:48:23.3230718+00:00 ContainerStream: Setting Up Routes : 07.48.23.322778
+2026-05-24T19:48:23.3439034+00:00 ContainerStream: Exiting Configure : 07.48.23.343681
+2026-05-24T19:48:23.4476753+00:00 ContainerStream: warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+2026-05-24T19:48:23.4477800+00:00 ContainerStream:       No XML encryptor configured. Key {c4925304-698a-4691-92dc-7537ac460a38} may be persisted to storage in unencrypted form.
+2026-05-24T19:48:23.6126810+00:00 ContainerStream: Hosting environment: Production
+2026-05-24T19:48:23.6129596+00:00 ContainerStream: Content root path: /opt/Kudu
+2026-05-24T19:48:23.6174518+00:00 ContainerStream: Now listening on: http://0.0.0.0:8181
+2026-05-24T19:48:23.6175049+00:00 ContainerStream: Application started. Press Ctrl+C to shut down.
+2026-05-24T19:51:08.9111005+00:00 ContainerStream:     __ __          __      __    _ __     
+2026-05-24T19:51:08.9204127+00:00 ContainerStream:    / //_/_  _ ____/ /_  __/ /   (_) /____ 
+2026-05-24T19:51:08.9204276+00:00 ContainerStream:   / ,< / / / / __  / / / / /   / / __/ _  
+2026-05-24T19:51:08.9204665+00:00 ContainerStream:  / /| / /_/ / /_/ / /_/ / /___/ / /_/  __/
+2026-05-24T19:51:08.9204762+00:00 ContainerStream: /_/ |_\__,_/\__,_/\__,_/_____/_/\__/\___/ 
+2026-05-24T19:51:08.9204837+00:00 ContainerStream: 
+2026-05-24T19:51:08.9204891+00:00 ContainerStream:                                           
+2026-05-24T19:51:08.9204938+00:00 ContainerStream: DEBUG CONSOLE | AZURE APP SERVICE ON LINUX
+2026-05-24T19:51:08.9204980+00:00 ContainerStream: 
+2026-05-24T19:51:08.9205028+00:00 ContainerStream: Documentation: http://aka.ms/webapp-linux
+2026-05-24T19:51:08.9205068+00:00 ContainerStream: Kudu Version : 20260420.5
+2026-05-24T19:51:08.9205115+00:00 ContainerStream: Commit       : 7a094e2df1cfed4581bd19068ff5e3be7c578796
+2026-05-24T19:51:08.9205228+00:00 ContainerStream: Instance Name: 10-30-0-147
+2026-05-24T19:51:08.9205343+00:00 ContainerStream: Instance Id  : 1b1f15bb56786a6bb8ba86082f436e509051d1089ba3891ef72c9800a4f23207
+2026-05-24T19:51:08.9205463+00:00 ContainerStream: 
+2026-05-24T19:51:10.0303054+00:00 ContainerStream: chown: changing ownership of '/temp': Operation not permitted
+2026-05-24T19:51:10.0336268+00:00 ContainerStream: chmod: changing permissions of '/temp': Operation not permitted
+2026-05-24T19:51:11.4744624+00:00 ContainerStream: Restarting OpenBSD Secure Shell server: sshd.
+2026-05-24T19:51:11.5122999+00:00 ContainerStream: node not running, starting node /opt/webssh/index.js
+2026-05-24T19:51:13.7694869+00:00 ContainerStream: Sun May 24 19:51:13 UTC 2026 running .net core
+2026-05-24T19:51:14.1923303+00:00 ContainerStream: Startup : 07.51.14.187378
+2026-05-24T19:51:14.2014328+00:00 ContainerStream: Configure Services : 07.51.14.201084
+2026-05-24T19:51:14.3305864+00:00 ContainerStream: Configure : 07.51.14.330316
+2026-05-24T19:51:14.4569519+00:00 ContainerStream: Setting Up Routes : 07.51.14.456663
+2026-05-24T19:51:14.4678113+00:00 ContainerStream: Exiting Configure : 07.51.14.466415
+2026-05-24T19:51:14.5311846+00:00 ContainerStream: Hosting environment: Production
+2026-05-24T19:51:14.5312449+00:00 ContainerStream: Content root path: /opt/Kudu
+2026-05-24T19:51:14.5312512+00:00 ContainerStream: Now listening on: http://0.0.0.0:8181
+2026-05-24T19:51:14.5312577+00:00 ContainerStream: Application started. Press Ctrl+C to shut down.
+2026-05-24T19:54:53.9557047+00:00 ContainerStream:     __ __          __      __    _ __     
+2026-05-24T19:54:53.9558514+00:00 ContainerStream:    / //_/_  _ ____/ /_  __/ /   (_) /____ 
+2026-05-24T19:54:53.9558596+00:00 ContainerStream:   / ,< / / / / __  / / / / /   / / __/ _  
+2026-05-24T19:54:53.9558640+00:00 ContainerStream:  / /| / /_/ / /_/ / /_/ / /___/ / /_/  __/
+2026-05-24T19:54:53.9558675+00:00 ContainerStream: /_/ |_\__,_/\__,_/\__,_/_____/_/\__/\___/ 
+2026-05-24T19:54:53.9558721+00:00 ContainerStream: 
+2026-05-24T19:54:53.9558762+00:00 ContainerStream:                                           
+2026-05-24T19:54:53.9558816+00:00 ContainerStream: DEBUG CONSOLE | AZURE APP SERVICE ON LINUX
+2026-05-24T19:54:53.9558849+00:00 ContainerStream: 
+2026-05-24T19:54:53.9558886+00:00 ContainerStream: Documentation: http://aka.ms/webapp-linux
+2026-05-24T19:54:53.9558923+00:00 ContainerStream: Kudu Version : 20260420.5
+2026-05-24T19:54:53.9558959+00:00 ContainerStream: Commit       : 7a094e2df1cfed4581bd19068ff5e3be7c578796
+2026-05-24T19:54:53.9558997+00:00 ContainerStream: Instance Name: 10-30-0-147
+2026-05-24T19:54:53.9559067+00:00 ContainerStream: Instance Id  : 1b1f15bb56786a6bb8ba86082f436e509051d1089ba3891ef72c9800a4f23207
+2026-05-24T19:54:53.9559142+00:00 ContainerStream: 
+2026-05-24T19:54:54.7042336+00:00 ContainerStream: chown: changing ownership of '/temp': Operation not permitted
+2026-05-24T19:54:54.7138371+00:00 ContainerStream: chmod: changing permissions of '/temp': Operation not permitted
+2026-05-24T19:54:55.6279607+00:00 ContainerStream: Restarting OpenBSD Secure Shell server: sshd.
+2026-05-24T19:54:55.6859180+00:00 ContainerStream: node not running, starting node /opt/webssh/index.js
+2026-05-24T19:54:58.7153867+00:00 ContainerStream: Sun May 24 19:54:58 UTC 2026 running .net core
+2026-05-24T19:54:59.0830061+00:00 ContainerStream: Startup : 07.54.59.075533
+2026-05-24T19:54:59.0904566+00:00 ContainerStream: Configure Services : 07.54.59.088630
+2026-05-24T19:54:59.3265076+00:00 ContainerStream: Configure : 07.54.59.326266
+2026-05-24T19:54:59.5664227+00:00 ContainerStream: Setting Up Routes : 07.54.59.566229
+2026-05-24T19:54:59.5765090+00:00 ContainerStream: Exiting Configure : 07.54.59.575984
+2026-05-24T19:54:59.6724711+00:00 ContainerStream: Hosting environment: Production
+2026-05-24T19:54:59.6725560+00:00 ContainerStream: Content root path: /opt/Kudu
+2026-05-24T19:54:59.6728008+00:00 ContainerStream: Now listening on: http://0.0.0.0:8181
+2026-05-24T19:54:59.6730871+00:00 ContainerStream: Application started. Press Ctrl+C to shut down.
+2026-05-24T19:55:11.4403126+00:00 ContainerStatus: State: Starting, Action: EstablishingSiteNetworks, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-05-24T19:55:12.1719132+00:00 ContainerStatus: State: Starting, Action: StartingSiteContainers, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-05-24T19:55:12.1725906+00:00 ContainerStatus: Container start method called.
+2026-05-24T19:55:12.1809186+00:00 ContainerStatus: State: Starting, Action: PullingImage, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pulling image 10.1.0.5:13209/appsvc/python:3.11_20260504.4.tuxprod for docia-modulo3., DetailsLevel: INFO
+2026-05-24T19:55:12.1848533+00:00 ContainerStatus: Establishing network.
+2026-05-24T19:55:12.1855307+00:00 ContainerStatus: Pulling image: appsvc/python:3.11_20260504.4.tuxprod.
+2026-05-24T19:55:12.5282513+00:00 ContainerStatus: Container is starting.
+2026-05-24T19:55:12.5284242+00:00 ContainerStatus: State: Starting, Action: MountingVolumes, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Mounting volumes for docia-modulo3., DetailsLevel: INFO
+2026-05-24T19:55:12.5285899+00:00 ContainerStatus: Establishing user namespace if not established already.
+2026-05-24T19:55:12.5288518+00:00 ContainerStatus: Establishing network if not established already.
+2026-05-24T19:55:12.5291851+00:00 ContainerStatus: Mounting volumes.
+2026-05-24T19:55:12.5296340+00:00 ContainerStatus: Nested mountpoint 
+2026-05-24T19:55:12.5375224+00:00 ContainerStatus: Nested mountpoint volatile/logs
+2026-05-24T19:55:12.5456368+00:00 ContainerStatus: Nested mountpoint 
+2026-05-24T19:55:12.5687002+00:00 ContainerStatus: Nested mountpoint 
+2026-05-24T19:55:12.5756901+00:00 ContainerStatus: Nested mountpoint 
+2026-05-24T19:55:12.7087195+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Finished pulling container image and mounting volumes for docia-modulo3. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-05-24T19:55:12.7098862+00:00 ContainerStatus: Creating container.
+2026-05-24T19:55:12.7103707+00:00 ContainerStatus: Creating pipes for streaming container io.
+2026-05-24T19:55:12.7111233+00:00 ContainerStatus: Creating stdout named pipe at /podr/container/pipe/6b65d2841a37_docia-modulo3/stdout_858ef2d986bc44e9868ca0a07fb817d8.
+2026-05-24T19:55:12.7120806+00:00 ContainerStatus: Successfully created stdout named pipe at: /podr/container/pipe/6b65d2841a37_docia-modulo3/stdout_858ef2d986bc44e9868ca0a07fb817d8.
+2026-05-24T19:55:12.7125160+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/6b65d2841a37_docia-modulo3/stdout_858ef2d986bc44e9868ca0a07fb817d8 for reading in non-blocking mode.
+2026-05-24T19:55:12.7168944+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/6b65d2841a37_docia-modulo3/stdout_858ef2d986bc44e9868ca0a07fb817d8.
+2026-05-24T19:55:12.7178081+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/6b65d2841a37_docia-modulo3/stdout_858ef2d986bc44e9868ca0a07fb817d8.
+2026-05-24T19:55:12.7200179+00:00 ContainerStatus: Creating stderr named pipe at /podr/container/pipe/6b65d2841a37_docia-modulo3/stderr_430fe040adb14fa5841235dc6d09e3f8.
+2026-05-24T19:55:12.7209107+00:00 ContainerStatus: Successfully created stderr named pipe at: /podr/container/pipe/6b65d2841a37_docia-modulo3/stderr_430fe040adb14fa5841235dc6d09e3f8.
+2026-05-24T19:55:12.7211211+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/6b65d2841a37_docia-modulo3/stderr_430fe040adb14fa5841235dc6d09e3f8 for reading in non-blocking mode.
+2026-05-24T19:55:12.7215012+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/6b65d2841a37_docia-modulo3/stderr_430fe040adb14fa5841235dc6d09e3f8.
+2026-05-24T19:55:12.7217768+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/6b65d2841a37_docia-modulo3/stderr_430fe040adb14fa5841235dc6d09e3f8.
+2026-05-24T19:55:12.7224755+00:00 ContainerStatus: Creating container with image: appsvc/python:3.11_20260504.4.tuxprod from registry: 10.1.0.5:13209 and fully qualified image name: 10.1.0.5:13209/appsvc/python:3.11_20260504.4.tuxprod
+2026-05-24T19:55:13.9273874+00:00 ContainerStatus: Starting container: 6b65d2841a37_docia-modulo3.
+2026-05-24T19:55:13.9499970+00:00 ContainerStatus: Starting watchers and probes.
+2026-05-24T19:55:13.9503201+00:00 ContainerStatus: Starting metrics collection.
+2026-05-24T19:55:13.9532467+00:00 ContainerStatus: Container is running.
+2026-05-24T19:55:13.9533656+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container docia-modulo3 successfully created and is running., DetailsLevel: INFO
+2026-05-24T19:55:13.9908754+00:00 ContainerStatus: Container start method finished after 1818 ms.
+2026-05-24T19:55:13.9947098+00:00 ContainerStatus: State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container docia-modulo3 successfully created and is running., DetailsLevel: INFO
+2026-05-24T19:55:14.0032551+00:00 ContainerStatus: State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-05-24T19:55:14.1704666+00:00 ContainerStream:    _____                               
+2026-05-24T19:55:14.1708063+00:00 ContainerStream:   /  _  \ __________ _________   ____  
+2026-05-24T19:55:14.1708165+00:00 ContainerStream:  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-05-24T19:55:14.1708208+00:00 ContainerStream: /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-05-24T19:55:14.1708246+00:00 ContainerStream: \____|__  /_____ \____/ |__|    \___  >
+2026-05-24T19:55:14.1708296+00:00 ContainerStream:         \/      \/                  \/ 
+2026-05-24T19:55:14.1708371+00:00 ContainerStream: A P P   S E R V I C E   O N   L I N U X
+2026-05-24T19:55:14.1708407+00:00 ContainerStream: 
+2026-05-24T19:55:14.1708449+00:00 ContainerStream: Documentation     : https://aka.ms/webapp-linux
+2026-05-24T19:55:14.1708491+00:00 ContainerStream: Python quickstart : https://aka.ms/python-qs
+2026-05-24T19:55:14.1708528+00:00 ContainerStream: Python version    : 3.11.15
+2026-05-24T19:55:14.1708566+00:00 ContainerStream: Instance name     : 10-30-0-147
+2026-05-24T19:55:14.1708626+00:00 ContainerStream: Instance id       : 1b1f15bb56786a6bb8ba86082f436e509051d1089ba3891ef72c9800a4f23207
+2026-05-24T19:55:14.1708663+00:00 ContainerStream: 
+2026-05-24T19:55:14.1708700+00:00 ContainerStream: App port          : 8000
+2026-05-24T19:55:14.1708736+00:00 ContainerStream: Port selected by  : Default for this image
+2026-05-24T19:55:14.1708775+00:00 ContainerStream: (Learn more about the PORT appsetting https://aka.ms/webapp-python-settings)
+2026-05-24T19:55:14.1708813+00:00 ContainerStream: 
+2026-05-24T19:55:14.1710767+00:00 ContainerStream: Note: Any data outside '/home' is not persisted
+2026-05-24T19:55:14.1710857+00:00 ContainerStream: 
+2026-05-24T19:55:14.1710920+00:00 ContainerStream: ────────────────────────────────────────────────────────────────
+2026-05-24T19:55:14.1710966+00:00 ContainerStream:  Run 'apphelp' for available commands and aliases.
+2026-05-24T19:55:14.1711024+00:00 ContainerStream:  Run 'install-nettools' to install networking utilities.
+2026-05-24T19:55:14.1711073+00:00 ContainerStream: ────────────────────────────────────────────────────────────────
+2026-05-24T19:55:14.6762149+00:00 ContainerStream: Starting OpenBSD Secure Shell server: sshd.
+2026-05-24T19:55:14.6936222+00:00 ContainerStream: WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-05-24T19:55:14.7362218+00:00 ContainerStream: Updating certificates in /etc/ssl/certs...
+2026-05-24T19:55:22.9895066+00:00 ContainerStream: rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+2026-05-24T19:55:23.1073037+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2026-05-24T19:55:23.1184187+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2026-05-24T19:55:23.1676677+00:00 ContainerStream: 4 added, 0 removed; done.
+2026-05-24T19:55:23.1694104+00:00 ContainerStream: Running hooks in /etc/ca-certificates/update.d...
+2026-05-24T19:55:23.1934665+00:00 ContainerStream: done.
+2026-05-24T19:55:23.2200866+00:00 ContainerStream: CA certificates copied and updated successfully.
+2026-05-24T19:55:23.3210924+00:00 ContainerStream: App Command Line not configured, will attempt auto-detect
+2026-05-24T19:55:23.6342447+00:00 ContainerStream: Starting periodic command scheduler: cron.
+2026-05-24T19:55:23.6358679+00:00 ContainerStream: Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2026-05-24T19:55:23.7648378+00:00 ContainerStream: Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2026-05-24T19:55:23.7657008+00:00 ContainerStream: Could not find operation ID in manifest. Generating an operation id...
+2026-05-24T19:55:23.7689414+00:00 ContainerStream: Build Operation ID: a3326904-91d8-44bd-bceb-005b229616d5
+2026-05-24T19:55:24.2919969+00:00 ContainerStream: Oryx Version: 0.2.20260504.2, Commit: a776ec9f2fd225b305599e35443ecb3533bcdb26, ReleaseTagName: 20260504.2
+2026-05-24T19:55:24.3056300+00:00 ContainerStream: No framework detected; using default app from /opt/defaultsite
+2026-05-24T19:55:24.3067753+00:00 ContainerStream: Generating `gunicorn` command for 'application:app'
+2026-05-24T19:55:24.4303681+00:00 ContainerStream: Writing output script to '/opt/startup/startup.sh'
+2026-05-24T19:55:24.6124425+00:00 ContainerStream: WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2026-05-24T19:55:24.6124981+00:00 ContainerStream: WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2026-05-24T19:55:25.3830834+00:00 ContainerStream: [2026-05-24 19:55:25 +0000] [1872] [INFO] Starting gunicorn 24.1.1
+2026-05-24T19:55:25.4311964+00:00 ContainerStream: [2026-05-24 19:55:25 +0000] [1872] [INFO] Listening at: http://0.0.0.0:8000 (1872)
+2026-05-24T19:55:25.4313579+00:00 ContainerStream: [2026-05-24 19:55:25 +0000] [1872] [INFO] Using worker: sync
+2026-05-24T19:55:25.4409053+00:00 ContainerStream: [2026-05-24 19:55:25 +0000] [1882] [INFO] Booting worker with pid: 1882
+2026-05-24T19:55:26.5956970+00:00 ContainerStream: 169.254.129.1 - - [24/May/2026:19:55:26 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2026-05-24T19:55:26.6086651+00:00 ContainerStatus: Site startup probe succeeded after 12.5778495 seconds.
+2026-05-24T19:55:26.7501767+00:00 ContainerStatus: State: Starting, Action: WarmUpProbeSucceeded, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site startup probe succeeded after 12.5778495 seconds., DetailsLevel: INFO
+2026-05-24T19:55:27.1520876+00:00 ContainerStatus: Site started.
+2026-05-24T19:55:27.1522037+00:00 ContainerStatus: State: Started, Action: None, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site started at 05/24/2026 19:55:27 (UTC), DetailsLevel: INFO
+2026-05-24T19:55:27.1613247+00:00 ContainerStatus: Site is running with patch version PYTHON 3.11.15

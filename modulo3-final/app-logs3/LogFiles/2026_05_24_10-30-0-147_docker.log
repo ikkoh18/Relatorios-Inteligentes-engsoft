@@ -1,0 +1,382 @@
+2026-05-24T19:55:11.4403126Z State: Starting, Action: EstablishingSiteNetworks, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-05-24T19:55:12.1719132Z State: Starting, Action: StartingSiteContainers, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-05-24T19:55:12.1725906Z Container start method called.
+2026-05-24T19:55:12.1809186Z State: Starting, Action: PullingImage, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pulling image 10.1.0.5:13209/appsvc/python:3.11_20260504.4.tuxprod for docia-modulo3., DetailsLevel: INFO
+2026-05-24T19:55:12.1848533Z Establishing network.
+2026-05-24T19:55:12.1855307Z Pulling image: appsvc/python:3.11_20260504.4.tuxprod.
+2026-05-24T19:55:12.5282513Z Container is starting.
+2026-05-24T19:55:12.5284242Z State: Starting, Action: MountingVolumes, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Mounting volumes for docia-modulo3., DetailsLevel: INFO
+2026-05-24T19:55:12.5285899Z Establishing user namespace if not established already.
+2026-05-24T19:55:12.5288518Z Establishing network if not established already.
+2026-05-24T19:55:12.5291851Z Mounting volumes.
+2026-05-24T19:55:12.5296340Z Nested mountpoint 
+2026-05-24T19:55:12.5375224Z Nested mountpoint volatile/logs
+2026-05-24T19:55:12.5456368Z Nested mountpoint 
+2026-05-24T19:55:12.5687002Z Nested mountpoint 
+2026-05-24T19:55:12.5756901Z Nested mountpoint 
+2026-05-24T19:55:12.7087195Z State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Finished pulling container image and mounting volumes for docia-modulo3. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-05-24T19:55:12.7098862Z Creating container.
+2026-05-24T19:55:12.7103707Z Creating pipes for streaming container io.
+2026-05-24T19:55:12.7111233Z Creating stdout named pipe at /podr/container/pipe/6b65d2841a37_docia-modulo3/stdout_858ef2d986bc44e9868ca0a07fb817d8.
+2026-05-24T19:55:12.7120806Z Successfully created stdout named pipe at: /podr/container/pipe/6b65d2841a37_docia-modulo3/stdout_858ef2d986bc44e9868ca0a07fb817d8.
+2026-05-24T19:55:12.7125160Z Opening named pipe /podr/container/pipe/6b65d2841a37_docia-modulo3/stdout_858ef2d986bc44e9868ca0a07fb817d8 for reading in non-blocking mode.
+2026-05-24T19:55:12.7168944Z Successfully opened named pipe: /podr/container/pipe/6b65d2841a37_docia-modulo3/stdout_858ef2d986bc44e9868ca0a07fb817d8.
+2026-05-24T19:55:12.7178081Z Successfully removed non-blocking flag from /podr/container/pipe/6b65d2841a37_docia-modulo3/stdout_858ef2d986bc44e9868ca0a07fb817d8.
+2026-05-24T19:55:12.7200179Z Creating stderr named pipe at /podr/container/pipe/6b65d2841a37_docia-modulo3/stderr_430fe040adb14fa5841235dc6d09e3f8.
+2026-05-24T19:55:12.7209107Z Successfully created stderr named pipe at: /podr/container/pipe/6b65d2841a37_docia-modulo3/stderr_430fe040adb14fa5841235dc6d09e3f8.
+2026-05-24T19:55:12.7211211Z Opening named pipe /podr/container/pipe/6b65d2841a37_docia-modulo3/stderr_430fe040adb14fa5841235dc6d09e3f8 for reading in non-blocking mode.
+2026-05-24T19:55:12.7215012Z Successfully opened named pipe: /podr/container/pipe/6b65d2841a37_docia-modulo3/stderr_430fe040adb14fa5841235dc6d09e3f8.
+2026-05-24T19:55:12.7217768Z Successfully removed non-blocking flag from /podr/container/pipe/6b65d2841a37_docia-modulo3/stderr_430fe040adb14fa5841235dc6d09e3f8.
+2026-05-24T19:55:12.7224755Z Creating container with image: appsvc/python:3.11_20260504.4.tuxprod from registry: 10.1.0.5:13209 and fully qualified image name: 10.1.0.5:13209/appsvc/python:3.11_20260504.4.tuxprod
+2026-05-24T19:55:13.9273874Z Starting container: 6b65d2841a37_docia-modulo3.
+2026-05-24T19:55:13.9499970Z Starting watchers and probes.
+2026-05-24T19:55:13.9503201Z Starting metrics collection.
+2026-05-24T19:55:13.9532467Z Container is running.
+2026-05-24T19:55:13.9533656Z State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container docia-modulo3 successfully created and is running., DetailsLevel: INFO
+2026-05-24T19:55:13.9908754Z Container start method finished after 1818 ms.
+2026-05-24T19:55:13.9947098Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container docia-modulo3 successfully created and is running., DetailsLevel: INFO
+2026-05-24T19:55:14.0032551Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-05-24T19:55:26.6086651Z Site startup probe succeeded after 12.5778495 seconds.
+2026-05-24T19:55:26.7501767Z State: Starting, Action: WarmUpProbeSucceeded, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site startup probe succeeded after 12.5778495 seconds., DetailsLevel: INFO
+2026-05-24T19:55:27.1520876Z Site started.
+2026-05-24T19:55:27.1522037Z State: Started, Action: None, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site started at 05/24/2026 19:55:27 (UTC), DetailsLevel: INFO
+2026-05-24T19:55:27.1613247Z Site is running with patch version PYTHON 3.11.15
+2026-05-24T19:56:36.4408589Z State: Starting, Action: EstablishingSiteNetworks, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-05-24T19:56:37.2585978Z State: Starting, Action: StartingSiteContainers, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-05-24T19:56:37.2588230Z Container start method called.
+2026-05-24T19:56:37.2589610Z State: Starting, Action: PullingImage, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pulling image 10.1.0.4:13209/appsvc/python:3.11_20260504.4.tuxprod for docia-modulo3., DetailsLevel: INFO
+2026-05-24T19:56:37.2624754Z Establishing network.
+2026-05-24T19:56:37.2626797Z Pulling image: appsvc/python:3.11_20260504.4.tuxprod.
+2026-05-24T19:56:38.6634699Z Image appsvc/python:3.11_20260504.4.tuxprod is pulled from registry 10.1.0.4:13209
+2026-05-24T19:56:38.6637073Z Container is starting.
+2026-05-24T19:56:38.6638424Z State: Starting, Action: MountingVolumes, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Mounting volumes for docia-modulo3., DetailsLevel: INFO
+2026-05-24T19:56:38.6639870Z Establishing user namespace if not established already.
+2026-05-24T19:56:38.6641232Z Establishing network if not established already.
+2026-05-24T19:56:38.6643241Z Mounting volumes.
+2026-05-24T19:56:38.6647581Z Nested mountpoint 
+2026-05-24T19:56:38.6686976Z Nested mountpoint volatile/logs
+2026-05-24T19:56:38.6908682Z Nested mountpoint 
+2026-05-24T19:56:38.6962126Z Nested mountpoint 
+2026-05-24T19:56:38.6970127Z Nested mountpoint 
+2026-05-24T19:56:39.2661590Z State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Finished pulling container image and mounting volumes for docia-modulo3. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-05-24T19:56:39.2663082Z Creating container.
+2026-05-24T19:56:39.2664550Z Creating pipes for streaming container io.
+2026-05-24T19:56:39.2666214Z Creating stdout named pipe at /podr/container/pipe/dcfce3f262c3_docia-modulo3/stdout_78f2331081df4b5ebd5fe7e510a358e9.
+2026-05-24T19:56:39.2668704Z Successfully created stdout named pipe at: /podr/container/pipe/dcfce3f262c3_docia-modulo3/stdout_78f2331081df4b5ebd5fe7e510a358e9.
+2026-05-24T19:56:39.2673459Z Opening named pipe /podr/container/pipe/dcfce3f262c3_docia-modulo3/stdout_78f2331081df4b5ebd5fe7e510a358e9 for reading in non-blocking mode.
+2026-05-24T19:56:39.2674850Z Successfully opened named pipe: /podr/container/pipe/dcfce3f262c3_docia-modulo3/stdout_78f2331081df4b5ebd5fe7e510a358e9.
+2026-05-24T19:56:39.2676065Z Successfully removed non-blocking flag from /podr/container/pipe/dcfce3f262c3_docia-modulo3/stdout_78f2331081df4b5ebd5fe7e510a358e9.
+2026-05-24T19:56:39.2677734Z Creating stderr named pipe at /podr/container/pipe/dcfce3f262c3_docia-modulo3/stderr_88ef0dbd2a714c338afd0c61e019c2bb.
+2026-05-24T19:56:39.2679434Z Successfully created stderr named pipe at: /podr/container/pipe/dcfce3f262c3_docia-modulo3/stderr_88ef0dbd2a714c338afd0c61e019c2bb.
+2026-05-24T19:56:39.2681563Z Opening named pipe /podr/container/pipe/dcfce3f262c3_docia-modulo3/stderr_88ef0dbd2a714c338afd0c61e019c2bb for reading in non-blocking mode.
+2026-05-24T19:56:39.2682980Z Successfully opened named pipe: /podr/container/pipe/dcfce3f262c3_docia-modulo3/stderr_88ef0dbd2a714c338afd0c61e019c2bb.
+2026-05-24T19:56:39.2683948Z Successfully removed non-blocking flag from /podr/container/pipe/dcfce3f262c3_docia-modulo3/stderr_88ef0dbd2a714c338afd0c61e019c2bb.
+2026-05-24T19:56:39.2685307Z Creating container with image: appsvc/python:3.11_20260504.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/python:3.11_20260504.4.tuxprod
+2026-05-24T19:56:39.9229978Z Starting container: dcfce3f262c3_docia-modulo3.
+2026-05-24T19:56:39.9456809Z Starting watchers and probes.
+2026-05-24T19:56:39.9459132Z Starting metrics collection.
+2026-05-24T19:56:39.9460729Z Container is running.
+2026-05-24T19:56:39.9461671Z State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container docia-modulo3 successfully created and is running., DetailsLevel: INFO
+2026-05-24T19:56:40.4374436Z Container start method finished after 3178 ms.
+2026-05-24T19:56:40.4376490Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container docia-modulo3 successfully created and is running., DetailsLevel: INFO
+2026-05-24T19:56:40.4376816Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-05-24T19:56:55.2228267Z Container has finished running with exit code: 1.
+2026-05-24T19:56:55.2314507Z Container is terminating. Grace period: 5 seconds.
+2026-05-24T19:56:55.2321398Z Stop and delete container. Retry count = 0
+2026-05-24T19:56:55.2322949Z Stopping container: dcfce3f262c3_docia-modulo3.
+2026-05-24T19:56:55.4104923Z Deleting container: dcfce3f262c3_docia-modulo3. Retry count = 0
+2026-05-24T19:56:55.7548049Z Container spec TerminationMessagePolicy  path 
+2026-05-24T19:56:55.7550955Z Container is terminated. Total time elapsed: 523 ms.
+2026-05-24T19:56:55.7568629Z Site container: docia-modulo3 terminated during site startup.
+2026-05-24T19:56:55.7800416Z State: Stopping, Action: CancellingStartup, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T19:56:55.8036077Z Site startup probe failed after 15.329286 seconds.
+2026-05-24T19:56:55.9915086Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:56:55, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T19:56:56.0134661Z Failed to start site. Revert by stopping site.
+2026-05-24T19:56:56.0145718Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:56:55, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T19:56:56.0252734Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:56:55, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T19:56:56.0253694Z Site: docia-modulo3 stopped.
+2026-05-24T19:57:16.9081705Z State: Stopping, Action: StoppingSite, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site started at 05/24/2026 19:55:27 (UTC), DetailsLevel: INFO
+2026-05-24T19:57:16.9393990Z State: Stopping, Action: StoppingSiteContainers, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site started at 05/24/2026 19:55:27 (UTC), DetailsLevel: INFO
+2026-05-24T19:57:16.9395954Z Container is terminating. Grace period: 5 seconds.
+2026-05-24T19:57:19.4969441Z Stop and delete container. Retry count = 0
+2026-05-24T19:57:19.4973452Z Stopping container: 6b65d2841a37_docia-modulo3.
+2026-05-24T19:57:26.1684945Z Deleting container: 6b65d2841a37_docia-modulo3. Retry count = 0
+2026-05-24T19:57:28.6107474Z Container spec TerminationMessagePolicy  path 
+2026-05-24T19:57:28.6367369Z Container is terminated. Total time elapsed: 10773 ms.
+2026-05-24T19:57:28.6369125Z Site: docia-modulo3 stopped.
+2026-05-24T19:59:22.8538860Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:56:55, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 05/24/2026 19:56:56 (UTC), DetailsLevel: ERR
+2026-05-24T19:59:23.3118537Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:56:55, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 05/24/2026 19:56:56 (UTC), DetailsLevel: ERR
+2026-05-24T19:59:23.3125341Z Container start method called.
+2026-05-24T19:59:23.3128976Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:56:55, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/python:3.11_20260504.4.tuxprod for docia-modulo3., DetailsLevel: INFO
+2026-05-24T19:59:23.3134259Z Establishing network.
+2026-05-24T19:59:23.3141910Z Pulling image: appsvc/python:3.11_20260504.4.tuxprod.
+2026-05-24T19:59:23.7615555Z Container is starting.
+2026-05-24T19:59:23.7616929Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:56:55, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for docia-modulo3., DetailsLevel: INFO
+2026-05-24T19:59:23.7618254Z Establishing user namespace if not established already.
+2026-05-24T19:59:23.7619211Z Establishing network if not established already.
+2026-05-24T19:59:23.7620057Z Mounting volumes.
+2026-05-24T19:59:23.7621599Z Nested mountpoint 
+2026-05-24T19:59:23.7752309Z Nested mountpoint volatile/logs
+2026-05-24T19:59:23.7832707Z Nested mountpoint 
+2026-05-24T19:59:23.7843892Z Nested mountpoint 
+2026-05-24T19:59:23.7929038Z Nested mountpoint 
+2026-05-24T19:59:23.9400753Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:56:55, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for docia-modulo3. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-05-24T19:59:23.9410216Z Creating container.
+2026-05-24T19:59:23.9412459Z Creating pipes for streaming container io.
+2026-05-24T19:59:23.9425859Z Creating stdout named pipe at /podr/container/pipe/fd2e0d93ace7_docia-modulo3/stdout_52e944531bba4314b556ff0b570d13a8.
+2026-05-24T19:59:23.9455273Z Successfully created stdout named pipe at: /podr/container/pipe/fd2e0d93ace7_docia-modulo3/stdout_52e944531bba4314b556ff0b570d13a8.
+2026-05-24T19:59:23.9460610Z Opening named pipe /podr/container/pipe/fd2e0d93ace7_docia-modulo3/stdout_52e944531bba4314b556ff0b570d13a8 for reading in non-blocking mode.
+2026-05-24T19:59:23.9468226Z Successfully opened named pipe: /podr/container/pipe/fd2e0d93ace7_docia-modulo3/stdout_52e944531bba4314b556ff0b570d13a8.
+2026-05-24T19:59:23.9475134Z Successfully removed non-blocking flag from /podr/container/pipe/fd2e0d93ace7_docia-modulo3/stdout_52e944531bba4314b556ff0b570d13a8.
+2026-05-24T19:59:23.9495853Z Creating stderr named pipe at /podr/container/pipe/fd2e0d93ace7_docia-modulo3/stderr_7baa6b82f0a44a81b1bc00ada8717696.
+2026-05-24T19:59:23.9506228Z Successfully created stderr named pipe at: /podr/container/pipe/fd2e0d93ace7_docia-modulo3/stderr_7baa6b82f0a44a81b1bc00ada8717696.
+2026-05-24T19:59:23.9513357Z Opening named pipe /podr/container/pipe/fd2e0d93ace7_docia-modulo3/stderr_7baa6b82f0a44a81b1bc00ada8717696 for reading in non-blocking mode.
+2026-05-24T19:59:23.9516651Z Successfully opened named pipe: /podr/container/pipe/fd2e0d93ace7_docia-modulo3/stderr_7baa6b82f0a44a81b1bc00ada8717696.
+2026-05-24T19:59:23.9518508Z Successfully removed non-blocking flag from /podr/container/pipe/fd2e0d93ace7_docia-modulo3/stderr_7baa6b82f0a44a81b1bc00ada8717696.
+2026-05-24T19:59:23.9543609Z Creating container with image: appsvc/python:3.11_20260504.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/python:3.11_20260504.4.tuxprod
+2026-05-24T19:59:24.4140850Z Starting container: fd2e0d93ace7_docia-modulo3.
+2026-05-24T19:59:24.4452212Z Starting watchers and probes.
+2026-05-24T19:59:24.4511213Z Starting metrics collection.
+2026-05-24T19:59:24.4514782Z Container is running.
+2026-05-24T19:59:24.4515517Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:56:55, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container docia-modulo3 successfully created and is running., DetailsLevel: INFO
+2026-05-24T19:59:24.5097459Z Container start method finished after 1197 ms.
+2026-05-24T19:59:24.5154322Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:56:55, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container docia-modulo3 successfully created and is running., DetailsLevel: INFO
+2026-05-24T19:59:24.5154739Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:56:55, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-05-24T19:59:51.7501968Z Container has finished running with exit code: 3.
+2026-05-24T19:59:51.7503461Z Container is terminating. Grace period: 5 seconds.
+2026-05-24T19:59:51.7593085Z Stop and delete container. Retry count = 0
+2026-05-24T19:59:51.7598620Z Stopping container: fd2e0d93ace7_docia-modulo3.
+2026-05-24T19:59:51.9181976Z Deleting container: fd2e0d93ace7_docia-modulo3. Retry count = 0
+2026-05-24T19:59:52.7295200Z Container spec TerminationMessagePolicy  path 
+2026-05-24T19:59:52.7317123Z Container is terminated. Total time elapsed: 980 ms.
+2026-05-24T19:59:52.7342145Z Site container: docia-modulo3 terminated during site startup.
+2026-05-24T19:59:52.7607499Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:56:55, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T19:59:52.7960327Z Site startup probe failed after 28.2605087 seconds.
+2026-05-24T19:59:52.9081082Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:59:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T19:59:52.9365213Z Failed to start site. Revert by stopping site.
+2026-05-24T19:59:52.9438777Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:59:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T19:59:52.9457354Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:59:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T19:59:52.9457583Z Site: docia-modulo3 stopped.
+2026-05-24T19:59:52.9484262Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:59:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T19:59:53.1688544Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:59:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T19:59:53.3198605Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:59:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 05/24/2026 19:59:53 (UTC), DetailsLevel: ERR
+2026-05-24T19:59:53.6753906Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:59:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 05/24/2026 19:59:53 (UTC), DetailsLevel: ERR
+2026-05-24T20:01:13.3315831Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:59:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 05/24/2026 19:59:53 (UTC), DetailsLevel: ERR
+2026-05-24T20:01:14.3476382Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:59:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 05/24/2026 19:59:53 (UTC), DetailsLevel: ERR
+2026-05-24T20:01:14.3478513Z Container start method called.
+2026-05-24T20:01:14.3481084Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:59:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/python:3.11_20260504.4.tuxprod for docia-modulo3., DetailsLevel: INFO
+2026-05-24T20:01:14.3483864Z Establishing network.
+2026-05-24T20:01:14.3485664Z Pulling image: appsvc/python:3.11_20260504.4.tuxprod.
+2026-05-24T20:01:15.0290258Z Container is starting.
+2026-05-24T20:01:15.0293733Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:59:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for docia-modulo3., DetailsLevel: INFO
+2026-05-24T20:01:15.0295340Z Establishing user namespace if not established already.
+2026-05-24T20:01:15.0298524Z Establishing network if not established already.
+2026-05-24T20:01:15.0299899Z Mounting volumes.
+2026-05-24T20:01:15.0303751Z Nested mountpoint 
+2026-05-24T20:01:15.0418908Z Nested mountpoint volatile/logs
+2026-05-24T20:01:15.0564295Z Nested mountpoint 
+2026-05-24T20:01:15.0573347Z Nested mountpoint 
+2026-05-24T20:01:15.0579901Z Nested mountpoint 
+2026-05-24T20:01:15.1913360Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:59:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for docia-modulo3. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-05-24T20:01:15.1916188Z Creating container.
+2026-05-24T20:01:15.1919592Z Creating pipes for streaming container io.
+2026-05-24T20:01:15.1922009Z Creating stdout named pipe at /podr/container/pipe/81694e70f8b5_docia-modulo3/stdout_f67690cd093f4d1abc89bd58258a23f4.
+2026-05-24T20:01:15.1933476Z Successfully created stdout named pipe at: /podr/container/pipe/81694e70f8b5_docia-modulo3/stdout_f67690cd093f4d1abc89bd58258a23f4.
+2026-05-24T20:01:15.1936454Z Opening named pipe /podr/container/pipe/81694e70f8b5_docia-modulo3/stdout_f67690cd093f4d1abc89bd58258a23f4 for reading in non-blocking mode.
+2026-05-24T20:01:15.1938307Z Successfully opened named pipe: /podr/container/pipe/81694e70f8b5_docia-modulo3/stdout_f67690cd093f4d1abc89bd58258a23f4.
+2026-05-24T20:01:15.1940689Z Successfully removed non-blocking flag from /podr/container/pipe/81694e70f8b5_docia-modulo3/stdout_f67690cd093f4d1abc89bd58258a23f4.
+2026-05-24T20:01:15.1942894Z Creating stderr named pipe at /podr/container/pipe/81694e70f8b5_docia-modulo3/stderr_3861ad18183c4a72a9bf042bce9dad1a.
+2026-05-24T20:01:15.1946147Z Successfully created stderr named pipe at: /podr/container/pipe/81694e70f8b5_docia-modulo3/stderr_3861ad18183c4a72a9bf042bce9dad1a.
+2026-05-24T20:01:15.1947555Z Opening named pipe /podr/container/pipe/81694e70f8b5_docia-modulo3/stderr_3861ad18183c4a72a9bf042bce9dad1a for reading in non-blocking mode.
+2026-05-24T20:01:15.1952971Z Successfully opened named pipe: /podr/container/pipe/81694e70f8b5_docia-modulo3/stderr_3861ad18183c4a72a9bf042bce9dad1a.
+2026-05-24T20:01:15.1956284Z Successfully removed non-blocking flag from /podr/container/pipe/81694e70f8b5_docia-modulo3/stderr_3861ad18183c4a72a9bf042bce9dad1a.
+2026-05-24T20:01:15.1974242Z Creating container with image: appsvc/python:3.11_20260504.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/python:3.11_20260504.4.tuxprod
+2026-05-24T20:01:16.0225813Z Starting container: 81694e70f8b5_docia-modulo3.
+2026-05-24T20:01:16.0506029Z Starting watchers and probes.
+2026-05-24T20:01:16.0508725Z Starting metrics collection.
+2026-05-24T20:01:16.0521978Z Container is running.
+2026-05-24T20:01:16.0540024Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:59:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container docia-modulo3 successfully created and is running., DetailsLevel: INFO
+2026-05-24T20:01:16.0748488Z Container start method finished after 1726 ms.
+2026-05-24T20:01:16.0755370Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:59:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container docia-modulo3 successfully created and is running., DetailsLevel: INFO
+2026-05-24T20:01:16.0755800Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:59:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-05-24T20:01:30.3032105Z Container has finished running with exit code: 3.
+2026-05-24T20:01:30.3033823Z Container is terminating. Grace period: 5 seconds.
+2026-05-24T20:01:30.3192333Z Stop and delete container. Retry count = 0
+2026-05-24T20:01:30.3196463Z Stopping container: 81694e70f8b5_docia-modulo3.
+2026-05-24T20:01:30.3572380Z Deleting container: 81694e70f8b5_docia-modulo3. Retry count = 0
+2026-05-24T20:01:31.0080999Z Container spec TerminationMessagePolicy  path 
+2026-05-24T20:01:31.0088420Z Container is terminated. Total time elapsed: 689 ms.
+2026-05-24T20:01:31.0095639Z Site container: docia-modulo3 terminated during site startup.
+2026-05-24T20:01:31.0143463Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 19:59:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:01:31.0435366Z Site startup probe failed after 14.9674891 seconds.
+2026-05-24T20:01:31.1180197Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:01:31.1218396Z Failed to start site. Revert by stopping site.
+2026-05-24T20:01:31.1392620Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:01:31.1396737Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:01:31.1396941Z Site: docia-modulo3 stopped.
+2026-05-24T20:01:31.1460934Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:01:31.3433924Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:01:31.4282344Z Site: docia-modulo3 will be blocked for 1 minutes till 05/24/2026 20:02:31
+2026-05-24T20:01:31.4284380Z State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site: docia-modulo3 will be blocked for 1 minutes till 05/24/2026 20:02:31, DetailsLevel: WARN
+2026-05-24T20:01:31.4616835Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 05/24/2026 20:01:31 (UTC), DetailsLevel: WARN
+2026-05-24T20:01:31.7169844Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 05/24/2026 20:01:31 (UTC), DetailsLevel: WARN
+2026-05-24T20:02:31.4347451Z Site: docia-modulo3 is unblocked.
+2026-05-24T20:04:00.9436546Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 05/24/2026 20:01:31 (UTC), DetailsLevel: WARN
+2026-05-24T20:04:01.6435752Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 05/24/2026 20:01:31 (UTC), DetailsLevel: WARN
+2026-05-24T20:04:01.6437991Z Container start method called.
+2026-05-24T20:04:01.6438850Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/python:3.11_20260504.4.tuxprod for docia-modulo3., DetailsLevel: INFO
+2026-05-24T20:04:01.6441453Z Establishing network.
+2026-05-24T20:04:01.6443197Z Pulling image: appsvc/python:3.11_20260504.4.tuxprod.
+2026-05-24T20:04:02.1142822Z Container is starting.
+2026-05-24T20:04:02.1144067Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for docia-modulo3., DetailsLevel: INFO
+2026-05-24T20:04:02.1145220Z Establishing user namespace if not established already.
+2026-05-24T20:04:02.1146411Z Establishing network if not established already.
+2026-05-24T20:04:02.1147647Z Mounting volumes.
+2026-05-24T20:04:02.1161053Z Nested mountpoint 
+2026-05-24T20:04:02.1279305Z Nested mountpoint volatile/logs
+2026-05-24T20:04:02.1381293Z Nested mountpoint 
+2026-05-24T20:04:02.1489249Z Nested mountpoint 
+2026-05-24T20:04:02.1619673Z Nested mountpoint 
+2026-05-24T20:04:02.2883349Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for docia-modulo3. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-05-24T20:04:02.2886013Z Creating container.
+2026-05-24T20:04:02.2887398Z Creating pipes for streaming container io.
+2026-05-24T20:04:02.2888762Z Creating stdout named pipe at /podr/container/pipe/ce5fef0c4177_docia-modulo3/stdout_7582c48b96fd4422abc8e0633d50c756.
+2026-05-24T20:04:02.2896802Z Successfully created stdout named pipe at: /podr/container/pipe/ce5fef0c4177_docia-modulo3/stdout_7582c48b96fd4422abc8e0633d50c756.
+2026-05-24T20:04:02.2898153Z Opening named pipe /podr/container/pipe/ce5fef0c4177_docia-modulo3/stdout_7582c48b96fd4422abc8e0633d50c756 for reading in non-blocking mode.
+2026-05-24T20:04:02.2899628Z Successfully opened named pipe: /podr/container/pipe/ce5fef0c4177_docia-modulo3/stdout_7582c48b96fd4422abc8e0633d50c756.
+2026-05-24T20:04:02.2900803Z Successfully removed non-blocking flag from /podr/container/pipe/ce5fef0c4177_docia-modulo3/stdout_7582c48b96fd4422abc8e0633d50c756.
+2026-05-24T20:04:02.2902485Z Creating stderr named pipe at /podr/container/pipe/ce5fef0c4177_docia-modulo3/stderr_e9fa443d2a4f4f9c82678cd4747ef0de.
+2026-05-24T20:04:02.2904301Z Successfully created stderr named pipe at: /podr/container/pipe/ce5fef0c4177_docia-modulo3/stderr_e9fa443d2a4f4f9c82678cd4747ef0de.
+2026-05-24T20:04:02.2906387Z Opening named pipe /podr/container/pipe/ce5fef0c4177_docia-modulo3/stderr_e9fa443d2a4f4f9c82678cd4747ef0de for reading in non-blocking mode.
+2026-05-24T20:04:02.2912706Z Successfully opened named pipe: /podr/container/pipe/ce5fef0c4177_docia-modulo3/stderr_e9fa443d2a4f4f9c82678cd4747ef0de.
+2026-05-24T20:04:02.2914020Z Successfully removed non-blocking flag from /podr/container/pipe/ce5fef0c4177_docia-modulo3/stderr_e9fa443d2a4f4f9c82678cd4747ef0de.
+2026-05-24T20:04:02.2926108Z Creating container with image: appsvc/python:3.11_20260504.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/python:3.11_20260504.4.tuxprod
+2026-05-24T20:04:02.8339337Z Starting container: ce5fef0c4177_docia-modulo3.
+2026-05-24T20:04:02.8747256Z Starting watchers and probes.
+2026-05-24T20:04:02.8765918Z Starting metrics collection.
+2026-05-24T20:04:02.8777159Z Container is running.
+2026-05-24T20:04:02.8778321Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container docia-modulo3 successfully created and is running., DetailsLevel: INFO
+2026-05-24T20:04:02.9046131Z Container start method finished after 1260 ms.
+2026-05-24T20:04:02.9048107Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container docia-modulo3 successfully created and is running., DetailsLevel: INFO
+2026-05-24T20:04:02.9049742Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-05-24T20:04:19.2160719Z Container has finished running with exit code: 3.
+2026-05-24T20:04:19.2162314Z Container is terminating. Grace period: 5 seconds.
+2026-05-24T20:04:19.2172912Z Stop and delete container. Retry count = 0
+2026-05-24T20:04:19.2174671Z Stopping container: ce5fef0c4177_docia-modulo3.
+2026-05-24T20:04:19.4264288Z Deleting container: ce5fef0c4177_docia-modulo3. Retry count = 0
+2026-05-24T20:04:20.8282397Z Container spec TerminationMessagePolicy  path 
+2026-05-24T20:04:20.8294595Z Container is terminated. Total time elapsed: 1612 ms.
+2026-05-24T20:04:20.8296194Z Site container: docia-modulo3 terminated during site startup.
+2026-05-24T20:04:20.8307213Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:01:31, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:04:20.8664605Z Site startup probe failed after 17.9608899 seconds.
+2026-05-24T20:04:20.9889793Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:04:20, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:04:21.0104999Z Failed to start site. Revert by stopping site.
+2026-05-24T20:04:21.0135916Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:04:20, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:04:21.0145875Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:04:20, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:04:21.0146131Z Site: docia-modulo3 stopped.
+2026-05-24T20:07:27.5310512Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:04:20, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 05/24/2026 20:04:21 (UTC), DetailsLevel: WARN
+2026-05-24T20:07:31.0417774Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:04:20, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 05/24/2026 20:04:21 (UTC), DetailsLevel: WARN
+2026-05-24T20:07:31.0420768Z Container start method called.
+2026-05-24T20:07:31.0421697Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:04:20, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.5:13209/appsvc/python:3.11_20260504.4.tuxprod for docia-modulo3., DetailsLevel: INFO
+2026-05-24T20:07:31.0855180Z Establishing network.
+2026-05-24T20:07:31.0901767Z Pulling image: appsvc/python:3.11_20260504.4.tuxprod.
+2026-05-24T20:07:31.9081498Z Container is starting.
+2026-05-24T20:07:31.9092307Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:04:20, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for docia-modulo3., DetailsLevel: INFO
+2026-05-24T20:07:31.9153656Z Establishing user namespace if not established already.
+2026-05-24T20:07:31.9157080Z Establishing network if not established already.
+2026-05-24T20:07:31.9158683Z Mounting volumes.
+2026-05-24T20:07:31.9160310Z Nested mountpoint 
+2026-05-24T20:07:31.9651549Z Nested mountpoint volatile/logs
+2026-05-24T20:07:31.9992824Z Nested mountpoint 
+2026-05-24T20:07:32.0425086Z Nested mountpoint 
+2026-05-24T20:07:32.0631668Z Nested mountpoint 
+2026-05-24T20:07:32.8876381Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:04:20, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for docia-modulo3. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-05-24T20:07:32.8882200Z Creating container.
+2026-05-24T20:07:32.8904502Z Creating pipes for streaming container io.
+2026-05-24T20:07:32.8906972Z Creating stdout named pipe at /podr/container/pipe/ec9907efeee7_docia-modulo3/stdout_f5629528d1d14ec8a84839a61922ba3b.
+2026-05-24T20:07:32.8930530Z Successfully created stdout named pipe at: /podr/container/pipe/ec9907efeee7_docia-modulo3/stdout_f5629528d1d14ec8a84839a61922ba3b.
+2026-05-24T20:07:32.8933905Z Opening named pipe /podr/container/pipe/ec9907efeee7_docia-modulo3/stdout_f5629528d1d14ec8a84839a61922ba3b for reading in non-blocking mode.
+2026-05-24T20:07:32.8940483Z Successfully opened named pipe: /podr/container/pipe/ec9907efeee7_docia-modulo3/stdout_f5629528d1d14ec8a84839a61922ba3b.
+2026-05-24T20:07:32.8945448Z Successfully removed non-blocking flag from /podr/container/pipe/ec9907efeee7_docia-modulo3/stdout_f5629528d1d14ec8a84839a61922ba3b.
+2026-05-24T20:07:32.8971596Z Creating stderr named pipe at /podr/container/pipe/ec9907efeee7_docia-modulo3/stderr_4f0ac21b17d74015ba635101b8725c87.
+2026-05-24T20:07:32.9074891Z Successfully created stderr named pipe at: /podr/container/pipe/ec9907efeee7_docia-modulo3/stderr_4f0ac21b17d74015ba635101b8725c87.
+2026-05-24T20:07:32.9078638Z Opening named pipe /podr/container/pipe/ec9907efeee7_docia-modulo3/stderr_4f0ac21b17d74015ba635101b8725c87 for reading in non-blocking mode.
+2026-05-24T20:07:32.9080566Z Successfully opened named pipe: /podr/container/pipe/ec9907efeee7_docia-modulo3/stderr_4f0ac21b17d74015ba635101b8725c87.
+2026-05-24T20:07:32.9084335Z Successfully removed non-blocking flag from /podr/container/pipe/ec9907efeee7_docia-modulo3/stderr_4f0ac21b17d74015ba635101b8725c87.
+2026-05-24T20:07:32.9151938Z Creating container with image: appsvc/python:3.11_20260504.4.tuxprod from registry: 10.1.0.5:13209 and fully qualified image name: 10.1.0.5:13209/appsvc/python:3.11_20260504.4.tuxprod
+2026-05-24T20:07:33.2681465Z Starting container: ec9907efeee7_docia-modulo3.
+2026-05-24T20:07:33.3090120Z Starting watchers and probes.
+2026-05-24T20:07:33.3118377Z Starting metrics collection.
+2026-05-24T20:07:33.3122197Z Container is running.
+2026-05-24T20:07:33.3123738Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:04:20, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container docia-modulo3 successfully created and is running., DetailsLevel: INFO
+2026-05-24T20:07:33.3802161Z Container start method finished after 2337 ms.
+2026-05-24T20:07:33.3812800Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:04:20, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container docia-modulo3 successfully created and is running., DetailsLevel: INFO
+2026-05-24T20:07:33.3813142Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:04:20, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-05-24T20:07:45.2038522Z Container has finished running with exit code: 3.
+2026-05-24T20:07:45.2040071Z Container is terminating. Grace period: 5 seconds.
+2026-05-24T20:07:45.2044218Z Stop and delete container. Retry count = 0
+2026-05-24T20:07:45.2045489Z Stopping container: ec9907efeee7_docia-modulo3.
+2026-05-24T20:07:45.2521860Z Deleting container: ec9907efeee7_docia-modulo3. Retry count = 0
+2026-05-24T20:07:45.9491530Z Container spec TerminationMessagePolicy  path 
+2026-05-24T20:07:45.9493521Z Container is terminated. Total time elapsed: 745 ms.
+2026-05-24T20:07:45.9496753Z Site container: docia-modulo3 terminated during site startup.
+2026-05-24T20:07:45.9512613Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:04:20, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:07:45.9539193Z Site startup probe failed after 12.5622307 seconds.
+2026-05-24T20:07:46.0166451Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:07:46, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:07:46.0201305Z Failed to start site. Revert by stopping site.
+2026-05-24T20:07:46.0203094Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:07:46, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:07:46.0205246Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:07:46, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:07:46.0205401Z Site: docia-modulo3 stopped.
+2026-05-24T20:09:07.5702683Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:07:46, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 05/24/2026 20:07:46 (UTC), DetailsLevel: ERR
+2026-05-24T20:09:08.0838580Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:07:46, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 05/24/2026 20:07:46 (UTC), DetailsLevel: ERR
+2026-05-24T20:09:08.0841073Z Container start method called.
+2026-05-24T20:09:08.0848366Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:07:46, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/python:3.11_20260504.4.tuxprod for docia-modulo3., DetailsLevel: INFO
+2026-05-24T20:09:08.0849892Z Establishing network.
+2026-05-24T20:09:08.0852739Z Pulling image: appsvc/python:3.11_20260504.4.tuxprod.
+2026-05-24T20:09:08.4494490Z Container is starting.
+2026-05-24T20:09:08.4495215Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:07:46, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for docia-modulo3., DetailsLevel: INFO
+2026-05-24T20:09:08.4496220Z Establishing user namespace if not established already.
+2026-05-24T20:09:08.4497218Z Establishing network if not established already.
+2026-05-24T20:09:08.4498281Z Mounting volumes.
+2026-05-24T20:09:08.4499463Z Nested mountpoint 
+2026-05-24T20:09:08.4538285Z Nested mountpoint volatile/logs
+2026-05-24T20:09:08.4666344Z Nested mountpoint 
+2026-05-24T20:09:08.4706932Z Nested mountpoint 
+2026-05-24T20:09:08.4751942Z Nested mountpoint 
+2026-05-24T20:09:08.5900480Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:07:46, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for docia-modulo3. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-05-24T20:09:08.5902289Z Creating container.
+2026-05-24T20:09:08.5905097Z Creating pipes for streaming container io.
+2026-05-24T20:09:08.5908732Z Creating stdout named pipe at /podr/container/pipe/b7efd8113c67_docia-modulo3/stdout_698f8e6400e648a788aafe16384ae35c.
+2026-05-24T20:09:08.5927205Z Successfully created stdout named pipe at: /podr/container/pipe/b7efd8113c67_docia-modulo3/stdout_698f8e6400e648a788aafe16384ae35c.
+2026-05-24T20:09:08.5928382Z Opening named pipe /podr/container/pipe/b7efd8113c67_docia-modulo3/stdout_698f8e6400e648a788aafe16384ae35c for reading in non-blocking mode.
+2026-05-24T20:09:08.5931557Z Successfully opened named pipe: /podr/container/pipe/b7efd8113c67_docia-modulo3/stdout_698f8e6400e648a788aafe16384ae35c.
+2026-05-24T20:09:08.5964282Z Successfully removed non-blocking flag from /podr/container/pipe/b7efd8113c67_docia-modulo3/stdout_698f8e6400e648a788aafe16384ae35c.
+2026-05-24T20:09:08.5984109Z Creating stderr named pipe at /podr/container/pipe/b7efd8113c67_docia-modulo3/stderr_0524423fc96442ff8675b3bb91d60ccd.
+2026-05-24T20:09:08.5987421Z Successfully created stderr named pipe at: /podr/container/pipe/b7efd8113c67_docia-modulo3/stderr_0524423fc96442ff8675b3bb91d60ccd.
+2026-05-24T20:09:08.5988638Z Opening named pipe /podr/container/pipe/b7efd8113c67_docia-modulo3/stderr_0524423fc96442ff8675b3bb91d60ccd for reading in non-blocking mode.
+2026-05-24T20:09:08.6006588Z Successfully opened named pipe: /podr/container/pipe/b7efd8113c67_docia-modulo3/stderr_0524423fc96442ff8675b3bb91d60ccd.
+2026-05-24T20:09:08.6009657Z Successfully removed non-blocking flag from /podr/container/pipe/b7efd8113c67_docia-modulo3/stderr_0524423fc96442ff8675b3bb91d60ccd.
+2026-05-24T20:09:08.6011570Z Creating container with image: appsvc/python:3.11_20260504.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/python:3.11_20260504.4.tuxprod
+2026-05-24T20:09:08.8754962Z Starting container: b7efd8113c67_docia-modulo3.
+2026-05-24T20:09:08.8999084Z Starting watchers and probes.
+2026-05-24T20:09:08.9002240Z Starting metrics collection.
+2026-05-24T20:09:08.9005179Z Container is running.
+2026-05-24T20:09:08.9005878Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:07:46, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container docia-modulo3 successfully created and is running., DetailsLevel: INFO
+2026-05-24T20:09:08.9317732Z Container start method finished after 847 ms.
+2026-05-24T20:09:08.9321402Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:07:46, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container docia-modulo3 successfully created and is running., DetailsLevel: INFO
+2026-05-24T20:09:08.9321745Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:07:46, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-05-24T20:09:24.8812499Z Container has finished running with exit code: 3.
+2026-05-24T20:09:24.8815574Z Container is terminating. Grace period: 5 seconds.
+2026-05-24T20:09:24.9007311Z Stop and delete container. Retry count = 0
+2026-05-24T20:09:24.9009581Z Stopping container: b7efd8113c67_docia-modulo3.
+2026-05-24T20:09:25.0381820Z Deleting container: b7efd8113c67_docia-modulo3. Retry count = 0
+2026-05-24T20:09:25.6905825Z Container spec TerminationMessagePolicy  path 
+2026-05-24T20:09:25.6920741Z Container is terminated. Total time elapsed: 796 ms.
+2026-05-24T20:09:25.6928554Z Site container: docia-modulo3 terminated during site startup.
+2026-05-24T20:09:25.6995675Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:07:46, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:09:25.7047817Z Site startup probe failed after 16.7719474 seconds.
+2026-05-24T20:09:25.7940465Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:09:25, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:09:25.8191711Z Failed to start site. Revert by stopping site.
+2026-05-24T20:09:25.8200892Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:09:25, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:09:25.8246803Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 05/24/2026 20:09:25, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: docia-modulo3 terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-05-24T20:09:25.8247137Z Site: docia-modulo3 stopped.

@@ -1,4 +1,5 @@
 import io
+import unicodedata
 from docx import Document
 from docx.shared import Pt
 from fpdf import FPDF
@@ -33,6 +34,27 @@ def exportar_docx(texto: str) -> bytes:
     return buf.getvalue()
 
 
+def _texto_pdf(texto: str) -> str:
+    trocas = {
+        "•": "-",
+        "–": "-",
+        "—": "-",
+        "“": '"',
+        "”": '"',
+        "‘": "'",
+        "’": "'",
+    }
+    for antigo, novo in trocas.items():
+        texto = texto.replace(antigo, novo)
+    texto = unicodedata.normalize("NFKD", texto)
+    return texto.encode("latin-1", errors="ignore").decode("latin-1")
+
+
+def _multi_cell(pdf: FPDF, altura: int, texto: str) -> None:
+    pdf.multi_cell(0, altura, _texto_pdf(texto))
+    pdf.set_x(pdf.l_margin)
+
+
 def exportar_pdf(texto: str) -> bytes:
     pdf = FPDF()
     pdf.add_page()
@@ -44,21 +66,21 @@ def exportar_pdf(texto: str) -> bytes:
         elif linha.startswith("# "):
             pdf.set_font("Helvetica", "B", 16)
             pdf.set_text_color(27, 42, 74)
-            pdf.multi_cell(0, 10, linha[2:])
+            _multi_cell(pdf, 10, linha[2:])
         elif linha.startswith("## "):
             pdf.set_font("Helvetica", "B", 13)
             pdf.set_text_color(14, 111, 86)
-            pdf.multi_cell(0, 8, linha[3:])
+            _multi_cell(pdf, 8, linha[3:])
         elif linha.startswith("### "):
             pdf.set_font("Helvetica", "B", 11)
             pdf.set_text_color(50, 50, 50)
-            pdf.multi_cell(0, 7, linha[4:])
+            _multi_cell(pdf, 7, linha[4:])
         elif linha.startswith(("- ", "* ")):
             pdf.set_font("Helvetica", "", 11)
             pdf.set_text_color(30, 30, 30)
-            pdf.multi_cell(0, 7, f"  • {linha[2:]}")
+            _multi_cell(pdf, 7, f"- {linha[2:]}")
         else:
             pdf.set_font("Helvetica", "", 11)
             pdf.set_text_color(30, 30, 30)
-            pdf.multi_cell(0, 7, linha.replace("**", ""))
+            _multi_cell(pdf, 7, linha.replace("**", ""))
     return bytes(pdf.output())

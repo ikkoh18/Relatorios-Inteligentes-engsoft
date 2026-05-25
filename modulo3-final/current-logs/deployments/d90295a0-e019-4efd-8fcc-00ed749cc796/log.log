@@ -1,0 +1,143 @@
+2026-05-24T20:25:18.3927116Z,Starting deployment execution...,3693f370-f5f2-4ebc-89a2-67d47e94ec31,0
+2026-05-24T20:25:19.4627377Z,Extracting zip file...,cd30df3d-71c1-478b-b680-99fd42870300,0
+2026-05-24T20:25:19.4993875Z,Zip extraction complete,dff1622f-4e8a-4d0a-9f35-1fc8af89f034,0
+2026-05-24T20:25:19.5108647Z,Setting file permissions on extracted content...,798146cc-19e4-49a4-9b66-33d0a5f6195d,0
+2026-05-24T20:25:19.5581774Z,File permissions set successfully,555df0b5-cf02-4580-877d-c16391bdce22,0
+2026-05-24T20:25:19.7096288Z,Starting QuickDeployBuilder - Perform Server Side Build: True,53ec3da9-fb06-49c1-bb7f-556b0df0e6b4,0
+2026-05-24T20:25:19.7804439Z,QuickDeploy build started,02c4f87f-dedd-4c98-a211-4f4f458b0ed2,0
+2026-05-24T20:25:19.7878514Z,Source path: /tmp/quickdeploy/d90295a0-e019-4efd-8fcc-00ed749cc796/extracted,f2ee64a6-6103-4205-85a2-8e9549a942c2,0
+2026-05-24T20:25:19.7999130Z,Output path: /home/site/wwwroot,44f93bb3-8f0f-4ed8-9dbf-2253032daa07,0
+2026-05-24T20:25:19.8114781Z,Run build: True,26d36192-db6b-4d20-a465-a0d5be11c946,0
+2026-05-24T20:25:19.8174486Z,Clean destination before deployment: True,7ee407a7-84b4-47c4-a5e7-455df9a71b56,0
+2026-05-24T20:25:19.8289954Z,Running Oryx build...,8d579da2-2553-42fc-abe7-2539f7e46e0c,0
+2026-05-24T20:25:19.8421723Z,Cleaning destination directory...,85b4d300-eddc-4b52-88b6-58babff7a98a,0
+2026-05-24T20:25:28.2205310Z,Executing Oryx build command...,9ff9b183-ff97-487b-8f76-dd9339e07f17,0
+2026-05-24T20:25:28.2313755Z,Build command: oryx build /tmp/quickdeploy/d90295a0-e019-4efd-8fcc-00ed749cc796/extracted -o /home/site/wwwroot --platform python --platform-version 3.11 -p virtualenv_name=antenv --log-file /tmp/build-debug.log  -i /tmp/8deb9d293348af8 --compress-destination-dir | tee /tmp/oryx-build.log,9d9adb38-e31b-4b52-ba52-d53c64d70776,0
+2026-05-24T20:25:28.2411767Z,Executing: /bin/bash -c "set -o pipefail; oryx build /tmp/quickdeploy/d90295a0-e019-4efd-8fcc-00ed749cc796/extracted -o /home/site/wwwroot --platform python --platform-version 3.11 -p virtualenv_name=antenv --log-file /tmp/build-debug.log  -i /tmp/8deb9d293348af8 --compress-destination-dir | tee /tmp/oryx-build.log",d940c070-b68c-4383-b0d9-5cc14bfbdebb,0
+2026-05-24T20:25:29.2735131Z,Operation performed by Microsoft Oryx  https://github.com/Microsoft/Oryx,89c1f88e-954f-4a88-aa04-392798b87f34,0
+2026-05-24T20:25:29.2803244Z,You can report issues at https://github.com/Microsoft/Oryx/issues,b8858c68-d29e-42eb-9786-4f706ae2f578,0
+2026-05-24T20:25:29.2915125Z,Oryx Version: 0.2.20260420.1+83c04e9ee1882dc90d279b63348824daedbd3c96  Commit: 83c04e9ee1882dc90d279b63348824daedbd3c96  ReleaseTagName: 20260420.1,6873ef82-cbd0-4d87-b614-4a6463ed269b,0
+2026-05-24T20:25:29.3097787Z,Build Operation ID: ca2347eaf85ede38,3de2d3e3-9328-4391-b017-030c83e7d6df,0
+2026-05-24T20:25:29.3176354Z,OS Type           : bullseye,dbd06f56-aec1-4e9f-a5a8-aeba683cabe6,0
+2026-05-24T20:25:29.3350652Z,Image Type        : githubactions,0cbf2710-c915-4367-9543-7c3f14b86946,0
+2026-05-24T20:25:29.3405786Z,Primary SDK Storage URL: https://oryx-cdn.microsoft.io,aa156ef9-406c-4406-b03e-9570273b22e8,0
+2026-05-24T20:25:29.3465168Z,Backup SDK Storage URL:,012d3006-e65d-498a-abd2-5e363bc4a8d0,0
+2026-05-24T20:25:29.3616951Z,ACR SDK Registry URL: (not set),b3e83eea-6b0d-4015-bf0b-801728e48be9,0
+2026-05-24T20:25:29.3734030Z,SDK provider status:,20afca5e-39ca-46e6-9c45-97fd2916b177,0
+2026-05-24T20:25:29.3915454Z,External ACR SDK provider: Enabled,327539cb-3cef-4bd7-954d-e19b5ee8bbc1,0
+2026-05-24T20:25:29.4098532Z,External SDK provider: Enabled,8f4ca113-0b05-4905-9697-603d15e5cfbe,0
+2026-05-24T20:25:29.4169674Z,Direct ACR SDK provider: Disabled,8712f5f0-68e3-4b0d-8bd3-0a56a0a7803d,0
+2026-05-24T20:25:29.4265228Z,Blob SDK provider: Enabled,3d7953f1-8345-4693-8813-01908843b65c,0
+2026-05-24T20:25:29.4397409Z,External ACR SDK provider is enabled. Only using user-specified platform: python,5cb78cc2-1db5-406d-aea1-94ed7078fdb8,0
+2026-05-24T20:25:29.4543007Z,Detecting platforms...,57736b3a-8de9-484e-851c-273ef76ab1d8,0
+2026-05-24T20:25:29.9283382Z,External ACR provider resolved version '3.11.15' for python.,2599ad5a-9a9c-4406-a10a-a69c78804ea4,0
+2026-05-24T20:25:29.9481945Z,Version resolved using external ACR SDK provider.,fb54e4c3-28db-45cc-816b-f80a57b7d637,0
+2026-05-24T20:25:29.9593064Z,Detected following platforms:,54923439-0dac-4629-b729-cc40e13ead93,0
+2026-05-24T20:25:29.9770420Z,python: 3.11.15,7e4fa819-52fe-4abe-80fd-34ef5048b29f,0
+2026-05-24T20:25:29.9974281Z,Requesting SDK from ACR via external provider: python 3.11.15 (bullseye),38c4dce4-4624-4aa0-887b-de9ddfa7c7a1,0
+2026-05-24T20:25:33.0138253Z,Successfully pulled SDK from ACR via external provider: python 3.11.15,e5bf9801-8ed9-427d-b91f-74006a16da3d,0
+2026-05-24T20:25:33.0351414Z,SDK for 'python' version '3.11.15' fetched via external ACR provider.,9114b6ee-3c0a-42bc-aed1-692efec44a4d,0
+2026-05-24T20:25:33.0526080Z,Version '3.11.15' of platform 'python' is not installed. Generating script to install it...,eee48ab1-a20d-4d9f-93b5-b940d460ef7c,0
+2026-05-24T20:25:33.2488325Z,Using intermediate directory '/tmp/8deb9d293348af8'.,ccf4c94a-3a20-48ce-aa4b-8d3ddec86000,0
+2026-05-24T20:25:33.2618298Z,Copying files to the intermediate directory...,71126b85-11f4-42e0-8a7c-3bc9d8e61177,0
+2026-05-24T20:25:33.3705824Z,Copying files to intermediate directory done in 0 sec(s).,43de6e4c-4cd3-4448-909a-a9b2df61dc75,0
+2026-05-24T20:25:33.3788038Z,Source directory     : /tmp/8deb9d293348af8,8b0cb1eb-d3a8-4b02-b279-78947bea4e53,0
+2026-05-24T20:25:33.3888765Z,Destination directory: /home/site/wwwroot,5f9da41b-82df-46e3-8c67-7bf642e41dca,0
+2026-05-24T20:25:33.4042785Z,Installing platform...,fe2cb131-8b7d-45e1-9547-6efc30e52e6b,0
+2026-05-24T20:25:33.4157129Z,Downloading and extracting 'python' version '3.11.15' to '/tmp/oryx/platforms/python/3.11.15'...,f9abaf75-170e-4c11-9cb1-cbc1c7055587,0
+2026-05-24T20:25:33.4319078Z,Detected image debian flavor: bullseye.,d77e6c84-77e3-4bcd-88c9-dbbc3bded5f7,0
+2026-05-24T20:25:33.4454563Z,SDK binary download was skipped. Looking for cached tarball...,17ba0152-fd4a-4eaf-bdad-9397e9129a6b,0
+2026-05-24T20:25:33.4633467Z,Found tarball at /var/OryxAcrSdks/python/python-bullseye-3.11.15.tar.gz,141af9c9-5e14-4a9d-b9c3-3c9bd0eddbe2,0
+2026-05-24T20:25:42.6779200Z,Successfully extracted python version 3.11.15 from cached tarball.,44ee628b-9cc5-4451-a7ae-eb7febf9675f,0
+2026-05-24T20:25:42.8820032Z,image detector file exists  platform is python..,dab963b4-d65a-4425-a650-170206e6ef60,0
+2026-05-24T20:25:42.9002085Z,OS detector file exists  OS is bullseye..,d299812b-1311-4fcc-a0ad-e6a1586ef043,0
+2026-05-24T20:25:42.9159074Z,Platform installation done in 9 sec(s).,0d757451-8055-4355-b85a-77ce37eb8a15,0
+2026-05-24T20:25:42.9269647Z,Running build script snippets...,4fc40dce-c40f-46d8-b79b-a7441265228e,0
+2026-05-24T20:25:42.9489818Z,Python Version: /tmp/oryx/platforms/python/3.11.15/bin/python3.11,882fe3fd-91d1-4f1e-ae50-929e83b30be8,0
+2026-05-24T20:25:42.9954741Z,Creating directory for command manifest file if it does not exist,f6891f88-03bc-48aa-a55f-dfb07baf01d8,0
+2026-05-24T20:25:43.0049892Z,Removing existing manifest file,6dcab634-fb81-4da6-a3f6-96d0a23e3c8b,0
+2026-05-24T20:25:43.0155381Z,Python Virtual Environment: antenv,971dffa9-8bd3-45b8-86d9-efde21ca860a,0
+2026-05-24T20:25:43.3695078Z,Creating virtual environment...,bd82106d-1abb-475a-9135-e719e3fbe05b,0
+2026-05-24T20:25:43.3841771Z,Executing: /tmp/oryx/platforms/python/3.11.15/bin/python3.11 -m venv antenv --copies --system-site-packages,37114e12-6493-467c-b429-172a80563070,0
+2026-05-24T20:25:49.3191775Z,Activating virtual environment...,feaf82ae-3021-458a-bd7a-9f468d2c7b4a,0
+2026-05-24T20:25:49.3331168Z,Fast build is enabled,7cd6c064-a8f8-439d-84b2-f539083923f0,0
+2026-05-24T20:25:49.3475129Z,Installing uv...,c45d415e-88b8-43ea-a029-647cfcfbff35,0
+2026-05-24T20:25:50.3041323Z,Collecting uv,a1f65814-daf3-4e55-9430-a3bd326f7058,0
+2026-05-24T20:25:50.3194197Z,Using cached uv-0.11.16-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB),5fae5bb1-0663-4e75-b28a-c0dc530fe978,0
+2026-05-24T20:25:50.3665003Z,Using cached uv-0.11.16-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (24.7 MB),5b8df91a-dc85-490f-a4b3-ea1348813575,0
+2026-05-24T20:25:50.6361863Z,Installing collected packages: uv,3882dc05-f30b-4ffb-b5e3-4a5afdbc6792,0
+2026-05-24T20:25:52.2018216Z,Successfully installed uv-0.11.16,219a5f09-e74e-4d5e-82f1-343935b80be0,0
+2026-05-24T20:25:52.4272337Z,[notice] A new release of pip is available: 24.0 -> 26.1.1,eb568b0e-6230-4240-b16b-72a6a6ff2eba,0
+2026-05-24T20:25:52.4369924Z,[notice] To update  run: pip install --upgrade pip,4f489ad1-867a-4565-9c5f-402d7455d231,0
+2026-05-24T20:25:52.5719892Z,Running uv pip install...,339199a2-e80e-4a5d-a56e-57f68b8d43e5,0
+2026-05-24T20:25:57.9904494Z,Using Python 3.11.15 environment at: antenv,119c9549-6bcf-499e-a746-3821856bf7c8,0
+2026-05-24T20:25:58.0068739Z,Resolved 36 packages in 435ms,e61e09e1-e8dd-498c-b6eb-e950ceae54a2,0
+2026-05-24T20:25:58.0183350Z,Downloading pydantic-core (2.0MiB),361d7ea8-e8b5-4ccb-9dc0-858f0757cc0f,0
+2026-05-24T20:25:58.0406615Z,Downloading pillow (6.8MiB),8c550518-69cc-4439-8cb8-1551444db241,0
+2026-05-24T20:25:58.0553908Z,Downloading fonttools (4.8MiB),9991da7b-3632-4210-8246-80c488462616,0
+2026-05-24T20:25:58.0653440Z,Downloading lxml (5.0MiB),15c99aee-6632-4e8e-a622-8cfeca117869,0
+2026-05-24T20:25:58.0817506Z,Downloading uvloop (3.6MiB),ddc14632-6ea5-403d-9615-e0f088f0775e,0
+2026-05-24T20:25:58.1170771Z,Downloaded pydantic-core,542fb2c7-c4c9-4516-bc32-ca6530f139ae,0
+2026-05-24T20:25:58.1267627Z,Downloaded uvloop,fcf6e840-18cc-48b1-9923-8edeeb4d4ede,0
+2026-05-24T20:25:58.1333078Z,Downloaded pillow,45586b63-d421-4b45-a8e8-c3af383fcbef,0
+2026-05-24T20:25:58.1443087Z,Downloaded lxml,cc046f45-117b-4c91-98f5-8b7032bc1658,0
+2026-05-24T20:25:58.2068175Z,Downloaded fonttools,c1b129ff-055b-4d60-aba8-6cd157306073,0
+2026-05-24T20:25:58.2271615Z,Prepared 36 packages in 1.12s,aa635931-d98c-4213-9854-572e0beeddad,0
+2026-05-24T20:25:58.2355376Z,Installed 36 packages in 263ms,6109d50b-3ba9-41b8-ac75-8b567c945895,0
+2026-05-24T20:25:58.2465429Z,Bytecode compiled 2375 files in 3.39s,fb85c432-dd1b-4025-8b27-506d6220e577,0
+2026-05-24T20:25:58.2674196Z,+ annotated-types==0.7.0,c386efc6-e86b-4ebc-8d18-cda19d0f2f17,0
+2026-05-24T20:25:58.2771319Z,+ anyio==4.13.0,7df4e26b-938c-4229-959a-52fc21b4a7a5,0
+2026-05-24T20:25:58.2954333Z,+ certifi==2026.5.20,6c569915-10f7-4547-b2ec-fffcccf505c7,0
+2026-05-24T20:25:58.3072465Z,+ click==8.4.1,43ed1f07-f343-48c2-a759-e673e7a6215a,0
+2026-05-24T20:25:58.3179803Z,+ defusedxml==0.7.1,aeb28c85-6e0c-4211-a146-22062fa97af3,0
+2026-05-24T20:25:58.3305484Z,+ distro==1.9.0,ef185eec-b25c-4e77-a476-a20a62de3f2b,0
+2026-05-24T20:25:58.3428026Z,+ fastapi==0.115.5,4dfe9de5-40c8-4e73-9d40-255192d3f009,0
+2026-05-24T20:25:58.3526101Z,+ fonttools==4.63.0,c5fa56de-9641-443f-a3a4-971459c9e33b,0
+2026-05-24T20:25:58.3633771Z,+ fpdf2==2.8.1,766a6eb0-f71a-4615-aee5-f153e701119a,0
+2026-05-24T20:25:58.3706893Z,+ gunicorn==23.0.0,03fc1a56-6d0a-4020-91de-b3e8527d3eb8,0
+2026-05-24T20:25:58.3776889Z,+ h11==0.16.0,3dffacd1-286c-4612-91e2-172d55491835,0
+2026-05-24T20:25:58.3865356Z,+ httpcore==1.0.9,8c2fc78c-9e48-4082-9d27-37efae96d4b4,0
+2026-05-24T20:25:58.3950746Z,+ httptools==0.7.1,6abb3d8d-9bca-4c96-aa2f-1f4711dbc86c,0
+2026-05-24T20:25:58.4137912Z,+ httpx==0.27.2,fe39b9b1-5d95-478b-9dad-4add13c80a52,0
+2026-05-24T20:25:58.4246131Z,+ idna==3.16,89e10b79-a51c-4bbf-971a-4f39bbc14987,0
+2026-05-24T20:25:58.4325634Z,+ jiter==0.15.0,ac908ad5-fa21-4b69-8d56-3b6ed5884393,0
+2026-05-24T20:25:58.4466932Z,+ lxml==6.1.1,ce29823e-7c2b-4688-819f-c67eb84e1972,0
+2026-05-24T20:25:58.4660866Z,+ markdown==3.7,5b724cfa-1389-4cd6-b307-9940a7d428a2,0
+2026-05-24T20:25:58.4775100Z,+ openai==1.54.4,3f479e9d-b3c5-4f42-b402-01295307fb03,0
+2026-05-24T20:25:58.4948691Z,+ packaging==26.2,35f71f8a-881f-4d73-a38f-882a87ac4514,0
+2026-05-24T20:25:58.5053571Z,+ pillow==12.2.0,ca79c026-cd08-47ea-94a7-a2392ce5b58c,0
+2026-05-24T20:25:58.5155160Z,+ pydantic==2.13.4,61a843c9-c044-48fc-b2cf-ef52e0765f10,0
+2026-05-24T20:25:58.5283032Z,+ pydantic-core==2.46.4,f3066032-8e5c-4a7c-b69f-2fdddc7c4b76,0
+2026-05-24T20:25:58.5374234Z,+ python-docx==1.1.2,0287b44f-d5fd-40ae-8319-ed286b44337e,0
+2026-05-24T20:25:58.5464497Z,+ python-dotenv==1.0.1,e69acf52-84bf-4101-9d7b-12beecfd045f,0
+2026-05-24T20:25:58.5547329Z,+ python-multipart==0.0.12,59f5bda6-0996-482a-b865-0ff5fa492b75,0
+2026-05-24T20:25:58.5628214Z,+ pyyaml==6.0.3,324dab73-a8be-4744-a8ce-bffa176619cc,0
+2026-05-24T20:25:58.5717514Z,+ sniffio==1.3.1,b1bbc366-6211-4ebe-91fb-0cc3a59b2596,0
+2026-05-24T20:25:58.5808924Z,+ starlette==0.41.3,9f535790-a480-4798-b266-2188c280d645,0
+2026-05-24T20:25:58.5984127Z,+ tqdm==4.67.3,4d247e87-e923-4042-9890-6c8dfe41ae4e,0
+2026-05-24T20:25:58.6112469Z,+ typing-extensions==4.15.0,4c4826a9-c25e-473c-ac80-af3c3b63a21b,0
+2026-05-24T20:25:58.6195863Z,+ typing-inspection==0.4.2,ccff5e43-e730-4f08-b855-dfd4268ee050,0
+2026-05-24T20:25:58.6320251Z,+ uvicorn==0.32.1,0a67c9bf-3361-4eaf-b6ea-85d097405d50,0
+2026-05-24T20:25:58.6432304Z,+ uvloop==0.22.1,3a31bd2c-112c-4d25-83bb-0027979408a1,0
+2026-05-24T20:25:58.6559191Z,+ watchfiles==1.2.0,0adc771d-e107-4b47-aa30-771197a55549,0
+2026-05-24T20:25:58.6698245Z,+ websockets==16.0,3b03b4bd-3471-4325-bda1-ec73c060d795,0
+2026-05-24T20:25:58.6807772Z,uv pip install done in 8 sec(s).,13fb4259-1123-402f-a1e0-6d1bcceb19fc,0
+2026-05-24T20:25:58.6924240Z,Not a vso image  so not writing build commands,90574455-0d49-4845-9daf-d451d1befdf2,0
+2026-05-24T20:25:58.7160484Z,Copying 'requirements.txt' to destination directory...,a846d85e-40cc-4cba-bb30-cc370626e044,0
+2026-05-24T20:25:58.7216996Z,Done copying requirements.txt to destination directory.,1f54326d-0a5b-43f9-84a1-9f99b5c1627a,0
+2026-05-24T20:25:58.7278765Z,Build script snippets done in 16 sec(s).,9f32b674-e5df-4e99-85cd-540365e0349f,0
+2026-05-24T20:25:58.7336202Z,Preparing output...,be53a907-d529-4d59-b69f-2c7e646f94a2,0
+2026-05-24T20:25:58.7407924Z,Compressing source directory directly to destination (optimized path)...,3013066f-6713-4b13-9430-9d1bd5e9e15b,0
+2026-05-24T20:25:58.7486550Z,Using zstd for compression,35c25c8e-4a0e-4933-8172-557c914e882e,0
+2026-05-24T20:26:04.8913227Z,Copied the compressed output to '/home/site/wwwroot',05232d4e-aae4-41aa-a59b-3f6b6cbd88ee,0
+2026-05-24T20:26:04.9128915Z,Direct compression with zstd done in 6 sec(s).,93de0596-60c9-4e54-b62e-76a1fd238856,0
+2026-05-24T20:26:04.9275444Z,Removing existing manifest file,6f14936d-85a8-47a6-b51d-72933551669f,0
+2026-05-24T20:26:04.9433789Z,Creating a manifest file...,7da20c1a-3338-4004-8a94-8a9b357a7e8c,0
+2026-05-24T20:26:04.9870925Z,Manifest file created.,5a58390b-1b97-4bf8-ab56-51ce8fb450f8,0
+2026-05-24T20:26:04.9988327Z,Copying .ostype to manifest output directory.,a50e8b62-90fe-48a2-a651-2c34b65a1e4a,0
+2026-05-24T20:26:05.0124903Z,Total execution done in 31 sec(s).,7911721e-db5a-44e6-9f00-ece521bd060f,0
+2026-05-24T20:26:05.1705910Z,Build process exited with code 0 (took 36.9s),aa2d8fe0-b018-48cb-8665-51056ded6b30,0
+2026-05-24T20:26:05.1812763Z,Oryx build completed,a4eabbbc-5554-4d08-90b2-ba3b90f006dc,0
+2026-05-24T20:26:05.1898381Z,QuickDeploy build completed successfully,8207a065-d87f-4bac-9a3e-44c270297ac4,0
+2026-05-24T20:26:05.3632469Z,Deployment successful. QuickDeploy deployment completed,36e7b65a-8904-4a88-9116-683f6f1d6b69,0
+2026-05-24T20:26:05.3774823Z,Triggering container restart...,2c6b9a28-885f-484e-ad1d-3e11e01eec6a,0

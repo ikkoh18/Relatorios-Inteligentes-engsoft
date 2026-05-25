@@ -1,0 +1,146 @@
+{"timestamp": "2026-05-24T20:25:17.803Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Deployment request accepted"}
+{"timestamp": "2026-05-24T20:25:17.807Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Deployment ID: d90295a0-e019-4efd-8fcc-00ed749cc796"}
+{"timestamp": "2026-05-24T20:25:17.812Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Deployment lock acquired"}
+{"timestamp": "2026-05-24T20:25:17.854Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Starting deployment execution..."}
+{"timestamp": "2026-05-24T20:25:19.452Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Extracting zip file..."}
+{"timestamp": "2026-05-24T20:25:19.497Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Zip extraction complete"}
+{"timestamp": "2026-05-24T20:25:19.509Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Setting file permissions on extracted content..."}
+{"timestamp": "2026-05-24T20:25:19.556Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "File permissions set successfully"}
+{"timestamp": "2026-05-24T20:25:19.708Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Starting QuickDeployBuilder - Perform Server Side Build: True"}
+{"timestamp": "2026-05-24T20:25:19.779Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "QuickDeploy build started"}
+{"timestamp": "2026-05-24T20:25:19.786Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Source path: /tmp/quickdeploy/d90295a0-e019-4efd-8fcc-00ed749cc796/extracted"}
+{"timestamp": "2026-05-24T20:25:19.798Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Output path: /home/site/wwwroot"}
+{"timestamp": "2026-05-24T20:25:19.810Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Run build: True"}
+{"timestamp": "2026-05-24T20:25:19.816Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Clean destination before deployment: True"}
+{"timestamp": "2026-05-24T20:25:19.827Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Running Oryx build..."}
+{"timestamp": "2026-05-24T20:25:19.840Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Cleaning destination directory..."}
+{"timestamp": "2026-05-24T20:25:28.219Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Executing Oryx build command..."}
+{"timestamp": "2026-05-24T20:25:28.230Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Build command: oryx build /tmp/quickdeploy/d90295a0-e019-4efd-8fcc-00ed749cc796/extracted -o /home/site/wwwroot --platform python --platform-version 3.11 -p virtualenv_name=antenv --log-file /tmp/build-debug.log  -i /tmp/8deb9d293348af8 --compress-destination-dir | tee /tmp/oryx-build.log"}
+{"timestamp": "2026-05-24T20:25:28.239Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Executing: /bin/bash -c \"set -o pipefail; oryx build /tmp/quickdeploy/d90295a0-e019-4efd-8fcc-00ed749cc796/extracted -o /home/site/wwwroot --platform python --platform-version 3.11 -p virtualenv_name=antenv --log-file /tmp/build-debug.log  -i /tmp/8deb9d293348af8 --compress-destination-dir | tee /tmp/oryx-build.log\""}
+{"timestamp": "2026-05-24T20:25:29.270Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Operation performed by Microsoft Oryx, https://github.com/Microsoft/Oryx"}
+{"timestamp": "2026-05-24T20:25:29.279Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "You can report issues at https://github.com/Microsoft/Oryx/issues"}
+{"timestamp": "2026-05-24T20:25:29.288Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Oryx Version: 0.2.20260420.1+83c04e9ee1882dc90d279b63348824daedbd3c96, Commit: 83c04e9ee1882dc90d279b63348824daedbd3c96, ReleaseTagName: 20260420.1"}
+{"timestamp": "2026-05-24T20:25:29.309Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Build Operation ID: ca2347eaf85ede38"}
+{"timestamp": "2026-05-24T20:25:29.317Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "OS Type           : bullseye"}
+{"timestamp": "2026-05-24T20:25:29.334Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Image Type        : githubactions"}
+{"timestamp": "2026-05-24T20:25:29.340Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Primary SDK Storage URL: https://oryx-cdn.microsoft.io"}
+{"timestamp": "2026-05-24T20:25:29.346Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Backup SDK Storage URL: "}
+{"timestamp": "2026-05-24T20:25:29.361Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "ACR SDK Registry URL: (not set)"}
+{"timestamp": "2026-05-24T20:25:29.372Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "SDK provider status:"}
+{"timestamp": "2026-05-24T20:25:29.389Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "  External ACR SDK provider: Enabled"}
+{"timestamp": "2026-05-24T20:25:29.406Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "  External SDK provider: Enabled"}
+{"timestamp": "2026-05-24T20:25:29.416Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "  Direct ACR SDK provider: Disabled"}
+{"timestamp": "2026-05-24T20:25:29.426Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "  Blob SDK provider: Enabled"}
+{"timestamp": "2026-05-24T20:25:29.439Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "External ACR SDK provider is enabled. Only using user-specified platform: python"}
+{"timestamp": "2026-05-24T20:25:29.453Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Detecting platforms..."}
+{"timestamp": "2026-05-24T20:25:29.916Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "External ACR provider resolved version '3.11.15' for python."}
+{"timestamp": "2026-05-24T20:25:29.946Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Version resolved using external ACR SDK provider."}
+{"timestamp": "2026-05-24T20:25:29.957Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Detected following platforms:"}
+{"timestamp": "2026-05-24T20:25:29.975Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "  python: 3.11.15"}
+{"timestamp": "2026-05-24T20:25:29.996Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Requesting SDK from ACR via external provider: python 3.11.15 (bullseye)"}
+{"timestamp": "2026-05-24T20:25:33.011Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Successfully pulled SDK from ACR via external provider: python 3.11.15"}
+{"timestamp": "2026-05-24T20:25:33.026Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "SDK for 'python' version '3.11.15' fetched via external ACR provider."}
+{"timestamp": "2026-05-24T20:25:33.045Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Version '3.11.15' of platform 'python' is not installed. Generating script to install it..."}
+{"timestamp": "2026-05-24T20:25:33.240Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Using intermediate directory '/tmp/8deb9d293348af8'."}
+{"timestamp": "2026-05-24T20:25:33.256Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Copying files to the intermediate directory..."}
+{"timestamp": "2026-05-24T20:25:33.368Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Copying files to intermediate directory done in 0 sec(s)."}
+{"timestamp": "2026-05-24T20:25:33.378Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Source directory     : /tmp/8deb9d293348af8"}
+{"timestamp": "2026-05-24T20:25:33.386Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Destination directory: /home/site/wwwroot"}
+{"timestamp": "2026-05-24T20:25:33.403Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Installing platform..."}
+{"timestamp": "2026-05-24T20:25:33.414Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Downloading and extracting 'python' version '3.11.15' to '/tmp/oryx/platforms/python/3.11.15'..."}
+{"timestamp": "2026-05-24T20:25:33.426Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Detected image debian flavor: bullseye."}
+{"timestamp": "2026-05-24T20:25:33.444Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "SDK binary download was skipped. Looking for cached tarball..."}
+{"timestamp": "2026-05-24T20:25:33.462Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Found tarball at /var/OryxAcrSdks/python/python-bullseye-3.11.15.tar.gz"}
+{"timestamp": "2026-05-24T20:25:42.612Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Successfully extracted python version 3.11.15 from cached tarball."}
+{"timestamp": "2026-05-24T20:25:42.880Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "image detector file exists, platform is python.."}
+{"timestamp": "2026-05-24T20:25:42.897Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "OS detector file exists, OS is bullseye.."}
+{"timestamp": "2026-05-24T20:25:42.912Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Platform installation done in 9 sec(s)."}
+{"timestamp": "2026-05-24T20:25:42.924Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Running build script snippets..."}
+{"timestamp": "2026-05-24T20:25:42.944Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Python Version: /tmp/oryx/platforms/python/3.11.15/bin/python3.11"}
+{"timestamp": "2026-05-24T20:25:42.994Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Creating directory for command manifest file if it does not exist"}
+{"timestamp": "2026-05-24T20:25:43.003Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Removing existing manifest file"}
+{"timestamp": "2026-05-24T20:25:43.014Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Python Virtual Environment: antenv"}
+{"timestamp": "2026-05-24T20:25:43.279Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Creating virtual environment..."}
+{"timestamp": "2026-05-24T20:25:43.382Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Executing: /tmp/oryx/platforms/python/3.11.15/bin/python3.11 -m venv antenv --copies --system-site-packages"}
+{"timestamp": "2026-05-24T20:25:49.316Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Activating virtual environment..."}
+{"timestamp": "2026-05-24T20:25:49.332Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Fast build is enabled"}
+{"timestamp": "2026-05-24T20:25:49.347Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Installing uv..."}
+{"timestamp": "2026-05-24T20:25:50.292Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Collecting uv"}
+{"timestamp": "2026-05-24T20:25:50.315Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "  Using cached uv-0.11.16-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)"}
+{"timestamp": "2026-05-24T20:25:50.361Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Using cached uv-0.11.16-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (24.7 MB)"}
+{"timestamp": "2026-05-24T20:25:50.634Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Installing collected packages: uv"}
+{"timestamp": "2026-05-24T20:25:52.200Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Successfully installed uv-0.11.16"}
+{"timestamp": "2026-05-24T20:25:52.424Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "[notice] A new release of pip is available: 24.0 -> 26.1.1"}
+{"timestamp": "2026-05-24T20:25:52.435Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "[notice] To update, run: pip install --upgrade pip"}
+{"timestamp": "2026-05-24T20:25:52.569Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Running uv pip install..."}
+{"timestamp": "2026-05-24T20:25:57.988Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Using Python 3.11.15 environment at: antenv"}
+{"timestamp": "2026-05-24T20:25:58.005Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Resolved 36 packages in 435ms"}
+{"timestamp": "2026-05-24T20:25:58.017Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Downloading pydantic-core (2.0MiB)"}
+{"timestamp": "2026-05-24T20:25:58.036Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Downloading pillow (6.8MiB)"}
+{"timestamp": "2026-05-24T20:25:58.053Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Downloading fonttools (4.8MiB)"}
+{"timestamp": "2026-05-24T20:25:58.063Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Downloading lxml (5.0MiB)"}
+{"timestamp": "2026-05-24T20:25:58.079Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Downloading uvloop (3.6MiB)"}
+{"timestamp": "2026-05-24T20:25:58.112Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " Downloaded pydantic-core"}
+{"timestamp": "2026-05-24T20:25:58.125Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " Downloaded uvloop"}
+{"timestamp": "2026-05-24T20:25:58.132Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " Downloaded pillow"}
+{"timestamp": "2026-05-24T20:25:58.143Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " Downloaded lxml"}
+{"timestamp": "2026-05-24T20:25:58.204Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " Downloaded fonttools"}
+{"timestamp": "2026-05-24T20:25:58.224Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Prepared 36 packages in 1.12s"}
+{"timestamp": "2026-05-24T20:25:58.234Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Installed 36 packages in 263ms"}
+{"timestamp": "2026-05-24T20:25:58.245Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Bytecode compiled 2375 files in 3.39s"}
+{"timestamp": "2026-05-24T20:25:58.257Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + annotated-types==0.7.0"}
+{"timestamp": "2026-05-24T20:25:58.276Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + anyio==4.13.0"}
+{"timestamp": "2026-05-24T20:25:58.293Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + certifi==2026.5.20"}
+{"timestamp": "2026-05-24T20:25:58.303Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + click==8.4.1"}
+{"timestamp": "2026-05-24T20:25:58.315Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + defusedxml==0.7.1"}
+{"timestamp": "2026-05-24T20:25:58.329Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + distro==1.9.0"}
+{"timestamp": "2026-05-24T20:25:58.340Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + fastapi==0.115.5"}
+{"timestamp": "2026-05-24T20:25:58.351Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + fonttools==4.63.0"}
+{"timestamp": "2026-05-24T20:25:58.361Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + fpdf2==2.8.1"}
+{"timestamp": "2026-05-24T20:25:58.369Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + gunicorn==23.0.0"}
+{"timestamp": "2026-05-24T20:25:58.376Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + h11==0.16.0"}
+{"timestamp": "2026-05-24T20:25:58.385Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + httpcore==1.0.9"}
+{"timestamp": "2026-05-24T20:25:58.393Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + httptools==0.7.1"}
+{"timestamp": "2026-05-24T20:25:58.412Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + httpx==0.27.2"}
+{"timestamp": "2026-05-24T20:25:58.423Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + idna==3.16"}
+{"timestamp": "2026-05-24T20:25:58.431Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + jiter==0.15.0"}
+{"timestamp": "2026-05-24T20:25:58.444Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + lxml==6.1.1"}
+{"timestamp": "2026-05-24T20:25:58.463Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + markdown==3.7"}
+{"timestamp": "2026-05-24T20:25:58.475Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + openai==1.54.4"}
+{"timestamp": "2026-05-24T20:25:58.493Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + packaging==26.2"}
+{"timestamp": "2026-05-24T20:25:58.503Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + pillow==12.2.0"}
+{"timestamp": "2026-05-24T20:25:58.514Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + pydantic==2.13.4"}
+{"timestamp": "2026-05-24T20:25:58.527Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + pydantic-core==2.46.4"}
+{"timestamp": "2026-05-24T20:25:58.536Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + python-docx==1.1.2"}
+{"timestamp": "2026-05-24T20:25:58.543Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + python-dotenv==1.0.1"}
+{"timestamp": "2026-05-24T20:25:58.553Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + python-multipart==0.0.12"}
+{"timestamp": "2026-05-24T20:25:58.561Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + pyyaml==6.0.3"}
+{"timestamp": "2026-05-24T20:25:58.570Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + sniffio==1.3.1"}
+{"timestamp": "2026-05-24T20:25:58.579Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + starlette==0.41.3"}
+{"timestamp": "2026-05-24T20:25:58.591Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + tqdm==4.67.3"}
+{"timestamp": "2026-05-24T20:25:58.606Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + typing-extensions==4.15.0"}
+{"timestamp": "2026-05-24T20:25:58.617Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + typing-inspection==0.4.2"}
+{"timestamp": "2026-05-24T20:25:58.628Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + uvicorn==0.32.1"}
+{"timestamp": "2026-05-24T20:25:58.640Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + uvloop==0.22.1"}
+{"timestamp": "2026-05-24T20:25:58.649Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + watchfiles==1.2.0"}
+{"timestamp": "2026-05-24T20:25:58.665Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": " + websockets==16.0"}
+{"timestamp": "2026-05-24T20:25:58.679Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "uv pip install done in 8 sec(s)."}
+{"timestamp": "2026-05-24T20:25:58.691Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Not a vso image, so not writing build commands"}
+{"timestamp": "2026-05-24T20:25:58.715Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Copying 'requirements.txt' to destination directory..."}
+{"timestamp": "2026-05-24T20:25:58.720Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Done copying requirements.txt to destination directory."}
+{"timestamp": "2026-05-24T20:25:58.726Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Build script snippets done in 16 sec(s)."}
+{"timestamp": "2026-05-24T20:25:58.732Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Preparing output..."}
+{"timestamp": "2026-05-24T20:25:58.739Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Compressing source directory directly to destination (optimized path)..."}
+{"timestamp": "2026-05-24T20:25:58.746Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Using zstd for compression"}
+{"timestamp": "2026-05-24T20:26:04.881Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Copied the compressed output to '/home/site/wwwroot'"}
+{"timestamp": "2026-05-24T20:26:04.911Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Direct compression with zstd done in 6 sec(s)."}
+{"timestamp": "2026-05-24T20:26:04.924Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Removing existing manifest file"}
+{"timestamp": "2026-05-24T20:26:04.941Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Creating a manifest file..."}
+{"timestamp": "2026-05-24T20:26:04.984Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Manifest file created."}
+{"timestamp": "2026-05-24T20:26:04.997Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Copying .ostype to manifest output directory."}
+{"timestamp": "2026-05-24T20:26:05.010Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Total execution done in 31 sec(s)."}
+{"timestamp": "2026-05-24T20:26:05.169Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Build process exited with code 0 (took 36.9s)"}
+{"timestamp": "2026-05-24T20:26:05.180Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Oryx build completed"}
+{"timestamp": "2026-05-24T20:26:05.188Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "QuickDeploy build completed successfully"}
+{"timestamp": "2026-05-24T20:26:05.353Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Deployment successful. QuickDeploy deployment completed"}
+{"timestamp": "2026-05-24T20:26:05.375Z", "level": "Message", "containerName": "9aa9f98ee0b5", "machineName": "1b1f15bb5678", "message": "Triggering container restart..."}

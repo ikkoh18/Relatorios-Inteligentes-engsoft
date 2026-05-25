@@ -1,0 +1,537 @@
+2026-05-24T20:07:33.4596476Z    _____                               
+2026-05-24T20:07:33.4626179Z   /  _  \ __________ _________   ____  
+2026-05-24T20:07:33.4626327Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-05-24T20:07:33.4626374Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-05-24T20:07:33.4626415Z \____|__  /_____ \____/ |__|    \___  >
+2026-05-24T20:07:33.4626461Z         \/      \/                  \/ 
+2026-05-24T20:07:33.4626547Z A P P   S E R V I C E   O N   L I N U X
+2026-05-24T20:07:33.4626978Z 
+2026-05-24T20:07:33.4627022Z Documentation     : https://aka.ms/webapp-linux
+2026-05-24T20:07:33.4627065Z Python quickstart : https://aka.ms/python-qs
+2026-05-24T20:07:33.4627105Z Python version    : 3.11.15
+2026-05-24T20:07:33.4627464Z Instance name     : 10-30-0-147
+2026-05-24T20:07:33.4627533Z Instance id       : 1b1f15bb56786a6bb8ba86082f436e509051d1089ba3891ef72c9800a4f23207
+2026-05-24T20:07:33.4627575Z 
+2026-05-24T20:07:33.4627933Z App port          : 8000
+2026-05-24T20:07:33.4627973Z Port selected by  : Default for this image
+2026-05-24T20:07:33.4628013Z (Learn more about the PORT appsetting https://aka.ms/webapp-python-settings)
+2026-05-24T20:07:33.4628050Z 
+2026-05-24T20:07:33.4628103Z Note: Any data outside '/home' is not persisted
+2026-05-24T20:07:33.4628136Z 
+2026-05-24T20:07:33.4628186Z ────────────────────────────────────────────────────────────────
+2026-05-24T20:07:33.4628226Z  Run 'apphelp' for available commands and aliases.
+2026-05-24T20:07:33.4628263Z  Run 'install-nettools' to install networking utilities.
+2026-05-24T20:07:33.4628309Z ────────────────────────────────────────────────────────────────
+2026-05-24T20:07:34.1984385Z Starting OpenBSD Secure Shell server: sshd.
+2026-05-24T20:07:34.2129669Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-05-24T20:07:34.2701639Z Updating certificates in /etc/ssl/certs...
+2026-05-24T20:07:40.5772794Z rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+2026-05-24T20:07:40.6060560Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2026-05-24T20:07:40.6110448Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2026-05-24T20:07:40.6288103Z 4 added, 0 removed; done.
+2026-05-24T20:07:40.6289226Z Running hooks in /etc/ca-certificates/update.d...
+2026-05-24T20:07:40.6331312Z done.
+2026-05-24T20:07:40.6422859Z CA certificates copied and updated successfully.
+2026-05-24T20:07:40.6968358Z Site's appCommandLine: APPDIR=$(find /tmp -maxdepth 1 -type d -name 8* | head -n 1); cd $APPDIR; gunicorn app.main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 --timeout 600
+2026-05-24T20:07:40.9384085Z Starting periodic command scheduler: cron.
+2026-05-24T20:07:40.9396379Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'APPDIR=$(find /tmp -maxdepth 1 -type d -name 8* | head -n 1); cd $APPDIR; gunicorn app.main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 --timeout 600'
+2026-05-24T20:07:40.9761711Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2026-05-24T20:07:40.9834687Z Build Operation ID: 1c6dae509a71b408
+2026-05-24T20:07:40.9841657Z Oryx Version: 0.2.20260504.2, Commit: a776ec9f2fd225b305599e35443ecb3533bcdb26, ReleaseTagName: 20260504.2
+2026-05-24T20:07:40.9843313Z Output is compressed. Extracting it...
+2026-05-24T20:07:40.9865182Z Found zstd-compressed tarball.
+2026-05-24T20:07:40.9869542Z Extracting '/home/site/wwwroot/output.tar.zst' to directory '/tmp/8deb9cf703e54ca'...
+2026-05-24T20:07:40.9869666Z Using zstd for decompression of file: /home/site/wwwroot/output.tar.zst
+2026-05-24T20:07:43.3445490Z zstd tar Successfully extracted '/home/site/wwwroot/output.tar.zst' to '/tmp/8deb9cf703e54ca'
+2026-05-24T20:07:43.3453447Z App path is set to '/tmp/8deb9cf703e54ca'
+2026-05-24T20:07:44.0303075Z Writing output script to '/opt/startup/startup.sh'
+2026-05-24T20:07:44.5098585Z Using packages from virtual environment antenv located at /tmp/8deb9cf703e54ca/antenv.
+2026-05-24T20:07:44.5099370Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages'
+2026-05-24T20:07:45.0674664Z [2026-05-24 20:07:45 +0000] [1886] [INFO] Starting gunicorn 23.0.0
+2026-05-24T20:07:45.0684924Z [2026-05-24 20:07:45 +0000] [1886] [INFO] Listening at: http://0.0.0.0:8000 (1886)
+2026-05-24T20:07:45.0685691Z [2026-05-24 20:07:45 +0000] [1886] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2026-05-24T20:07:45.0743748Z [2026-05-24 20:07:45 +0000] [1887] [INFO] Booting worker with pid: 1887
+2026-05-24T20:07:45.0926020Z [2026-05-24 20:07:45 +0000] [1887] [ERROR] Exception in worker process
+2026-05-24T20:07:45.0926768Z Traceback (most recent call last):
+2026-05-24T20:07:45.0926851Z   File "/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+2026-05-24T20:07:45.0926959Z     worker.init_process()
+2026-05-24T20:07:45.0927009Z   File "/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages/uvicorn/workers.py", line 75, in init_process
+2026-05-24T20:07:45.0927047Z     super().init_process()
+2026-05-24T20:07:45.0927087Z   File "/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 135, in init_process
+2026-05-24T20:07:45.0927125Z     self.load_wsgi()
+2026-05-24T20:07:45.0927166Z   File "/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+2026-05-24T20:07:45.0927217Z     self.wsgi = self.app.wsgi()
+2026-05-24T20:07:45.0927255Z                 ^^^^^^^^^^^^^^^
+2026-05-24T20:07:45.0927296Z   File "/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages/gunicorn/app/base.py", line 66, in wsgi
+2026-05-24T20:07:45.0927335Z     self.callable = self.load()
+2026-05-24T20:07:45.0927371Z                     ^^^^^^^^^^^
+2026-05-24T20:07:45.0927411Z   File "/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+2026-05-24T20:07:45.0927458Z     return self.load_wsgiapp()
+2026-05-24T20:07:45.0927495Z            ^^^^^^^^^^^^^^^^^^^
+2026-05-24T20:07:45.0927538Z   File "/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+2026-05-24T20:07:45.0927574Z     return util.import_app(self.app_uri)
+2026-05-24T20:07:45.0927610Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-05-24T20:07:45.0927654Z   File "/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages/gunicorn/util.py", line 370, in import_app
+2026-05-24T20:07:45.0927690Z     mod = importlib.import_module(module)
+2026-05-24T20:07:45.0927736Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-05-24T20:07:45.0927774Z   File "/opt/python/3.11.15/lib/python3.11/importlib/__init__.py", line 126, in import_module
+2026-05-24T20:07:45.0927816Z     return _bootstrap._gcd_import(name[level:], package, level)
+2026-05-24T20:07:45.0927853Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-05-24T20:07:45.0927892Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2026-05-24T20:07:45.0927931Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2026-05-24T20:07:45.0927978Z   File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+2026-05-24T20:07:45.0928017Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2026-05-24T20:07:45.0928054Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2026-05-24T20:07:45.0928093Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2026-05-24T20:07:45.0928155Z   File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+2026-05-24T20:07:45.0928226Z ModuleNotFoundError: No module named 'app'
+2026-05-24T20:07:45.0933516Z [2026-05-24 20:07:45 +0000] [1887] [INFO] Worker exiting (pid: 1887)
+2026-05-24T20:07:45.1461267Z [2026-05-24 20:07:45 +0000] [1886] [ERROR] Worker (pid:1887) exited with code 3
+2026-05-24T20:07:45.1461708Z [2026-05-24 20:07:45 +0000] [1886] [ERROR] Shutting down: Master
+2026-05-24T20:07:45.1461753Z [2026-05-24 20:07:45 +0000] [1886] [ERROR] Reason: Worker failed to boot.
+2026-05-24T20:09:08.9992685Z    _____                               
+2026-05-24T20:09:08.9995388Z   /  _  \ __________ _________   ____  
+2026-05-24T20:09:08.9995488Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-05-24T20:09:08.9995526Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-05-24T20:09:08.9995553Z \____|__  /_____ \____/ |__|    \___  >
+2026-05-24T20:09:08.9995633Z         \/      \/                  \/ 
+2026-05-24T20:09:08.9995657Z A P P   S E R V I C E   O N   L I N U X
+2026-05-24T20:09:08.9995681Z 
+2026-05-24T20:09:08.9995711Z Documentation     : https://aka.ms/webapp-linux
+2026-05-24T20:09:08.9995738Z Python quickstart : https://aka.ms/python-qs
+2026-05-24T20:09:08.9995762Z Python version    : 3.11.15
+2026-05-24T20:09:08.9995795Z Instance name     : 10-30-0-147
+2026-05-24T20:09:08.9995824Z Instance id       : 1b1f15bb56786a6bb8ba86082f436e509051d1089ba3891ef72c9800a4f23207
+2026-05-24T20:09:08.9995849Z 
+2026-05-24T20:09:08.9995875Z App port          : 8000
+2026-05-24T20:09:08.9995900Z Port selected by  : Default for this image
+2026-05-24T20:09:08.9995926Z (Learn more about the PORT appsetting https://aka.ms/webapp-python-settings)
+2026-05-24T20:09:08.9995960Z 
+2026-05-24T20:09:08.9995985Z Note: Any data outside '/home' is not persisted
+2026-05-24T20:09:08.9996009Z 
+2026-05-24T20:09:08.9996043Z ────────────────────────────────────────────────────────────────
+2026-05-24T20:09:08.9996071Z  Run 'apphelp' for available commands and aliases.
+2026-05-24T20:09:08.9996096Z  Run 'install-nettools' to install networking utilities.
+2026-05-24T20:09:08.9996128Z ────────────────────────────────────────────────────────────────
+2026-05-24T20:09:09.5087886Z Starting OpenBSD Secure Shell server: sshd.
+2026-05-24T20:09:09.5153443Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-05-24T20:09:09.5425319Z Updating certificates in /etc/ssl/certs...
+2026-05-24T20:09:15.3660704Z rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+2026-05-24T20:09:15.3940627Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2026-05-24T20:09:15.3997343Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2026-05-24T20:09:15.4239953Z 4 added, 0 removed; done.
+2026-05-24T20:09:15.4240589Z Running hooks in /etc/ca-certificates/update.d...
+2026-05-24T20:09:15.4311170Z done.
+2026-05-24T20:09:15.4440305Z CA certificates copied and updated successfully.
+2026-05-24T20:09:15.6417899Z Site's appCommandLine: APPDIR=$(dirname $(find /tmp -path */app/main.py -print -quit)); cd $APPDIR; gunicorn app.main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 --timeout 600
+2026-05-24T20:09:16.2835234Z Starting periodic command scheduler: cron.
+2026-05-24T20:09:16.2837732Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'APPDIR=$(dirname $(find /tmp -path */app/main.py -print -quit)); cd $APPDIR; gunicorn app.main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 --timeout 600'
+2026-05-24T20:09:16.2837920Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2026-05-24T20:09:16.2845307Z Build Operation ID: 1c6dae509a71b408
+2026-05-24T20:09:16.2855201Z Output is compressed. Extracting it...
+2026-05-24T20:09:16.2856517Z Oryx Version: 0.2.20260504.2, Commit: a776ec9f2fd225b305599e35443ecb3533bcdb26, ReleaseTagName: 20260504.2
+2026-05-24T20:09:16.4561707Z Found zstd-compressed tarball.
+2026-05-24T20:09:16.4617466Z Extracting '/home/site/wwwroot/output.tar.zst' to directory '/tmp/8deb9cf703e54ca'...
+2026-05-24T20:09:16.4618308Z Using zstd for decompression of file: /home/site/wwwroot/output.tar.zst
+2026-05-24T20:09:19.5765573Z zstd tar Successfully extracted '/home/site/wwwroot/output.tar.zst' to '/tmp/8deb9cf703e54ca'
+2026-05-24T20:09:19.5773630Z App path is set to '/tmp/8deb9cf703e54ca'
+2026-05-24T20:09:20.8745824Z Writing output script to '/opt/startup/startup.sh'
+2026-05-24T20:09:21.2387731Z Using packages from virtual environment antenv located at /tmp/8deb9cf703e54ca/antenv.
+2026-05-24T20:09:21.2391166Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages'
+2026-05-24T20:09:21.8460453Z dirname: missing operand
+2026-05-24T20:09:21.8461043Z Try 'dirname --help' for more information.
+2026-05-24T20:09:24.5873695Z [2026-05-24 20:09:24 +0000] [1885] [INFO] Starting gunicorn 23.0.0
+2026-05-24T20:09:24.5882900Z [2026-05-24 20:09:24 +0000] [1885] [INFO] Listening at: http://0.0.0.0:8000 (1885)
+2026-05-24T20:09:24.5889972Z [2026-05-24 20:09:24 +0000] [1885] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2026-05-24T20:09:24.6151781Z [2026-05-24 20:09:24 +0000] [1886] [INFO] Booting worker with pid: 1886
+2026-05-24T20:09:24.6476116Z [2026-05-24 20:09:24 +0000] [1886] [ERROR] Exception in worker process
+2026-05-24T20:09:24.6476650Z Traceback (most recent call last):
+2026-05-24T20:09:24.6476716Z   File "/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+2026-05-24T20:09:24.6476764Z     worker.init_process()
+2026-05-24T20:09:24.6476816Z   File "/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages/uvicorn/workers.py", line 75, in init_process
+2026-05-24T20:09:24.6476857Z     super().init_process()
+2026-05-24T20:09:24.6476959Z   File "/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 135, in init_process
+2026-05-24T20:09:24.6477001Z     self.load_wsgi()
+2026-05-24T20:09:24.6477035Z   File "/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+2026-05-24T20:09:24.6477062Z     self.wsgi = self.app.wsgi()
+2026-05-24T20:09:24.6477087Z                 ^^^^^^^^^^^^^^^
+2026-05-24T20:09:24.6477114Z   File "/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages/gunicorn/app/base.py", line 66, in wsgi
+2026-05-24T20:09:24.6477151Z     self.callable = self.load()
+2026-05-24T20:09:24.6477174Z                     ^^^^^^^^^^^
+2026-05-24T20:09:24.6477200Z   File "/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+2026-05-24T20:09:24.6477224Z     return self.load_wsgiapp()
+2026-05-24T20:09:24.6477247Z            ^^^^^^^^^^^^^^^^^^^
+2026-05-24T20:09:24.6477273Z   File "/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+2026-05-24T20:09:24.6477298Z     return util.import_app(self.app_uri)
+2026-05-24T20:09:24.6477333Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-05-24T20:09:24.6477360Z   File "/tmp/8deb9cf703e54ca/antenv/lib/python3.11/site-packages/gunicorn/util.py", line 370, in import_app
+2026-05-24T20:09:24.6477384Z     mod = importlib.import_module(module)
+2026-05-24T20:09:24.6477408Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-05-24T20:09:24.6477434Z   File "/opt/python/3.11.15/lib/python3.11/importlib/__init__.py", line 126, in import_module
+2026-05-24T20:09:24.6477460Z     return _bootstrap._gcd_import(name[level:], package, level)
+2026-05-24T20:09:24.6477492Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-05-24T20:09:24.6477518Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2026-05-24T20:09:24.6477544Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2026-05-24T20:09:24.6477570Z   File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+2026-05-24T20:09:24.6477597Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2026-05-24T20:09:24.6477622Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2026-05-24T20:09:24.6477654Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2026-05-24T20:09:24.6477693Z   File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+2026-05-24T20:09:24.6477739Z ModuleNotFoundError: No module named 'app'
+2026-05-24T20:09:24.6477765Z [2026-05-24 20:09:24 +0000] [1886] [INFO] Worker exiting (pid: 1886)
+2026-05-24T20:09:24.7509963Z [2026-05-24 20:09:24 +0000] [1885] [ERROR] Worker (pid:1886) exited with code 3
+2026-05-24T20:09:24.7533049Z [2026-05-24 20:09:24 +0000] [1885] [ERROR] Shutting down: Master
+2026-05-24T20:09:24.7540333Z [2026-05-24 20:09:24 +0000] [1885] [ERROR] Reason: Worker failed to boot.
+2026-05-24T20:14:23.8482748Z    _____                               
+2026-05-24T20:14:23.8484561Z   /  _  \ __________ _________   ____  
+2026-05-24T20:14:23.8484672Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-05-24T20:14:23.8484713Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-05-24T20:14:23.8484748Z \____|__  /_____ \____/ |__|    \___  >
+2026-05-24T20:14:23.8484796Z         \/      \/                  \/ 
+2026-05-24T20:14:23.8484835Z A P P   S E R V I C E   O N   L I N U X
+2026-05-24T20:14:23.8484873Z 
+2026-05-24T20:14:23.8484929Z Documentation     : https://aka.ms/webapp-linux
+2026-05-24T20:14:23.8484971Z Python quickstart : https://aka.ms/python-qs
+2026-05-24T20:14:23.8485007Z Python version    : 3.11.15
+2026-05-24T20:14:23.8485041Z Instance name     : 10-30-0-147
+2026-05-24T20:14:23.8485080Z Instance id       : 1b1f15bb56786a6bb8ba86082f436e509051d1089ba3891ef72c9800a4f23207
+2026-05-24T20:14:23.8485114Z 
+2026-05-24T20:14:23.8485161Z App port          : 8000
+2026-05-24T20:14:23.8485378Z Port selected by  : Default for this image
+2026-05-24T20:14:23.8485429Z (Learn more about the PORT appsetting https://aka.ms/webapp-python-settings)
+2026-05-24T20:14:23.8485468Z 
+2026-05-24T20:14:23.8485511Z Note: Any data outside '/home' is not persisted
+2026-05-24T20:14:23.8485550Z 
+2026-05-24T20:14:23.8489175Z ────────────────────────────────────────────────────────────────
+2026-05-24T20:14:23.8490173Z  Run 'apphelp' for available commands and aliases.
+2026-05-24T20:14:23.8490223Z  Run 'install-nettools' to install networking utilities.
+2026-05-24T20:14:23.8490271Z ────────────────────────────────────────────────────────────────
+2026-05-24T20:14:24.3955967Z Starting OpenBSD Secure Shell server: sshd.
+2026-05-24T20:14:24.4019624Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-05-24T20:14:24.4384356Z Updating certificates in /etc/ssl/certs...
+2026-05-24T20:14:30.4781117Z rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+2026-05-24T20:14:30.5275350Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2026-05-24T20:14:30.5341938Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2026-05-24T20:14:30.5621252Z 4 added, 0 removed; done.
+2026-05-24T20:14:30.5622044Z Running hooks in /etc/ca-certificates/update.d...
+2026-05-24T20:14:30.5838503Z done.
+2026-05-24T20:14:30.6134712Z CA certificates copied and updated successfully.
+2026-05-24T20:14:30.6967867Z Site's appCommandLine: cd /home/site/wwwroot && python -m pip install -r requirements.txt --target=/home/site/wwwroot/.python_packages/lib/site-packages && PYTHONPATH=/home/site/wwwroot/.python_packages/lib/site-packages:/home/site/wwwroot gunicorn app.main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 --timeout 600
+2026-05-24T20:14:30.9628666Z Starting periodic command scheduler: cron.
+2026-05-24T20:14:30.9661950Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'cd /home/site/wwwroot && python -m pip install -r requirements.txt --target=/home/site/wwwroot/.python_packages/lib/site-packages && PYTHONPATH=/home/site/wwwroot/.python_packages/lib/site-packages:/home/site/wwwroot gunicorn app.main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 --timeout 600'
+2026-05-24T20:14:31.1235717Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2026-05-24T20:14:31.1236208Z Could not find operation ID in manifest. Generating an operation id...
+2026-05-24T20:14:31.1236705Z Build Operation ID: cd8d6525-1a0d-432c-ad23-6a7213819d93
+2026-05-24T20:14:31.5810318Z Oryx Version: 0.2.20260504.2, Commit: a776ec9f2fd225b305599e35443ecb3533bcdb26, ReleaseTagName: 20260504.2
+2026-05-24T20:14:31.7001466Z Writing output script to '/opt/startup/startup.sh'
+2026-05-24T20:14:31.9676681Z WARNING: Could not find virtual environment directory /home/site/wwwroot/antenv.
+2026-05-24T20:14:31.9677564Z WARNING: Could not find package directory /home/site/wwwroot/__oryx_packages__.
+2026-05-24T20:14:33.7319523Z Collecting fastapi==0.115.5 (from -r requirements.txt (line 1))
+2026-05-24T20:14:33.7677225Z   Downloading fastapi-0.115.5-py3-none-any.whl.metadata (27 kB)
+2026-05-24T20:14:33.8801741Z Collecting uvicorn==0.32.1 (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2))
+2026-05-24T20:14:33.8875661Z   Downloading uvicorn-0.32.1-py3-none-any.whl.metadata (6.6 kB)
+2026-05-24T20:14:34.0365602Z Collecting openai==1.54.4 (from -r requirements.txt (line 3))
+2026-05-24T20:14:34.0441403Z   Downloading openai-1.54.4-py3-none-any.whl.metadata (24 kB)
+2026-05-24T20:14:34.1453264Z Collecting python-docx==1.1.2 (from -r requirements.txt (line 4))
+2026-05-24T20:14:34.1548301Z   Downloading python_docx-1.1.2-py3-none-any.whl.metadata (2.0 kB)
+2026-05-24T20:14:34.2651320Z Collecting fpdf2==2.8.1 (from -r requirements.txt (line 5))
+2026-05-24T20:14:34.2806676Z   Downloading fpdf2-2.8.1-py2.py3-none-any.whl.metadata (63 kB)
+2026-05-24T20:14:34.3823760Z Collecting markdown==3.7 (from -r requirements.txt (line 6))
+2026-05-24T20:14:34.3915187Z   Downloading Markdown-3.7-py3-none-any.whl.metadata (7.0 kB)
+2026-05-24T20:14:34.4805455Z Collecting python-dotenv==1.0.1 (from -r requirements.txt (line 7))
+2026-05-24T20:14:34.4865011Z   Downloading python_dotenv-1.0.1-py3-none-any.whl.metadata (23 kB)
+2026-05-24T20:14:34.5963268Z Collecting python-multipart==0.0.12 (from -r requirements.txt (line 8))
+2026-05-24T20:14:34.6046902Z   Downloading python_multipart-0.0.12-py3-none-any.whl.metadata (1.9 kB)
+2026-05-24T20:14:34.7015263Z Collecting gunicorn==23.0.0 (from -r requirements.txt (line 9))
+2026-05-24T20:14:34.7087638Z   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+2026-05-24T20:14:34.8066840Z Collecting httpx==0.27.2 (from -r requirements.txt (line 10))
+2026-05-24T20:14:34.8181002Z   Downloading httpx-0.27.2-py3-none-any.whl.metadata (7.1 kB)
+2026-05-24T20:14:34.9238555Z Collecting starlette<0.42.0,>=0.40.0 (from fastapi==0.115.5->-r requirements.txt (line 1))
+2026-05-24T20:14:34.9311528Z   Downloading starlette-0.41.3-py3-none-any.whl.metadata (6.0 kB)
+2026-05-24T20:14:35.1432114Z Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi==0.115.5->-r requirements.txt (line 1))
+2026-05-24T20:14:35.1499347Z   Downloading pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
+2026-05-24T20:14:35.2387105Z Collecting typing-extensions>=4.8.0 (from fastapi==0.115.5->-r requirements.txt (line 1))
+2026-05-24T20:14:35.2451542Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+2026-05-24T20:14:35.3482837Z Collecting click>=7.0 (from uvicorn==0.32.1->uvicorn[standard]==0.32.1->-r requirements.txt (line 2))
+2026-05-24T20:14:35.3559625Z   Downloading click-8.4.1-py3-none-any.whl.metadata (2.6 kB)
+2026-05-24T20:14:35.4532231Z Collecting h11>=0.8 (from uvicorn==0.32.1->uvicorn[standard]==0.32.1->-r requirements.txt (line 2))
+2026-05-24T20:14:35.4606945Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-05-24T20:14:35.5517313Z Collecting anyio<5,>=3.5.0 (from openai==1.54.4->-r requirements.txt (line 3))
+2026-05-24T20:14:35.5578806Z   Downloading anyio-4.13.0-py3-none-any.whl.metadata (4.5 kB)
+2026-05-24T20:14:35.6450829Z Collecting distro<2,>=1.7.0 (from openai==1.54.4->-r requirements.txt (line 3))
+2026-05-24T20:14:35.6505861Z   Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+2026-05-24T20:14:35.8179631Z Collecting jiter<1,>=0.4.0 (from openai==1.54.4->-r requirements.txt (line 3))
+2026-05-24T20:14:35.8263086Z   Downloading jiter-0.15.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+2026-05-24T20:14:35.9319833Z Collecting sniffio (from openai==1.54.4->-r requirements.txt (line 3))
+2026-05-24T20:14:35.9389633Z   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+2026-05-24T20:14:36.0408887Z Collecting tqdm>4 (from openai==1.54.4->-r requirements.txt (line 3))
+2026-05-24T20:14:36.0486747Z   Downloading tqdm-4.67.3-py3-none-any.whl.metadata (57 kB)
+2026-05-24T20:14:36.1521617Z Collecting certifi (from httpx==0.27.2->-r requirements.txt (line 10))
+2026-05-24T20:14:36.1587019Z   Downloading certifi-2026.5.20-py3-none-any.whl.metadata (2.5 kB)
+2026-05-24T20:14:36.2586853Z Collecting httpcore==1.* (from httpx==0.27.2->-r requirements.txt (line 10))
+2026-05-24T20:14:36.2661565Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-05-24T20:14:36.3598202Z Collecting idna (from httpx==0.27.2->-r requirements.txt (line 10))
+2026-05-24T20:14:36.3689414Z   Downloading idna-3.16-py3-none-any.whl.metadata (6.4 kB)
+2026-05-24T20:14:36.6955463Z Collecting lxml>=3.1.0 (from python-docx==1.1.2->-r requirements.txt (line 4))
+2026-05-24T20:14:36.7035135Z   Downloading lxml-6.1.1-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.5 kB)
+2026-05-24T20:14:36.8009143Z Collecting defusedxml (from fpdf2==2.8.1->-r requirements.txt (line 5))
+2026-05-24T20:14:36.8063284Z   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+2026-05-24T20:14:37.0792546Z Collecting Pillow!=9.2.*,>=6.2.2 (from fpdf2==2.8.1->-r requirements.txt (line 5))
+2026-05-24T20:14:37.0940982Z   Downloading pillow-12.2.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+2026-05-24T20:14:37.3447921Z Collecting fonttools>=4.34.0 (from fpdf2==2.8.1->-r requirements.txt (line 5))
+2026-05-24T20:14:37.3563548Z   Downloading fonttools-4.63.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+2026-05-24T20:14:37.4803031Z Collecting packaging (from gunicorn==23.0.0->-r requirements.txt (line 9))
+2026-05-24T20:14:37.4872354Z   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+2026-05-24T20:14:37.6325465Z Collecting httptools>=0.6.3 (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2))
+2026-05-24T20:14:37.6402068Z   Downloading httptools-0.7.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+2026-05-24T20:14:37.7642333Z Collecting pyyaml>=5.1 (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2))
+2026-05-24T20:14:37.7713408Z   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-05-24T20:14:37.8940888Z Collecting uvloop!=0.15.0,!=0.15.1,>=0.14.0 (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2))
+2026-05-24T20:14:37.9044784Z   Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+2026-05-24T20:14:38.0686356Z Collecting watchfiles>=0.13 (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2))
+2026-05-24T20:14:38.0757385Z   Downloading watchfiles-1.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+2026-05-24T20:14:38.2324755Z Collecting websockets>=10.4 (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2))
+2026-05-24T20:14:38.2390455Z   Downloading websockets-16.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.8 kB)
+2026-05-24T20:14:38.3440676Z Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.5->-r requirements.txt (line 1))
+2026-05-24T20:14:38.3501514Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2026-05-24T20:14:39.2187488Z Collecting pydantic-core==2.46.4 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.5->-r requirements.txt (line 1))
+2026-05-24T20:14:39.2261095Z   Downloading pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+2026-05-24T20:14:39.3110550Z Collecting typing-inspection>=0.4.2 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.5->-r requirements.txt (line 1))
+2026-05-24T20:14:39.3174319Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+2026-05-24T20:14:39.3994588Z Downloading fastapi-0.115.5-py3-none-any.whl (94 kB)
+2026-05-24T20:14:39.4530758Z Downloading uvicorn-0.32.1-py3-none-any.whl (63 kB)
+2026-05-24T20:14:39.5162878Z Downloading openai-1.54.4-py3-none-any.whl (389 kB)
+2026-05-24T20:14:39.5960485Z Downloading httpx-0.27.2-py3-none-any.whl (76 kB)
+2026-05-24T20:14:39.6394237Z Downloading python_docx-1.1.2-py3-none-any.whl (244 kB)
+2026-05-24T20:14:39.6904078Z Downloading fpdf2-2.8.1-py2.py3-none-any.whl (227 kB)
+2026-05-24T20:14:39.7470081Z Downloading Markdown-3.7-py3-none-any.whl (106 kB)
+2026-05-24T20:14:39.7893794Z Downloading python_dotenv-1.0.1-py3-none-any.whl (19 kB)
+2026-05-24T20:14:39.8347289Z Downloading python_multipart-0.0.12-py3-none-any.whl (23 kB)
+2026-05-24T20:14:39.8776176Z Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+2026-05-24T20:14:39.9235086Z Downloading anyio-4.13.0-py3-none-any.whl (114 kB)
+2026-05-24T20:14:39.9759438Z Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+2026-05-24T20:14:40.0330450Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-05-24T20:14:40.0846358Z Downloading jiter-0.15.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (349 kB)
+2026-05-24T20:14:40.1389378Z Downloading pydantic-2.13.4-py3-none-any.whl (472 kB)
+2026-05-24T20:14:40.1942026Z Downloading pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-05-24T20:14:40.2627539Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 28.9 MB/s  0:00:00
+2026-05-24T20:14:40.2696361Z Downloading starlette-0.41.3-py3-none-any.whl (73 kB)
+2026-05-24T20:14:40.3186579Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-05-24T20:14:40.3696897Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2026-05-24T20:14:40.4106397Z Downloading click-8.4.1-py3-none-any.whl (116 kB)
+2026-05-24T20:14:40.4593637Z Downloading fonttools-4.63.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.1 MB)
+2026-05-24T20:14:40.6062316Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 34.3 MB/s  0:00:00
+2026-05-24T20:14:40.6115856Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-05-24T20:14:40.6583835Z Downloading httptools-0.7.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (456 kB)
+2026-05-24T20:14:40.7370824Z Downloading idna-3.16-py3-none-any.whl (74 kB)
+2026-05-24T20:14:40.7958080Z Downloading lxml-6.1.1-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+2026-05-24T20:14:41.3382749Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 9.2 MB/s  0:00:00
+2026-05-24T20:14:41.3465823Z Downloading pillow-12.2.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+2026-05-24T20:14:41.5818532Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 29.8 MB/s  0:00:00
+2026-05-24T20:14:41.5921828Z Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+2026-05-24T20:14:41.7488880Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 5.0 MB/s  0:00:00
+2026-05-24T20:14:41.7557487Z Downloading tqdm-4.67.3-py3-none-any.whl (78 kB)
+2026-05-24T20:14:56.8362036Z WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='files.pythonhosted.org', port=443): Read timed out. (read timeout=15)")': /packages/dc/9b/47798a6c91d8bdb567fe2698fe81e0c6b7cb7ef4d13da4114b41d239f65d/typing_inspection-0.4.2-py3-none-any.whl
+2026-05-24T20:14:56.8639001Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+2026-05-24T20:14:56.9087095Z Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.8 MB)
+2026-05-24T20:14:57.1013911Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 19.9 MB/s  0:00:00
+2026-05-24T20:14:57.1086338Z Downloading watchfiles-1.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+2026-05-24T20:14:57.2255890Z Downloading websockets-16.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (184 kB)
+2026-05-24T20:14:57.2693609Z Downloading certifi-2026.5.20-py3-none-any.whl (134 kB)
+2026-05-24T20:14:57.3200420Z Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+2026-05-24T20:14:57.3771367Z Downloading packaging-26.2-py3-none-any.whl (100 kB)
+2026-05-24T20:14:57.4247134Z Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+2026-05-24T20:14:57.6606880Z Installing collected packages: websockets, uvloop, typing-extensions, tqdm, sniffio, pyyaml, python-multipart, python-dotenv, Pillow, packaging, markdown, lxml, jiter, idna, httptools, h11, fonttools, distro, defusedxml, click, certifi, annotated-types, uvicorn, typing-inspection, python-docx, pydantic-core, httpcore, gunicorn, fpdf2, anyio, watchfiles, starlette, pydantic, httpx, openai, fastapi
+2026-05-24T20:15:06.5391782Z 
+2026-05-24T20:15:06.5425087Z Successfully installed Pillow-12.2.0 annotated-types-0.7.0 anyio-4.13.0 certifi-2026.5.20 click-8.4.1 defusedxml-0.7.1 distro-1.9.0 fastapi-0.115.5 fonttools-4.63.0 fpdf2-2.8.1 gunicorn-23.0.0 h11-0.16.0 httpcore-1.0.9 httptools-0.7.1 httpx-0.27.2 idna-3.16 jiter-0.15.0 lxml-6.1.1 markdown-3.7 openai-1.54.4 packaging-26.2 pydantic-2.13.4 pydantic-core-2.46.4 python-docx-1.1.2 python-dotenv-1.0.1 python-multipart-0.0.12 pyyaml-6.0.3 sniffio-1.3.1 starlette-0.41.3 tqdm-4.67.3 typing-extensions-4.15.0 typing-inspection-0.4.2 uvicorn-0.32.1 uvloop-0.22.1 watchfiles-1.2.0 websockets-16.0
+2026-05-24T20:27:05.7214152Z    _____                               
+2026-05-24T20:27:05.7320705Z   /  _  \ __________ _________   ____  
+2026-05-24T20:27:05.7320907Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-05-24T20:27:05.7320954Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-05-24T20:27:05.7320994Z \____|__  /_____ \____/ |__|    \___  >
+2026-05-24T20:27:05.7321069Z         \/      \/                  \/ 
+2026-05-24T20:27:05.7321120Z A P P   S E R V I C E   O N   L I N U X
+2026-05-24T20:27:05.7321153Z 
+2026-05-24T20:27:05.7321191Z Documentation     : https://aka.ms/webapp-linux
+2026-05-24T20:27:05.7321224Z Python quickstart : https://aka.ms/python-qs
+2026-05-24T20:27:05.7321261Z Python version    : 3.11.15
+2026-05-24T20:27:05.7321294Z Instance name     : 10-30-0-147
+2026-05-24T20:27:05.7321350Z Instance id       : 1b1f15bb56786a6bb8ba86082f436e509051d1089ba3891ef72c9800a4f23207
+2026-05-24T20:27:05.7321384Z 
+2026-05-24T20:27:05.7321418Z App port          : 8000
+2026-05-24T20:27:05.7321453Z Port selected by  : Default for this image
+2026-05-24T20:27:05.7321489Z (Learn more about the PORT appsetting https://aka.ms/webapp-python-settings)
+2026-05-24T20:27:05.7321525Z 
+2026-05-24T20:27:05.7321572Z Note: Any data outside '/home' is not persisted
+2026-05-24T20:27:05.7321609Z 
+2026-05-24T20:27:05.7321658Z ────────────────────────────────────────────────────────────────
+2026-05-24T20:27:05.7321698Z  Run 'apphelp' for available commands and aliases.
+2026-05-24T20:27:05.7321736Z  Run 'install-nettools' to install networking utilities.
+2026-05-24T20:27:05.7321784Z ────────────────────────────────────────────────────────────────
+2026-05-24T20:27:06.0736606Z Starting OpenBSD Secure Shell server: sshd.
+2026-05-24T20:27:06.0820558Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-05-24T20:27:06.1138255Z Updating certificates in /etc/ssl/certs...
+2026-05-24T20:27:36.2856055Z rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+2026-05-24T20:27:36.3085818Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2026-05-24T20:27:36.3139997Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2026-05-24T20:27:36.3377879Z 4 added, 0 removed; done.
+2026-05-24T20:27:36.3378370Z Running hooks in /etc/ca-certificates/update.d...
+2026-05-24T20:27:36.3440499Z done.
+2026-05-24T20:27:36.3548693Z CA certificates copied and updated successfully.
+2026-05-24T20:27:36.4181761Z Site's appCommandLine: cd /home/site/wwwroot && python -m pip install -r requirements.txt --target=/home/site/wwwroot/.python_packages/lib/site-packages && PYTHONPATH=/home/site/wwwroot/.python_packages/lib/site-packages:/home/site/wwwroot gunicorn app.main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 --timeout 600
+2026-05-24T20:27:36.5530676Z Starting periodic command scheduler: cron.
+2026-05-24T20:27:36.5581587Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'cd /home/site/wwwroot && python -m pip install -r requirements.txt --target=/home/site/wwwroot/.python_packages/lib/site-packages && PYTHONPATH=/home/site/wwwroot/.python_packages/lib/site-packages:/home/site/wwwroot gunicorn app.main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 --timeout 600'
+2026-05-24T20:27:36.6990613Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2026-05-24T20:27:36.7319968Z Build Operation ID: ca2347eaf85ede38
+2026-05-24T20:27:36.7333309Z Output is compressed. Extracting it...
+2026-05-24T20:27:36.7342331Z Oryx Version: 0.2.20260504.2, Commit: a776ec9f2fd225b305599e35443ecb3533bcdb26, ReleaseTagName: 20260504.2
+2026-05-24T20:27:36.7342630Z Found zstd-compressed tarball.
+2026-05-24T20:27:36.7350386Z Extracting '/home/site/wwwroot/output.tar.zst' to directory '/tmp/8deb9d293348af8'...
+2026-05-24T20:27:36.7350540Z Using zstd for decompression of file: /home/site/wwwroot/output.tar.zst
+2026-05-24T20:27:39.9739836Z zstd tar Successfully extracted '/home/site/wwwroot/output.tar.zst' to '/tmp/8deb9d293348af8'
+2026-05-24T20:27:39.9750374Z App path is set to '/tmp/8deb9d293348af8'
+2026-05-24T20:27:40.8379706Z Writing output script to '/opt/startup/startup.sh'
+2026-05-24T20:27:41.1395270Z Using packages from virtual environment antenv located at /tmp/8deb9d293348af8/antenv.
+2026-05-24T20:27:41.1396363Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8deb9d293348af8/antenv/lib/python3.11/site-packages'
+2026-05-24T20:27:43.3390796Z Collecting fastapi==0.115.5 (from -r requirements.txt (line 1))
+2026-05-24T20:27:43.3686530Z   Downloading fastapi-0.115.5-py3-none-any.whl.metadata (27 kB)
+2026-05-24T20:27:44.0146535Z Collecting uvicorn==0.32.1 (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2))
+2026-05-24T20:27:44.0234503Z   Downloading uvicorn-0.32.1-py3-none-any.whl.metadata (6.6 kB)
+2026-05-24T20:27:44.3642345Z Collecting openai==1.54.4 (from -r requirements.txt (line 3))
+2026-05-24T20:27:44.3716920Z   Downloading openai-1.54.4-py3-none-any.whl.metadata (24 kB)
+2026-05-24T20:27:44.5070508Z Collecting python-docx==1.1.2 (from -r requirements.txt (line 4))
+2026-05-24T20:27:44.5199337Z   Downloading python_docx-1.1.2-py3-none-any.whl.metadata (2.0 kB)
+2026-05-24T20:27:44.6361247Z Collecting fpdf2==2.8.1 (from -r requirements.txt (line 5))
+2026-05-24T20:27:44.6440286Z   Downloading fpdf2-2.8.1-py2.py3-none-any.whl.metadata (63 kB)
+2026-05-24T20:27:44.6933021Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.1/63.1 kB 1.3 MB/s eta 0:00:00
+2026-05-24T20:27:44.7737614Z Collecting markdown==3.7 (from -r requirements.txt (line 6))
+2026-05-24T20:27:44.7838969Z   Downloading Markdown-3.7-py3-none-any.whl.metadata (7.0 kB)
+2026-05-24T20:27:44.8994082Z Collecting python-dotenv==1.0.1 (from -r requirements.txt (line 7))
+2026-05-24T20:27:44.9064066Z   Downloading python_dotenv-1.0.1-py3-none-any.whl.metadata (23 kB)
+2026-05-24T20:27:45.0043298Z Collecting python-multipart==0.0.12 (from -r requirements.txt (line 8))
+2026-05-24T20:27:45.0137901Z   Downloading python_multipart-0.0.12-py3-none-any.whl.metadata (1.9 kB)
+2026-05-24T20:27:45.1461253Z Collecting gunicorn==23.0.0 (from -r requirements.txt (line 9))
+2026-05-24T20:27:45.1526577Z   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+2026-05-24T20:27:45.2665155Z Collecting httpx==0.27.2 (from -r requirements.txt (line 10))
+2026-05-24T20:27:45.2740285Z   Downloading httpx-0.27.2-py3-none-any.whl.metadata (7.1 kB)
+2026-05-24T20:27:45.4591529Z Collecting starlette<0.42.0,>=0.40.0 (from fastapi==0.115.5->-r requirements.txt (line 1))
+2026-05-24T20:27:45.4683624Z   Downloading starlette-0.41.3-py3-none-any.whl.metadata (6.0 kB)
+2026-05-24T20:27:45.7797309Z Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi==0.115.5->-r requirements.txt (line 1))
+2026-05-24T20:27:45.7867382Z   Downloading pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
+2026-05-24T20:27:45.8470193Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.4/109.4 kB 1.8 MB/s eta 0:00:00
+2026-05-24T20:27:45.9168839Z Collecting typing-extensions>=4.8.0 (from fastapi==0.115.5->-r requirements.txt (line 1))
+2026-05-24T20:27:45.9219544Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+2026-05-24T20:27:46.0851955Z Collecting click>=7.0 (from uvicorn==0.32.1->uvicorn[standard]==0.32.1->-r requirements.txt (line 2))
+2026-05-24T20:27:46.0929724Z   Downloading click-8.4.1-py3-none-any.whl.metadata (2.6 kB)
+2026-05-24T20:27:46.2146619Z Collecting h11>=0.8 (from uvicorn==0.32.1->uvicorn[standard]==0.32.1->-r requirements.txt (line 2))
+2026-05-24T20:27:46.2213154Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-05-24T20:27:46.3486574Z Collecting anyio<5,>=3.5.0 (from openai==1.54.4->-r requirements.txt (line 3))
+2026-05-24T20:27:46.3554020Z   Downloading anyio-4.13.0-py3-none-any.whl.metadata (4.5 kB)
+2026-05-24T20:27:46.4542561Z Collecting distro<2,>=1.7.0 (from openai==1.54.4->-r requirements.txt (line 3))
+2026-05-24T20:27:46.4618682Z   Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+2026-05-24T20:27:46.6767801Z Collecting jiter<1,>=0.4.0 (from openai==1.54.4->-r requirements.txt (line 3))
+2026-05-24T20:27:46.6857505Z   Downloading jiter-0.15.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+2026-05-24T20:27:46.8611799Z Collecting sniffio (from openai==1.54.4->-r requirements.txt (line 3))
+2026-05-24T20:27:46.8677512Z   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+2026-05-24T20:27:47.0155227Z Collecting tqdm>4 (from openai==1.54.4->-r requirements.txt (line 3))
+2026-05-24T20:27:47.0215737Z   Downloading tqdm-4.67.3-py3-none-any.whl.metadata (57 kB)
+2026-05-24T20:27:47.0919719Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 708.7 kB/s eta 0:00:00
+2026-05-24T20:27:47.4657597Z Collecting lxml>=3.1.0 (from python-docx==1.1.2->-r requirements.txt (line 4))
+2026-05-24T20:27:47.4731835Z   Downloading lxml-6.1.1-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.5 kB)
+2026-05-24T20:27:47.5746414Z Collecting defusedxml (from fpdf2==2.8.1->-r requirements.txt (line 5))
+2026-05-24T20:27:47.5820943Z   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+2026-05-24T20:27:47.9472833Z Collecting Pillow!=9.2.*,>=6.2.2 (from fpdf2==2.8.1->-r requirements.txt (line 5))
+2026-05-24T20:27:47.9544728Z   Downloading pillow-12.2.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+2026-05-24T20:27:48.3035400Z Collecting fonttools>=4.34.0 (from fpdf2==2.8.1->-r requirements.txt (line 5))
+2026-05-24T20:27:48.3122003Z   Downloading fonttools-4.63.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+2026-05-24T20:27:48.3654280Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.7/118.7 kB 2.2 MB/s eta 0:00:00
+2026-05-24T20:27:48.4674681Z Collecting packaging (from gunicorn==23.0.0->-r requirements.txt (line 9))
+2026-05-24T20:27:48.4737760Z   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+2026-05-24T20:27:48.6058805Z Collecting certifi (from httpx==0.27.2->-r requirements.txt (line 10))
+2026-05-24T20:27:48.6118646Z   Downloading certifi-2026.5.20-py3-none-any.whl.metadata (2.5 kB)
+2026-05-24T20:27:48.7699582Z Collecting httpcore==1.* (from httpx==0.27.2->-r requirements.txt (line 10))
+2026-05-24T20:27:48.7767763Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-05-24T20:27:48.9323937Z Collecting idna (from httpx==0.27.2->-r requirements.txt (line 10))
+2026-05-24T20:27:48.9432151Z   Downloading idna-3.16-py3-none-any.whl.metadata (6.4 kB)
+2026-05-24T20:27:49.2261095Z Collecting httptools>=0.6.3 (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2))
+2026-05-24T20:27:49.2325444Z   Downloading httptools-0.7.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+2026-05-24T20:27:49.4331849Z Collecting pyyaml>=5.1 (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2))
+2026-05-24T20:27:49.4448161Z   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-05-24T20:27:49.6040300Z Collecting uvloop!=0.15.0,!=0.15.1,>=0.14.0 (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2))
+2026-05-24T20:27:49.6112124Z   Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+2026-05-24T20:27:49.8334428Z Collecting watchfiles>=0.13 (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2))
+2026-05-24T20:27:49.8390937Z   Downloading watchfiles-1.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+2026-05-24T20:27:50.0642138Z Collecting websockets>=10.4 (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2))
+2026-05-24T20:27:50.0716890Z   Downloading websockets-16.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.8 kB)
+2026-05-24T20:27:50.4548367Z Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.5->-r requirements.txt (line 1))
+2026-05-24T20:27:50.4659159Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2026-05-24T20:27:52.3615706Z Collecting pydantic-core==2.46.4 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.5->-r requirements.txt (line 1))
+2026-05-24T20:27:52.3681492Z   Downloading pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+2026-05-24T20:27:52.4773974Z Collecting typing-inspection>=0.4.2 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.5->-r requirements.txt (line 1))
+2026-05-24T20:27:52.4832237Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+2026-05-24T20:27:52.6298680Z Downloading fastapi-0.115.5-py3-none-any.whl (94 kB)
+2026-05-24T20:27:52.6860798Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.9/94.9 kB 1.7 MB/s eta 0:00:00
+2026-05-24T20:27:52.6919659Z Downloading uvicorn-0.32.1-py3-none-any.whl (63 kB)
+2026-05-24T20:27:52.7504461Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 kB 966.2 kB/s eta 0:00:00
+2026-05-24T20:27:52.7620884Z Downloading openai-1.54.4-py3-none-any.whl (389 kB)
+2026-05-24T20:27:52.8150336Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 389.6/389.6 kB 8.1 MB/s eta 0:00:00
+2026-05-24T20:27:52.8285555Z Downloading python_docx-1.1.2-py3-none-any.whl (244 kB)
+2026-05-24T20:27:52.8830090Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 244.3/244.3 kB 4.7 MB/s eta 0:00:00
+2026-05-24T20:27:52.8904534Z Downloading fpdf2-2.8.1-py2.py3-none-any.whl (227 kB)
+2026-05-24T20:27:52.9363313Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 227.8/227.8 kB 5.2 MB/s eta 0:00:00
+2026-05-24T20:27:52.9434602Z Downloading Markdown-3.7-py3-none-any.whl (106 kB)
+2026-05-24T20:27:52.9947137Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.3/106.3 kB 2.0 MB/s eta 0:00:00
+2026-05-24T20:27:53.0017872Z Downloading python_dotenv-1.0.1-py3-none-any.whl (19 kB)
+2026-05-24T20:27:53.0495155Z Downloading python_multipart-0.0.12-py3-none-any.whl (23 kB)
+2026-05-24T20:27:53.0996703Z Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+2026-05-24T20:27:53.1524503Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 1.5 MB/s eta 0:00:00
+2026-05-24T20:27:53.1589672Z Downloading httpx-0.27.2-py3-none-any.whl (76 kB)
+2026-05-24T20:27:53.2043135Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 76.4/76.4 kB 1.6 MB/s eta 0:00:00
+2026-05-24T20:27:53.2104428Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-05-24T20:27:53.2584351Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.8/78.8 kB 1.6 MB/s eta 0:00:00
+2026-05-24T20:27:53.2703234Z Downloading anyio-4.13.0-py3-none-any.whl (114 kB)
+2026-05-24T20:27:53.3218261Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.4/114.4 kB 2.0 MB/s eta 0:00:00
+2026-05-24T20:27:53.3293593Z Downloading click-8.4.1-py3-none-any.whl (116 kB)
+2026-05-24T20:27:53.3771944Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 116.6/116.6 kB 2.4 MB/s eta 0:00:00
+2026-05-24T20:27:53.3842327Z Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+2026-05-24T20:27:53.4447756Z Downloading fonttools-4.63.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.1 MB)
+2026-05-24T20:27:53.6891368Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 21.5 MB/s eta 0:00:00
+2026-05-24T20:27:53.6947980Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-05-24T20:27:53.7535475Z Downloading httptools-0.7.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (456 kB)
+2026-05-24T20:27:53.8339462Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 456.6/456.6 kB 5.7 MB/s eta 0:00:00
+2026-05-24T20:27:53.8446377Z Downloading idna-3.16-py3-none-any.whl (74 kB)
+2026-05-24T20:27:53.8989726Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.2/74.2 kB 1.3 MB/s eta 0:00:00
+2026-05-24T20:27:53.9128782Z Downloading jiter-0.15.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (349 kB)
+2026-05-24T20:27:53.9753270Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 349.4/349.4 kB 5.8 MB/s eta 0:00:00
+2026-05-24T20:27:53.9846849Z Downloading lxml-6.1.1-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+2026-05-24T20:27:54.2285716Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 21.6 MB/s eta 0:00:00
+2026-05-24T20:27:54.2382950Z Downloading pillow-12.2.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+2026-05-24T20:27:54.5916466Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 20.2 MB/s eta 0:00:00
+2026-05-24T20:27:54.5984999Z Downloading pydantic-2.13.4-py3-none-any.whl (472 kB)
+2026-05-24T20:27:54.6794715Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 472.3/472.3 kB 6.0 MB/s eta 0:00:00
+2026-05-24T20:27:54.6943905Z Downloading pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-05-24T20:27:54.8130291Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 18.1 MB/s eta 0:00:00
+2026-05-24T20:27:54.8231702Z Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+2026-05-24T20:27:54.8791232Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 15.1 MB/s eta 0:00:00
+2026-05-24T20:27:54.8855807Z Downloading starlette-0.41.3-py3-none-any.whl (73 kB)
+2026-05-24T20:27:54.9276964Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.2/73.2 kB 1.6 MB/s eta 0:00:00
+2026-05-24T20:27:54.9343648Z Downloading tqdm-4.67.3-py3-none-any.whl (78 kB)
+2026-05-24T20:27:54.9885668Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.4/78.4 kB 1.4 MB/s eta 0:00:00
+2026-05-24T20:27:54.9939426Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-05-24T20:27:55.0382425Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 821.8 kB/s eta 0:00:00
+2026-05-24T20:27:55.0549843Z Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.8 MB)
+2026-05-24T20:27:55.2148428Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 24.6 MB/s eta 0:00:00
+2026-05-24T20:27:55.2228704Z Downloading watchfiles-1.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+2026-05-24T20:27:55.2893151Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 456.9/456.9 kB 7.1 MB/s eta 0:00:00
+2026-05-24T20:27:55.2978126Z Downloading websockets-16.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (184 kB)
+2026-05-24T20:27:55.3749996Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 184.6/184.6 kB 2.4 MB/s eta 0:00:00
+2026-05-24T20:27:55.3821842Z Downloading certifi-2026.5.20-py3-none-any.whl (134 kB)
+2026-05-24T20:27:55.4327652Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.1/134.1 kB 2.6 MB/s eta 0:00:00
+2026-05-24T20:27:55.4412759Z Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+2026-05-24T20:27:55.5190526Z Downloading packaging-26.2-py3-none-any.whl (100 kB)
+2026-05-24T20:27:55.5614946Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.2/100.2 kB 2.3 MB/s eta 0:00:00
+2026-05-24T20:27:55.5707623Z Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+2026-05-24T20:27:55.6122645Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2026-05-24T20:27:55.6639577Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+2026-05-24T20:27:56.3220453Z Installing collected packages: websockets, uvloop, typing-extensions, tqdm, sniffio, pyyaml, python-multipart, python-dotenv, Pillow, packaging, markdown, lxml, jiter, idna, httptools, h11, fonttools, distro, defusedxml, click, certifi, annotated-types, uvicorn, typing-inspection, python-docx, pydantic-core, httpcore, gunicorn, fpdf2, anyio, watchfiles, starlette, pydantic, httpx, openai, fastapi
+2026-05-24T20:28:04.7941666Z Successfully installed Pillow-12.2.0 annotated-types-0.7.0 anyio-4.13.0 certifi-2026.5.20 click-8.4.1 defusedxml-0.7.1 distro-1.9.0 fastapi-0.115.5 fonttools-4.63.0 fpdf2-2.8.1 gunicorn-23.0.0 h11-0.16.0 httpcore-1.0.9 httptools-0.7.1 httpx-0.27.2 idna-3.16 jiter-0.15.0 lxml-6.1.1 markdown-3.7 openai-1.54.4 packaging-26.2 pydantic-2.13.4 pydantic-core-2.46.4 python-docx-1.1.2 python-dotenv-1.0.1 python-multipart-0.0.12 pyyaml-6.0.3 sniffio-1.3.1 starlette-0.41.3 tqdm-4.67.3 typing-extensions-4.15.0 typing-inspection-0.4.2 uvicorn-0.32.1 uvloop-0.22.1 watchfiles-1.2.0 websockets-16.0

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<deployment>
+  <id>temp-d02f76e8</id>
+  <author>OneDeploy</author>
+  <deployer>OneDeploy</deployer>
+  <authorEmail>N/A</authorEmail>
+  <message>N/A</message>
+  <progress></progress>
+  <status>Failed</status>
+  <statusText>Deployment has been stopped due to SCM container restart. The restart can happen due to a management operation on site. Do not perform a management operation and a deployment operation in quick succession. Adding a small delay can help avoid any conflicts.</statusText>
+  <lastSuccessEndTime />
+  <receivedTime>2026-05-24T20:12:33.7715227Z</receivedTime>
+  <startTime>2026-05-24T20:12:33.7715227Z</startTime>
+  <endTime>2026-05-24T20:20:44.5881399Z</endTime>
+  <complete>True</complete>
+  <is_temp>True</is_temp>
+  <is_readonly>False</is_readonly>
+  <containerId>f4b907c8be17</containerId>
+  <buildSummary />
+</deployment>

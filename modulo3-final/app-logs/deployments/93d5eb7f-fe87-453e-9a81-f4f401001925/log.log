@@ -1,0 +1,50 @@
+2026-05-24T19:56:48.4518431Z,Updating submodules.,26536b57-412e-429c-a66d-2044a01d8fb2,0
+2026-05-24T19:56:50.0062473Z,Preparing deployment for commit id '93d5eb7f-f'.,9572ca86-0b53-42cb-aa6c-082574eff126,0
+2026-05-24T19:56:50.6103581Z,PreDeployment: context.CleanOutputPath False,7cda67da-0584-4509-8cf2-5cfdcea860b1,0
+2026-05-24T19:56:50.7908650Z,PreDeployment: context.OutputPath /home/site/wwwroot,834169b9-58d2-4a55-85af-528726aed819,0
+2026-05-24T19:56:51.0669667Z,Repository path is /tmp/zipdeploy/extracted,29514dd6-341d-480c-9ecc-0a63ab39c9ed,0
+2026-05-24T19:56:51.2992696Z,Running oryx build...,387dceb2-0a9f-4e50-a488-e5258d2e8853,0
+	2026-05-24T19:56:51.3301636Z,Command: oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform python --platform-version 3.11 -p virtualenv_name=antenv --log-file /tmp/build-debug.log  -i /tmp/8deb9ce9856e9f0 --compress-destination-dir | tee /tmp/oryx-build.log,,0
+	2026-05-24T19:56:54.9197490Z,Operation performed by Microsoft Oryx&comma; https://github.com/Microsoft/Oryx,,0
+	2026-05-24T19:56:55.2965522Z,You can report issues at https://github.com/Microsoft/Oryx/issues,,0
+	2026-05-24T19:56:55.3233926Z,,,0
+	2026-05-24T19:56:55.3551748Z,Oryx Version: 0.2.20260420.1+83c04e9ee1882dc90d279b63348824daedbd3c96&comma; Commit: 83c04e9ee1882dc90d279b63348824daedbd3c96&comma; ReleaseTagName: 20260420.1,,0
+	2026-05-24T19:56:55.3950584Z,,,0
+	2026-05-24T19:56:55.4268745Z,Build Operation ID: 7332570382b2e1db,,0
+	2026-05-24T19:56:55.4731526Z,Repository Commit : 93d5eb7f-fe87-453e-9a81-f4f401001925,,0
+	2026-05-24T19:56:55.5600795Z,OS Type           : bullseye,,0
+	2026-05-24T19:56:55.5887995Z,Image Type        : githubactions,,0
+	2026-05-24T19:56:55.6249078Z,,,0
+	2026-05-24T19:56:55.6435712Z,Primary SDK Storage URL: https://oryx-cdn.microsoft.io,,0
+	2026-05-24T19:56:55.6869550Z,Backup SDK Storage URL: ,,0
+	2026-05-24T19:56:55.7115186Z,ACR SDK Registry URL: (not set),,0
+	2026-05-24T19:56:55.7408777Z,SDK provider status:,,0
+	2026-05-24T19:56:55.7821352Z,  External ACR SDK provider: Enabled,,0
+	2026-05-24T19:56:55.8399256Z,  External SDK provider: Enabled,,0
+	2026-05-24T19:56:55.8736672Z,  Direct ACR SDK provider: Disabled,,0
+	2026-05-24T19:56:55.8996344Z,  Blob SDK provider: Enabled,,0
+	2026-05-24T19:56:55.9231389Z,External ACR SDK provider is enabled. Only using user-specified platform: python,,0
+	2026-05-24T19:56:56.0095659Z,Detecting platforms...,,0
+	2026-05-24T19:56:59.7982162Z,External ACR provider resolved version '3.11.15' for python.,,0
+	2026-05-24T19:56:59.9119989Z,Version resolved using external ACR SDK provider.,,0
+	2026-05-24T19:56:59.9426148Z,Detected following platforms:,,0
+	2026-05-24T19:56:59.9858005Z,  python: 3.11.15,,0
+	2026-05-24T19:57:00.0334466Z,Requesting SDK from ACR via external provider: python 3.11.15 (bullseye),,0
+	2026-05-24T19:57:05.9560338Z,Successfully pulled SDK from ACR via external provider: python 3.11.15,,0
+	2026-05-24T19:57:06.0036242Z,SDK for 'python' version '3.11.15' fetched via external ACR provider.,,0
+	2026-05-24T19:57:06.0230301Z,Version '3.11.15' of platform 'python' is not installed. Generating script to install it...,,0
+	2026-05-24T19:57:06.1341721Z,,,0
+	2026-05-24T19:57:06.2174242Z,Using intermediate directory '/tmp/8deb9ce9856e9f0'.,,0
+	2026-05-24T19:57:06.2497100Z,,,0
+	2026-05-24T19:57:06.2920126Z,Copying files to the intermediate directory...,,0
+	2026-05-24T19:57:06.3776205Z,Copying files to intermediate directory done in 0 sec(s).,,0
+	2026-05-24T19:57:06.4102601Z,,,0
+	2026-05-24T19:57:06.4432908Z,Source directory     : /tmp/8deb9ce9856e9f0,,0
+	2026-05-24T19:57:06.4811658Z,Destination directory: /home/site/wwwroot,,0
+	2026-05-24T19:57:06.5056490Z,,,0
+	2026-05-24T19:57:06.5490880Z,Installing platform...,,0
+	2026-05-24T19:57:06.5734077Z,,,0
+	2026-05-24T19:57:06.6011256Z,Downloading and extracting 'python' version '3.11.15' to '/tmp/oryx/platforms/python/3.11.15'...,,0
+	2026-05-24T19:57:06.6201780Z,Detected image debian flavor: bullseye.,,0
+	2026-05-24T19:57:06.6510180Z,SDK binary download was skipped. Looking for cached tarball...,,0
+	2026-05-24T19:57:06.6793149Z,Found tarball at /var/OryxAcrSdks/python/python-bullseye-3.11.15.tar.gz,,0
